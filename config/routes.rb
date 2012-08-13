@@ -6,4 +6,6 @@ Website::Application.routes.draw do
   match 'about' => 'about#index'
   match 'home' => 'home#index', :path => '/'
 
+  resources :blogs, :path => 'blog'
+
 end
