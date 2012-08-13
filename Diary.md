@@ -4,3 +4,4 @@
 * `9:30` Had a Skype call with Eric-Paul to explain how to install `rbenv` and `rubybuild`, which is still pretty hard to install
 * `10:00` After running the Rails install i stumbled upon [this Rails gem](https://github.com/khelben/rails-boilerplate) to provide easy access to [HTML5 Boilerplate](http://html5boilerplate.com)
 * `12:00` Studying the designs to see what patterns I find
+* `12:33` I tried running the application in production mode but I found out the stylesheets and javascript files weren't loading (even after I ran the `rake asset:precompile` command). This is because thin doesn't server the static files. See [this Stack Overflow post](http://stackoverflow.com/questions/7829480/no-route-matches-get-assets) for more details.

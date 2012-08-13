@@ -52,9 +52,13 @@ Change into the new directory, then run `bundle install` to install al dependenc
     #  = 1.8.7 : gem install rdoc-data; rdoc-data --install
     #  = 1.9.1 : gem install rdoc-data; rdoc-data --install
     # >= 1.9.2 : nothing to do! Yay!
- 
+
+
+## Running in development mode
+
 Run the rake migrations to update your local database
 
+	$ rake db:create
 	$ rake db:migrate
 	
 Then start the rails server with this command:
@@ -68,4 +72,25 @@ Then start the rails server with this command:
     # [2012-08-13 10:23:11] INFO  ruby 1.9.3 (2012-04-20) [x86_64-darwin12.0.0]
     # [2012-08-13 10:23:11] INFO  WEBrick::HTTPServer#start: pid=6818 port=3000
     
-Open your web browser at 127.0.0.1:3000 to view the project 
+Open your web browser at 127.0.0.1:3000 to view the project
+
+## Running in production mode
+
+Run these rake tasks (I'm using the [asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html))
+
+	$ rake db:create
+	$ rake db:migrate
+	$ rake assets:precompile
+
+Then start the rails server with this command:
+
+    $ rails server --e=production                                                                                                         develop [fee530a] modified untracked
+    # => Booting WEBrick
+    # => Rails 3.2.8 application starting in production on http://0.0.0.0:3000
+    # => Call with -d to detach
+    # => Ctrl-C to shutdown server
+    # [2012-08-13 12:27:46] INFO  WEBrick 1.3.1
+    # [2012-08-13 12:27:46] INFO  ruby 1.9.3 (2012-04-20) [x86_64-darwin12.0.0]
+    # [2012-08-13 12:27:46] INFO  WEBrick::HTTPServer#start: pid=12697 port=3000
+
+Open your web browser at 127.0.0.1:3000 to view the project
