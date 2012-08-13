@@ -7,3 +7,9 @@
 * `12:33` I tried running the application in production mode but I found out the stylesheets and javascript files weren't loading (even after I ran the `rake asset:precompile` command). This is because thin doesn't server the static files. See [this Stack Overflow post](http://stackoverflow.com/questions/7829480/no-route-matches-get-assets) for more details.
 * `12:46` Adding the first raw HTML output without styling in the layout file
 * `16:05` I am now working through the designs, and making plain HTML pages so Eric Paul can edit the copy
+* `17:00` Just created a controller for our apps `apps_controller` with two actions; `index` and `show` the routes for this controller are:
+
+## routes for the apps_controller
+
+    match 'apps/:appname' => 'apps#show', :constraints => { :name => /(gettogether|willitfit|uberlayer)/i }
+    match 'apps' => 'apps#index'
