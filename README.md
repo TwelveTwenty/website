@@ -28,7 +28,12 @@ Open the terminal and install `bundler`
     # Installing ri documentation for bundler-1.1.5...
     # Installing RDoc documentation for bundler-1.1.5...
 
-Then run `bundle install` to install al dependencies 
+
+Clone the project from Github using this command:
+
+    git clone git://github.com/TwelveTwenty/website.git
+
+Change into the new directory, then run `bundle install` to install al dependencies 
 
     $ bundle install
     # Fetching gem metadata from https://rubygems.org/.......
