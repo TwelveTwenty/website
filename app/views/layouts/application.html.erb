@@ -40,6 +40,18 @@
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
   <!-- Add your site or application content here -->
+
+  <header>
+	  <ul class="main-menu">
+		  <li><%= link_to "home", "--" %></li>
+		  <li><%= link_to "Apps", "--" %></li>
+		  <li><%= link_to "About", :controller => :about, :action => :index %></li>
+		  <li><%= link_to "Goodies", "--" %></li>
+		  <li><%= link_to "Contact", "--" %></li>
+		  <li><%= link_to "Blog", "--" %></li>
+	  </ul>
+  </header>
+
   <%= yield %>
 
   <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
