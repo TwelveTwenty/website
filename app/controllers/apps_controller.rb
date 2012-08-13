@@ -4,6 +4,6 @@ class AppsController < ApplicationController
   end
 
   def show
-    render params[:appname]
+    render params[:app]
   end
 end
