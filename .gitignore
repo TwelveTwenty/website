@@ -15,3 +15,6 @@
 /tmp
 
 .rakeTasks
+
+# ignore assets from asset pipeline
+public/assets/
