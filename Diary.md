@@ -13,3 +13,18 @@
 
     match 'apps/:appname' => 'apps#show', :constraints => { :name => /(gettogether|willitfit|uberlayer)/i }
     match 'apps' => 'apps#index'
+
+* `18:25` Got stuck on generating the blog, got this error: `no implicit conversion from nil to integer`.
+* `18:39` Generated the Home controller and added some routes, this is my current routes file:
+
+## Routes file (per 13 august):
+
+    Website::Application.routes.draw do
+
+      match 'apps/:app' => 'apps#show', :constraints => { :name => /(gettogether|willitfit|uberlayer)/i }
+      match 'apps' => 'apps#index'
+      match 'contact' => 'contact#index'
+      match 'about' => 'about#index'
+      match 'home' => 'home#index', :path => '/'
+
+    end
