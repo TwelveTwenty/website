@@ -1,5 +1,7 @@
 Website::Application.routes.draw do
-  get "about/index"
+
+  resources :about
+  resources :contact
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

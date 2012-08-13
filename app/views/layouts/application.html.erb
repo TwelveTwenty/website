@@ -42,18 +42,29 @@
   <!-- Add your site or application content here -->
 
   <header>
+
 	  <ul class="main-menu">
 		  <li><%= link_to "home", "--" %></li>
 		  <li><%= link_to "Apps", "--" %></li>
-		  <li><%= link_to "About", :controller => :about, :action => :index %></li>
+		  <li><%= link_to "About", :controller => :about %></li>
 		  <li><%= link_to "Goodies", "--" %></li>
-		  <li><%= link_to "Contact", "--" %></li>
+		  <li><%= link_to "Contact", :controller => :contact %></li>
 		  <li><%= link_to "Blog", "--" %></li>
 	  </ul>
-	  <%= image_tag "rails.png" %>
+
+	  <%= yield :header %>
+
   </header>
 
   <%= yield %>
+
+  <footer>
+	  <ul>
+		  <li><a href="http://sharelink1">Footer link 1</a></li>
+		  <li><a href="http://sharelink2">Footer link 2</a></li>
+		  <li><a href="http://sharelink3">Footer link 3</a></li>
+	  </ul>
+  </footer>
 
   <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
   <%= javascript_include_tag 'application' %>

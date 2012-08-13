@@ -5,3 +5,5 @@
 * `10:00` After running the Rails install i stumbled upon [this Rails gem](https://github.com/khelben/rails-boilerplate) to provide easy access to [HTML5 Boilerplate](http://html5boilerplate.com)
 * `12:00` Studying the designs to see what patterns I find
 * `12:33` I tried running the application in production mode but I found out the stylesheets and javascript files weren't loading (even after I ran the `rake asset:precompile` command). This is because thin doesn't server the static files. See [this Stack Overflow post](http://stackoverflow.com/questions/7829480/no-route-matches-get-assets) for more details.
+* `12:46` Adding the first raw HTML output without styling in the layout file
+* `16:05` I am now working through the designs, and making plain HTML pages so Eric Paul can edit the copy
