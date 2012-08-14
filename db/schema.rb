@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(:version => 20120814054648) do
 
   create_table "blogs", :force => true do |t|
-    t.string   "name"
     t.string   "title"
     t.string   "author"
     t.datetime "created_at", :null => false
