@@ -45,3 +45,34 @@ That's a good way to end the day!
 # Tuesday, August 14th 2012
 
 * `07:34` I am continuing with the work I started yesterday, which is getting blog posts in the website. The first thing I want is use seeds so I can insert the blog posts from our current blog into the database
+
+* `07:47` Forgot to add a body column to the blog model, that's why I ran this generator
+
+In the terminal: 
+
+    rails g migration add_body_to_blogs blog:text 
+
+This generates: 
+
+    class AddBodyToBlogs < ActiveRecord::Migration
+      def change
+        add_column :blogs, :body, :text
+      end
+    end
+
+This is my current schema
+
+    ActiveRecord::Schema.define(:version => 20120814054648) do
+    
+      create_table "blogs", :force => true do |t|
+        t.string   "name"
+        t.string   "title"
+        t.string   "author"
+        t.datetime "created_at", :null => false
+        t.datetime "updated_at", :null => false
+        t.text     "body"
+      end
+    
+    end
+
+* `08:04` I just ran into a problem using a seed file: `/db/seeds.rb:20: invalid multibyte char (US-ASCII)`. I solved this by putting `# encoding: UTF-8` at the top of my Seed file
