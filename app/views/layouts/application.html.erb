@@ -47,10 +47,10 @@
 	  <ul>
 		  <li class="<%= "current" if params[:controller] == "home" %>"><%= link_to_unless_current "home", {:controller => :home}  %></li>
 		  <li class="<%= "current" if params[:controller] == "apps" %>"><%= link_to_unless_current "Apps", :controller => :apps %></li>
-		  <li class="<%= "current" if params[:controller] == "about" %>"><%= link_to_unless_current "About", :controller => :about %></li>
 		  <li class="<%= "current" if params[:controller] == "goodies" %>"><%= link_to_unless_current "Goodies", :controller => :goodies %></li>
+      <li class="<%= "current" if params[:controller] == "about" %>"><%= link_to_unless_current "About", :controller => :about %></li>
+      <li class="<%= "current" if params[:controller] == "blogs" %>"><%= link_to_unless_current "Blog", :controller => :blogs %></li>
 		  <li class="<%= "current" if params[:controller] == "contact" %>"><%= link_to_unless_current "Contact", :controller => :contact %></li>
-		  <li class="<%= "current" if params[:controller] == "blog" %>"><%= link_to_unless_current "Blog", :controller => :blogs %></li>
 	  </ul>
   </header>
 
