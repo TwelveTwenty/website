@@ -28,3 +28,20 @@
       match 'home' => 'home#index', :path => '/'
 
     end
+
+* `19:00` I found the problem!
+
+Seems that the Rails scaffold generate generates a broken view, this is what's get generated:
+
+    <%= f.label :name %>
+
+That gives this error: `no implicit conversion from nil to integer`. This can be solved if you change it to this:
+
+    <%= f.label :name, "name" %>
+
+That's a good way to end the day!
+
+
+# Tuesday, August 14th 2012
+
+* `07:34` I am continuing with the work I started yesterday, which is getting blog posts in the website. The first thing I want is use seeds so I can insert the blog posts from our current blog into the database
