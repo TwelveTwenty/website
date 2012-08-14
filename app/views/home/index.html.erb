@@ -22,3 +22,25 @@
 	<h1>Our apps</h1>
 	<p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
 </section>
+
+<h1>Listing blogs</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Author</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<% @blogs.each do |blog| %>
+		<tr>
+			<td><%= blog.title %></td>
+			<td><%= blog.author %></td>
+			<td><%= link_to 'Show', blog %></td>
+			<td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+			<td><%= link_to 'Destroy', blog, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+		</tr>
+	<% end %>
+</table>
