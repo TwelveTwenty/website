@@ -1,0 +1,33 @@
+<h1>Listing goodies</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Thumb url</th>
+    <th>Download url</th>
+    <th>Teaser</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @goodies.each do |goody| %>
+  <tr>
+    <td><%= goody.title %></td>
+    <td><%= goody.author %></td>
+    <td><%= goody.thumb_url %></td>
+    <td><%= goody.download_url %></td>
+    <td><%= goody.teaser %></td>
+    <td><%= goody.body %></td>
+    <td><%= link_to 'Show', goody %></td>
+    <td><%= link_to 'Edit', edit_goody_path(goody) %></td>
+    <td><%= link_to 'Destroy', goody, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Goody', new_goody_path %>
