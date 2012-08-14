@@ -13,13 +13,39 @@
  *= require_tree .
  */
 
-/* apply a natural box layout model to all elements */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
-header {
+body {
+	background-image: url('/assets/bg-white-pattern.png');
+	padding-top: 43px;
+}
+
+body > section#heading, body > footer {
+	background-image: url('/assets/bg-black-pattern.png');
+	color: white;
+}
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}
+
+section#heading {
+	padding: 50px;
+}
+
+body > header {
+	position: fixed;
 	font-family: 'Oswald', sans-serif;
 	background-image: url('/assets/navigationstroke.png');
 	background-repeat: repeat-x;
+	width: 100%;
+	top: 0;
 }
 
 header > ul {
@@ -51,13 +77,4 @@ header > ul {
 		color: white;
 		text-decoration: none;
 	}
-}
-
-footer {
-	border-top: #333333 solid 1px;
-	background-color: #86e8e8;
-}
-
-header {
-	background-color: #e8e8e8;
 }

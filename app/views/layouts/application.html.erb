@@ -21,6 +21,7 @@
 
   <%= stylesheet_link_tag "application" %>
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -43,7 +44,6 @@
   <!-- Add your site or application content here -->
 
   <header>
-
 	  <ul>
 		  <li class="<%= "current" if params[:controller] == "home" %>"><%= link_to_unless_current "home", {:controller => :home}  %></li>
 		  <li class="<%= "current" if params[:controller] == "apps" %>"><%= link_to_unless_current "Apps", :controller => :apps %></li>
@@ -52,12 +52,11 @@
 		  <li class="<%= "current" if params[:controller] == "contact" %>"><%= link_to_unless_current "Contact", :controller => :contact %></li>
 		  <li class="<%= "current" if params[:controller] == "blog" %>"><%= link_to_unless_current "Blog", :controller => :blogs %></li>
 	  </ul>
-
-	  <section>
-		  <%= yield :header %>
-	  </section>
-
   </header>
+
+  <section id="heading">
+	  <%= yield :header %>
+  </section>
 
   <%= yield %>
 
