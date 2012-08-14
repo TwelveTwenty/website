@@ -12,17 +12,52 @@
  *= require_self
  *= require_tree .
  */
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+header {
+	font-family: 'Oswald', sans-serif;
+	background-image: url('/assets/navigationstroke.png');
+	background-repeat: repeat-x;
+}
+
+header > ul {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	background-image: url('/assets/navigationpunt.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	line-height: 60px;
+	height: 90px;
+
+	li {
+		font-size: 13px;
+		padding: 0px 30px;
+		display: inline-block;
+		color: white;
+		text-transform: uppercase;
+	}
+
+	li.current {
+		text-decoration: underline;
+	}
+
+	a, a:visited, a:hover {
+		background-color: transparent;
+		color: white;
+		text-decoration: none;
+	}
+}
+
 footer {
 	border-top: #333333 solid 1px;
 	background-color: #86e8e8;
 }
 
 header {
-	border-bottom: #333333 solid 1px;
 	background-color: #e8e8e8;
-}
-
-header section {
-	border: #ffcc00 solid 1px;
-	background-color: #e8b8e0;
 }
