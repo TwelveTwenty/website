@@ -54,14 +54,16 @@
 	  </ul>
   </header>
 
-  <section id="heading">
+  <div class="dark" id="heading">
 	  <%= yield :header %>
 	  <div class="clearfix"></div>
-  </section>
+  </div>
 
-  <section class="body">
-  	<%= yield %>
-  </section>
+  <div class="light">
+	  <section>
+		  <%= yield %>
+	  </section>
+  </div>
 
   <footer>
 	  <ul>

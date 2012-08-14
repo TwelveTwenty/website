@@ -1,0 +1,35 @@
+// For desktops
+.visible-phone     { display: none !important; }
+.visible-tablet    { display: none !important; }
+.visible-desktop   { } // Don't set initially
+.hidden-phone      { }
+.hidden-tablet     { }
+.hidden-desktop    { display: none !important; }
+
+// Phones only
+@media (max-width: 758px) {
+	body {
+		background-color: orange !important;
+	}
+
+	.visible-phone     { display: inherit !important; }
+	.hidden-phone      { display: none !important; }
+	.hidden-desktop    { display: inherit !important; }
+	.visible-desktop   { display: none !important; }
+}
+
+// Bigger than phone
+@media (min-width: 758px) {
+	body {
+		background-color: blue !important;
+	}
+
+	.container {
+
+	}
+
+	.visible-tablet    { display: inherit !important; }
+	.hidden-tablet     { display: none !important; }
+	.hidden-desktop    { display: inherit !important; }
+	.visible-desktop   { display: none !important ; }
+}

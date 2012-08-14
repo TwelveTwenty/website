@@ -1,0 +1,26 @@
+h1, h2, h3 {
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}
+
+em {
+	font-family: 'Poly', serif;
+}
+
+a, a:visited, a:hover {
+	background-color: transparent;
+	color: inherit;
+	text-decoration: none;
+}
+
+section.body {
+	padding: 20px;
+}
+
+a.arrow {
+	background-image: url('/assets/pijl.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 15px;
+}
