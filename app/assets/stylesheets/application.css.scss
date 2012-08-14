@@ -19,6 +19,10 @@
 	box-sizing: border-box;
 }
 
+.third {
+	width: 33%;
+}
+
 body {
 	background-image: url('/assets/bg-white-pattern.png');
 	padding-top: 43px;
@@ -35,13 +39,21 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
+em {
+	font-family: 'Poly', serif;
+}
+
 section#heading {
-	padding: 50px;
+	padding: 70px;
+}
+
+section#heading .third {
+	float: left;
+	text-align: center;
 }
 
 body > header {
 	position: fixed;
-	font-family: 'Oswald', sans-serif;
 	background-image: url('/assets/navigationstroke.png');
 	background-repeat: repeat-x;
 	width: 100%;
@@ -61,6 +73,7 @@ header > ul {
 	height: 90px;
 
 	li {
+		font-family: 'Oswald', sans-serif;
 		font-size: 13px;
 		padding: 0px 30px;
 		display: inline-block;
@@ -77,4 +90,8 @@ header > ul {
 		color: white;
 		text-decoration: none;
 	}
+}
+
+section.body {
+	padding: 20px;
 }

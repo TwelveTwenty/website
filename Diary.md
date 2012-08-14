@@ -76,3 +76,4 @@ This is my current schema
     end
 
 * `08:04` I just ran into a problem using a seed file: `/db/seeds.rb:20: invalid multibyte char (US-ASCII)`. I solved this by putting `# encoding: UTF-8` at the top of my Seed file
+* `13:22` Working on the CSS of the homepage

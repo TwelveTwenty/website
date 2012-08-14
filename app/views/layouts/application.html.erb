@@ -21,7 +21,7 @@
 
   <%= stylesheet_link_tag "application" %>
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -56,9 +56,12 @@
 
   <section id="heading">
 	  <%= yield :header %>
+	  <div class="clearfix"></div>
   </section>
 
-  <%= yield %>
+  <section class="body">
+  	<%= yield %>
+  </section>
 
   <footer>
 	  <ul>
