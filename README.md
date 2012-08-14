@@ -60,6 +60,7 @@ Run the rake migrations to update your local database
 
 	$ rake db:create
 	$ rake db:migrate
+	$ rake db:seed	
 	
 Then start the rails server with this command:
 
@@ -81,6 +82,7 @@ Run these rake tasks (I'm using the [asset pipeline](http://guides.rubyonrails.o
 	$ rake db:create
 	$ rake db:migrate
 	$ rake assets:precompile
+	$ rake db:seed
 
 Then start the rails server with this command:
 
