@@ -17,44 +17,41 @@
 
 <% end %>
 
-<section>
+<section class="third floater">
 	<h1>Our apps</h1>
 	<p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-	<ul>
-		<li>
-			<h1>App name</h1>
-			<em>Cras mattis consectetur purus sit amet fermentum.</em>
-		</li>
-		<li>
-			<h1>App name 2</h1>
-			<em>Cras mattis consectetur purus sit amet fermentum.</em>
-		</li>
-		<li>
-			<h1>App name 3</h1>
-			<em>Cras mattis consectetur purus sit amet fermentum.</em>
-		</li>
-	</ul>
 </section>
 
-<h1>Listing blogs</h1>
+<ul class="two-thirds floater apps">
+	<li class="uberlayer">
+		<h1>App name</h1>
+		<em>Cras mattis consectetur purus sit amet fermentum.</em>
+	</li>
+	<li class="willitfit">
+		<h1>App name 2</h1>
+		<em>Cras mattis consectetur purus sit amet fermentum.</em>
+	</li>
+	<li class="gettogether">
+		<h1>App name 3</h1>
+		<em>Cras mattis consectetur purus sit amet fermentum.</em>
+	</li>
+</ul>
 
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Author</th>
-		<th></th>
-		<th></th>
-		<th></th>
-	</tr>
+<div class="clearfix"></div>
 
-	<% @blogs.each do |blog| %>
-		<tr>
-			<td><%= blog.title %></td>
-			<td><%= blog.author %></td>
-			<td><%= link_to 'Show', blog %></td>
-			<td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-			<td><%= link_to 'Destroy', blog, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-		</tr>
-	<% end %>
-</table>
+<section>
+
+	<h1></h1>
+
+	<table>
+		<% @blogs.each do |blog| %>
+			<tr>
+				<td><%= blog.title %></td>
+				<td><%= blog.author %></td>
+				<td><%= link_to 'Show', blog %></td>
+				<td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+				<td><%= link_to 'Destroy', blog, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+			</tr>
+		<% end %>
+	</table>
+</section>

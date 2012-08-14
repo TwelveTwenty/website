@@ -23,6 +23,15 @@
 	width: 33%;
 }
 
+.two-thirds {
+	width: 66%;
+}
+
+.floater {
+	display: block;
+	float: left;
+}
+
 body {
 	background-image: url('/assets/bg-white-pattern.png');
 	padding-top: 43px;
