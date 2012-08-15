@@ -46,4 +46,16 @@ body.apps {
 		padding-top: 5px;
 		background-image: none;
 	}
+
+	.content .text {
+		h2 {
+			padding-left: 40px;
+			background-image: url('/assets/apps/dotsgreen.png');
+			background-repeat: no-repeat;
+			background-position: center left;
+		}
+		p {
+			padding-left: 40px;
+		}
+	}
 }
