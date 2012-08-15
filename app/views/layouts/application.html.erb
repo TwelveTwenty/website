@@ -1,88 +1,109 @@
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/i/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+More info: h5bp.com/i/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Website</title>
-  <meta name="description" content="">
+	<title>Twelve Twenty</title>
+	<meta name="description" content="Apps you didn't know you needed">
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width">
+	<meta property="og:type" content=website>
+	<meta property="og:title" content="Twelve Twenty"/>
+	<meta property="og:description" content="Tools you didn't know you needed"/>
+	<meta property="og:image" content="<%= image_path "share.jpg" %>"/>
+	<meta property="og:url" content="http://twelvetwenty.nl"/>
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width">
 
-  <%= stylesheet_link_tag "application" %>
-  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
-  <%= csrf_meta_tags %>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+	<%= stylesheet_link_tag "application" %>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
+	<%= csrf_meta_tags %>
 
-  <!-- All JavaScript at the bottom, except this Modernizr build.
-       Modernizr enables HTML5 elements & feature detects for optimal performance.
-       Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <%= javascript_include_tag 'modernizr' %>
+	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
-  <!-- Initializes the modernizr and actually perform the checks. Enable this
-       if you need the modernizr, but remember to only do the actual checks
-       that you need. -->
-  <%= javascript_tag "Modernizr.load();" %>
+	<!-- All JavaScript at the bottom, except this Modernizr build.
+Modernizr enables HTML5 elements & feature detects for optimal performance.
+Create your own custom Modernizr build: www.modernizr.com/download/ -->
+	<%= javascript_include_tag 'modernizr' %>
+
+	<!-- Initializes the modernizr and actually perform the checks. Enable this
+if you need the modernizr, but remember to only do the actual checks
+that you need. -->
+	<%= javascript_tag "Modernizr.load();" %>
 </head>
-<body>
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<body class="debug-layout <%= params[:controller] %>">
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]>
+<p class=chromeframe>Your browser is <em>ancient!</em>
+	<a href="http://browsehappy.com/">Upgrade to a different browser</a> or
+	<a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.
+</p><![endif]-->
 
-  <!-- Add your site or application content here -->
+<header>
+	<ul>
+		<li class="<%= "current" if params[:controller] == "home" %>"><%= link_to_unless_current "home", {:controller => :home} %></li>
+		<li class="<%= "current" if params[:controller] == "apps" %>"><%= link_to_unless_current "Apps", :controller => :apps %></li>
+		<li class="<%= "current" if params[:controller] == "about" %>"><%= link_to_unless_current "About", :controller => :about %></li>
+		<li class="<%= "current" if params[:controller] == "goodies" %>"><%= link_to_unless_current "Goodies", :controller => :goodies %></li>
+		<li class="<%= "current" if params[:controller] == "contact" %>"><%= link_to_unless_current "Contact", :controller => :contact %></li>
+		<li class="<%= "current" if params[:controller] == "blog" %>"><%= link_to_unless_current "Blog", :controller => :blogs %></li>
+	</ul>
+</header>
 
-  <header>
-	  <ul>
-		  <li class="<%= "current" if params[:controller] == "home" %>"><%= link_to_unless_current "home", {:controller => :home}  %></li>
-		  <li class="<%= "current" if params[:controller] == "apps" %>"><%= link_to_unless_current "Apps", :controller => :apps %></li>
-		  <li class="<%= "current" if params[:controller] == "goodies" %>"><%= link_to_unless_current "Goodies", :controller => :goodies %></li>
-      <li class="<%= "current" if params[:controller] == "about" %>"><%= link_to_unless_current "About", :controller => :about %></li>
-      <li class="<%= "current" if params[:controller] == "blogs" %>"><%= link_to_unless_current "Blog", :controller => :blogs %></li>
-		  <li class="<%= "current" if params[:controller] == "contact" %>"><%= link_to_unless_current "Contact", :controller => :contact %></li>
-	  </ul>
-  </header>
+<div class="dark" id="heading">
+	<div class="container">
+		<%= yield :header %>
+	</div>
+</div>
 
-  <section id="heading">
-	  <%= yield :header %>
-	  <div class="clearfix"></div>
-  </section>
+<div class="light">
+	<div class="container">
+		<%= yield %>
+	</div>
+</div>
 
-  <section class="body">
-  	<%= yield %>
-  </section>
+<footer class="dark">
+	<div class="container">
+		<ul>
+			<li><a href="http://some-external-website.com">External footer link 1</a></li>
+			<li><a href="http://some-external-website.com">External footer link 2</a></li>
+			<li><a href="http://some-external-website.com">External footer link 3</a></li>
+		</ul>
+	</div>
+</footer>
 
-  <footer>
-	  <ul>
-		  <li><a href="http://some-external-website.com">External footer link 1</a></li>
-		  <li><a href="http://some-external-website.com">External footer link 2</a></li>
-		  <li><a href="http://some-external-website.com">External footer link 3</a></li>
-	  </ul>
-  </footer>
+<!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
+<%= javascript_include_tag 'application' %>
 
-  <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
-  <%= javascript_include_tag 'application' %>
-
-  <% if Rails.env.production? %>
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-  <% end %>
+<% if Rails.env.production? %>
+	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+mathiasbynens.be/notes/async-analytics-snippet -->
+	<script>
+		var _gaq = [
+			['_setAccount', 'UA-XXXXX-X'],
+			['_trackPageview']
+		];
+		(function (d, t) {
+			var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+			g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s)
+		}(document, 'script'));
+	</script>
+<% end %>
 </body>
 </html>
