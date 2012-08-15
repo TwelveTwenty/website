@@ -9,10 +9,11 @@ $main-menu-height: 60px;
 body > header {
 
 	position: fixed;
-	background-image: url('/assets/navigationstroke.png');
+	background-image: url('/assets/navigation-stroke.png');
 	background-repeat: repeat-x;
 	width: 100%;
 	top: 0;
+	z-index: 1;
 
 	ul {
 		text-align: center;
@@ -20,7 +21,7 @@ body > header {
 		margin: 0;
 		padding: 0;
 
-		background-image: url('/assets/navigationpunt.png');
+		background-image: url('/assets/nav-point.png');
 		background-repeat: no-repeat;
 		background-position: top center;
 		line-height: $main-menu-height;

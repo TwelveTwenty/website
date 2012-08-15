@@ -8,19 +8,24 @@
 
 <div class="column">
 	<div class="one-third">
-		<article class=" app uberlayer">
-			<h2><%= link_to "Uberlayer", :controller => :apps, :action => :show, :app => :uberlayer %></h2>
-		</article>
+		<%= link_to :controller => :apps, :action => :show, :app => :uberlayer do %>
+			<article class=" app uberlayer">
+				<h2>Uberlayer</h2>
+			</article>
+		<% end %>
 	</div>
 	<div class="one-third">
-		<article class=" app willitfit">
-			<h2><%= link_to "Will it fit", :controller => :apps, :action => :show, :app => :willitfit %></h2>
-
-		</article>
+		<%= link_to :controller => :apps, :action => :show, :app => :willitfit do %>
+			<article class=" app willitfit">
+				<h2>Will it fit</h2>
+			</article>
+		<% end %>
 	</div>
 	<div class="one-third">
-		<article class="app gettogether">
-			<h3><%= link_to "Get Together", :controller => :apps, :action => :show, :app => :gettogether %></h3>
-		</article>
+		<%= link_to :controller => :apps, :action => :show, :app => :willitfit do %>
+			<article class="app gettogether">
+				<h3>Get Together</h3>
+			</article>
+		<% end %>
 	</div>
 </div>
