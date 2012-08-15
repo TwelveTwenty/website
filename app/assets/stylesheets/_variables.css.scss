@@ -6,3 +6,15 @@ $column-at-half: ($site-width - 3 * $column-margin) / 2;
 $column-at-full: ($site-width - 2 * $column-margin);
 
 $site-width-mobile: $column-at-half + 2 * $column-margin;
+
+@mixin wrapper-dark {
+	background-color: black;
+	background-image: url('/assets/bg-black-pattern.png');
+	color: white;
+}
+
+@mixin wrapper-light {
+	background-color: white;
+	background-image: url('/assets/bg-white-pattern.png');
+	color: black;
+}

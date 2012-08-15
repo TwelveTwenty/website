@@ -1,23 +1,36 @@
-ul.apps {
+@import "_variables.css.scss";
 
-	list-style: none;
+body.home {
 
-	li {
-		height: 172px;
-		background-repeat: no-repeat;
-		padding-left: 236px;
+	.apps {
+		list-style: none;
+
+		li {
+			height: 172px;
+			background-repeat: no-repeat;
+			padding-left: 236px;
+		}
+
+		li.uberlayer {
+			background-image: url('/assets/iconuberlayer.png');
+		}
+
+		li.willitfit {
+			background-image: url('/assets/iconwillitfit.png');
+		}
+
+		li.gettogether {
+			background-image: url('/assets/icongettogether.png');
+		}
+
 	}
 
-	li.uberlayer {
-		background-image: url('/assets/iconuberlayer.png');
+	.wrapper.header {
+		@include wrapper-dark;
 	}
 
-	li.willitfit {
-		background-image: url('/assets/iconwillitfit.png');
-	}
-
-	li.gettogether {
-		background-image: url('/assets/icongettogether.png');
+	.wrapper.content, .wrapper.footer {
+		@include wrapper-light;
 	}
 
 }

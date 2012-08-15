@@ -1,5 +1,7 @@
 @import "_variables.css.scss";
 
+$main-menu-height: 60px;
+
 /**
 * HEADER
 */
@@ -21,8 +23,8 @@ body > header {
 		background-image: url('/assets/navigationpunt.png');
 		background-repeat: no-repeat;
 		background-position: top center;
-		line-height: 60px;
-		height: 90px;
+		line-height: $main-menu-height;
+		height: $main-menu-height + 30px;
 	}
 
 	li {
@@ -44,13 +46,13 @@ body > header {
 
 }
 
-.container:first-child {
-	margin-top: 100px;
+.wrapper.header {
+	margin-top: $main-menu-height;
 }
 
 @media (max-width: $site-width) {
 
-	.container:first-child {
+	.wrapper.header {
 		margin-top: 0px;
 	}
 

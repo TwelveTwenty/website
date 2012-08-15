@@ -13,27 +13,19 @@
  *= require_tree .
  */
 
+@import "_variables.css.scss";
+
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-
-.light {
-	background-image: url('/assets/bg-white-pattern.png');
-	color: black;
-	a, a:hover, a:visited {
-		color: black;
-		background-color: transparent;
-	}
+.wrapper.header {
+	padding: 39px 0;
+	@include wrapper-light;
 }
 
-.dark {
-	background-image: url('/assets/bg-black-pattern.png');
-	color: white;
-	a, a:hover, a:visited {
-		color: white;
-		background-color: transparent;
-	}
+.wrapper.content, .wrapper.footer {
+	@include wrapper-dark;
 }
