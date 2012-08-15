@@ -47,7 +47,7 @@ body > header {
 }
 
 .wrapper.header {
-	margin-top: $main-menu-height;
+	margin-top: $main-menu-height - 1;
 }
 
 @media (max-width: $site-width) {
