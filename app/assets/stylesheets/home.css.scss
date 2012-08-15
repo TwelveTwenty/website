@@ -50,15 +50,44 @@ body.home {
 		color: black;
 	}
 
+	.blog-teaser .content {
+		background-image: url('/assets/blog222-side.png');
+		background-repeat: repeat-y;
+	}
+
 	.blog-teaser header {
 		height: 200px;
+		margin-left: 4px;
 	}
 
 	.blog-teaser footer {
-		background-image: url('/assets/blog-bottom.png');
-		height: 70px;
+		background-image: url('/assets/blog222-bottom.png');
+		background-position: left;
+		height: 61px;
 	}
 
+	@media (max-width: $site-width) {
+
+		.blog-teaser .content {
+				background-image: url('/assets/blog345-side.png');
+				background-repeat: repeat-y;
+			}
+
+			.blog-teaser header {
+				height: 200px;
+				margin-left: 4px;
+			}
+
+			.blog-teaser footer {
+				background-image: url('/assets/blog345-bottom.png');
+				background-position: left;
+				height: 61px;
+			}
+
+	}
+
+
 }
+
 
 //.home
