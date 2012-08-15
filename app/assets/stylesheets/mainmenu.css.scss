@@ -44,7 +44,15 @@ body > header {
 
 }
 
+.container:first-child {
+	margin-top: 100px;
+}
+
 @media (max-width: $site-width) {
+
+	.container:first-child {
+		margin-top: 0px;
+	}
 
 	body > header {
 		width: auto;
