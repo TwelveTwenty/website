@@ -57,3 +57,35 @@ ul {
 .padded {
 	padding: $column-margin;
 }
+
+.full .video {
+	height: 400px;
+}
+
+.full.slideshow {
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.controls {
+		margin-top: 10px;
+		display: inline-block;
+		background-image: url('/assets/slideshow.png');
+		width: 132px;
+		height: 29px;
+	}
+}
+
+@media (max-width: $site-width) {
+	.full .video {
+		height: 200px;
+	}
+
+}

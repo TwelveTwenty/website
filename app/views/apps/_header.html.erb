@@ -1,10 +1,9 @@
 <h1 class="hidden">Apps</h1>
-<div class="column">
+<div class="column hidden-mobile">
 	<section class="full centered">
 		<%= image_tag "logo-white.png" %>
 	</section>
 </div>
-
 
 <div class="column">
 	<div class="one-third">
@@ -22,7 +21,7 @@
 		<% end %>
 	</div>
 	<div class="one-third">
-		<%= link_to :controller => :apps, :action => :show, :app => :willitfit do %>
+		<%= link_to :controller => :apps, :action => :show, :app => :gettogether do %>
 			<article class="app gettogether">
 				<h3>Get Together</h3>
 			</article>

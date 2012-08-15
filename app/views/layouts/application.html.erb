@@ -46,7 +46,7 @@ if you need the modernizr, but remember to only do the actual checks
 that you need. -->
 	<%= javascript_tag "Modernizr.load();" %>
 </head>
-<body class="debug-layout <%= params[:controller] %> <%= "#{params[:action]}-#{params[:controller]}" %>">
+<body class="<%= params[:controller] %> <%= "#{params[:action]}-#{params[:controller]}" %>">
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
 chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]>
 <p class=chromeframe>Your browser is <em>ancient!</em>

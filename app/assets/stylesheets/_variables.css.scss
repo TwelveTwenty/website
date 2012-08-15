@@ -8,6 +8,8 @@ $column-at-full: ($site-width - 2 * $column-margin);
 
 $site-width-mobile: $column-at-half + 2 * $column-margin;
 
+$black: #282828;
+
 @mixin wrapper-dark {
 	background-color: black;
 	background-image: url('/assets/bg-black-pattern.png');

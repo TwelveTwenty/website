@@ -18,7 +18,7 @@ body.apps {
 		text-align: center;
 		padding-top: 150px;
 
-		opacity: 0.4;
+		opacity: 1;
 		
 		-webkit-transition: opacity 0.3s ease;
 		-moz-transition: opacity 0.3s ease;
@@ -28,11 +28,7 @@ body.apps {
 	}
 
 	.app:hover {
-		opacity: 1;
-	}
-
-	a, a:visited, a:hover {
-		color: black;
+		opacity: 0.4;
 	}
 
 	.willitfit {
@@ -43,5 +39,11 @@ body.apps {
 	}
 	.gettogether {
 		background-image: url('/assets/apps/icon-gettogether.png');
+	}
+
+	.requirements {
+		background-color: $black;
+		padding-top: 5px;
+		background-image: none;
 	}
 }

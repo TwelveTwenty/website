@@ -71,13 +71,10 @@ body.debug-layout {
 /** This is inspired by Twitter Bootstrap */
 
 // For desktops
-.visible-phone     { display: none !important; }
-.visible-tablet    { display: none !important; }
+.visible-mobile    { display: none !important; }
+.hidden-mobile      { }
 .visible-desktop   { } // Don't set initially
-.hidden-phone      { }
-.hidden-tablet     { }
 .hidden-desktop    { display: none !important; }
-
 
 // Phones only
 @media (max-width: $site-width) {
@@ -99,8 +96,8 @@ body.debug-layout {
 		margin-bottom: 0px;
 	}
 
-	.visible-phone     { display: inherit !important; }
-	.hidden-phone      { display: none !important; }
+	.visible-mobile     { display: inherit !important; }
+	.hidden-mobile      { display: none !important; }
 	.hidden-desktop    { display: inherit !important; }
 	.visible-desktop   { display: none !important; }
 }
@@ -108,8 +105,8 @@ body.debug-layout {
 // Bigger than phone
 @media (min-width: $site-width) {
 
-	.visible-tablet    { display: inherit !important; }
-	.hidden-tablet     { display: none !important; }
+	.visible-mobile    { display: inherit !important; }
+	.hidden-mobile     { display: none !important; }
 	.hidden-desktop    { display: inherit !important; }
 	.visible-desktop   { display: none !important ; }
 }
