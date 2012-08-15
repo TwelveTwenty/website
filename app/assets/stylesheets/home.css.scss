@@ -4,30 +4,16 @@ body.home {
 
 	.apps {
 		list-style: none;
+		padding: 0px;
 
 		$padding-left: 216px;
 		$padding-right: 10px;
 
 		li {
-			height: 172px;
+			min-height: 172px;
 			background-repeat: no-repeat;
 			padding: 20px $padding-right 0 $padding-left;
 			cursor: pointer;
-
-			$speed: 0.1s;
-
-			-webkit-transition: all $speed ease;
-			-moz-transition: all $speed ease;
-			-ms-transition: all $speed ease;
-			-o-transition: all $speed ease;
-			transition: all $speed ease;
-
-		}
-
-		li:hover {
-			$animation-distance: 10px;
-			padding-left: $padding-left - $animation-distance;
-			padding-right: $padding-right + $animation-distance;
 		}
 
 		li.uberlayer {
@@ -42,9 +28,15 @@ body.home {
 			background-image: url('/assets/icongettogether.png');
 		}
 
+		@media (max-width: $site-width) {
+			li {
+				background-position: center top;
+				padding: 160px 50px 25px;
+				text-align: center;
+			}
+		}
 	}
-
-
+	//.apps
 
 	.wrapper.header {
 		@include wrapper-dark;
@@ -55,3 +47,5 @@ body.home {
 	}
 
 }
+
+//.home
