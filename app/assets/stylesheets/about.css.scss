@@ -1,3 +1,27 @@
-// Place all the styles related to the About controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body.about {
+	.people h2 {
+		background: url("/assets/about/dots.png");
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		padding-bottom: 18px;
+	}
+
+	.people ul {
+		background: url("/assets/about/iconemailtwitter.png");
+		background-repeat: no-repeat;
+		background-position: left top;
+		list-style: none;
+		padding-left: 70px;
+		padding-top: 12px;
+		min-height: 65px;
+	}
+
+	.people li {
+		padding-bottom: 5px;
+	}
+
+	.people li a {
+		color: white;
+		font-style: italic;
+	}
+}
