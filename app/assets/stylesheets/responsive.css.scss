@@ -1,3 +1,9 @@
+$site-width: 762px;
+$column-margin: 24px;
+$column-at-one-third: ($site-width - 4 * $column-margin) / 3;
+$column-at-half: ($site-width - 3 * $column-margin) / 2;
+$column-at-full: ($site-width - 2 * $column-margin);
+
 // For desktops
 .visible-phone     { display: none !important; }
 .visible-tablet    { display: none !important; }
@@ -6,10 +12,86 @@
 .hidden-tablet     { }
 .hidden-desktop    { display: none !important; }
 
-// Phones only
-@media (max-width: 758px) {
-	body {
+
+/** DEBUGGING LAYOUT */
+
+body.debug-layout {
+	background-color: blue !important;
+
+	@media (max-width: $site-width) {
 		background-color: orange !important;
+	}
+
+	.one-third {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwARpjGhiaUD+LGRBsABIEUwQLgATRBEACQIAw+IEbPD2jzoAAAAASUVORK5CYII=);
+	}
+
+	.half {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAL7rh5MY4TxQRwnbftZYAEYB8RmROaABADOIg6/PJ3T6QAAAABJRU5ErkJggg==);
+	}
+
+	.full {
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJElEQVQIW2NkYGAwBuKzQAwHjFAWigRMECQHl0AWhEugC4IlAPMHBDmyOst9AAAAAElFTkSuQmCC);
+	}
+
+}
+
+/** DEBUGGING LAYOUT END */
+
+.container {
+	margin: 0 auto;
+}
+
+.container {
+	width: 762px;
+}
+
+.row {
+	margin-bottom: 24px;
+}
+
+.row::after {
+	clear: both;
+}
+
+.row::before, .row::after {
+	display: table;
+	content: "";
+}
+
+.one-third, .half, .full {
+	float: left;
+	margin-left: 24px;
+}
+
+.one-third {
+	width: $column-at-one-third;
+}
+
+.half {
+	width: $column-at-half;
+}
+
+.full {
+	width: $column-at-full;
+}
+
+/** This is inspired by Twitter Bootstrap */
+
+// Phones only
+@media (max-width: $site-width) {
+
+	.container {
+		width: $column-at-half + 2 * $column-margin;
+	}
+
+	.one-third, .half, .full {
+		width: $column-at-half;
+		margin-bottom: 24px;
+	}
+
+	.row {
+		margin-bottom: 0px;
 	}
 
 	.visible-phone     { display: inherit !important; }
@@ -19,14 +101,7 @@
 }
 
 // Bigger than phone
-@media (min-width: 758px) {
-	body {
-		background-color: blue !important;
-	}
-
-	.container {
-
-	}
+@media (min-width: $site-width) {
 
 	.visible-tablet    { display: inherit !important; }
 	.hidden-tablet     { display: none !important; }

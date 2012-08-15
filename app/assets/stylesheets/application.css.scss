@@ -20,36 +20,20 @@
 }
 
 
-/**
-* HEADER END
-*/
+.light {
+	background-image: url('/assets/bg-white-pattern.png');
+	color: black;
+	a, a:hover, a:visited {
+		color: black;
+		background-color: transparent;
+	}
+}
 
-//
-//body {
-//	background-image: url('/assets/bg-white-pattern.png');
-//	padding-top: 43px;
-//}
-//
-//body > section#heading, body > footer {
-//	background-image: url('/assets/bg-black-pattern.png');
-//	color: white;
-//}
-//
-
-//section#heading {
-//	padding: 70px;
-//}
-//
-//section#heading .third {
-//	float: left;
-//	text-align: center;
-//}
-//
-
-//
-
-
-/**
-* Grid
-*/
-
+.dark {
+	background-image: url('/assets/bg-black-pattern.png');
+	color: white;
+	a, a:hover, a:visited {
+		color: white;
+		background-color: transparent;
+	}
+}
