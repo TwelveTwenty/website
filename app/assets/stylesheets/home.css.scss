@@ -38,11 +38,11 @@ body.home {
 	}
 	//.apps
 
-	.wrapper.header {
+	.wrapper.header, .wrapper.footer  {
 		@include wrapper-dark;
 	}
 
-	.wrapper.content, .wrapper.footer {
+	.wrapper.content{
 		@include wrapper-light;
 	}
 

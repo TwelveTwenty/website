@@ -33,3 +33,17 @@
 .wrapper.content {
 	padding: 39px 0;
 }
+
+.wrapper.footer {
+	text-align: center;
+	ul {
+		padding: 10px 0;
+		margin-left: -10px;
+	}
+
+	li {
+		list-style: none;
+		display: inline;
+		padding-left: 10px;
+	}
+}
