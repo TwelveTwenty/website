@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require reset
+ *= require layout
  *= require_self
  *= require_tree .
  */
@@ -19,6 +20,15 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+body .wrapper:before, body .wrapper:after {
+	content: "";
+	display: table;
+}
+
+body .wrapper:after {
+	clear: both;
 }
 
 .wrapper.header {

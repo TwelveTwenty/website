@@ -1,7 +1,26 @@
-<h1>Apps</h1>
-<%= image_tag "rails.png" %>
-<ul>
-	<li><%= link_to "uberlayer", :controller => :apps, :action => :show, :app => :uberlayer %></li>
-	<li><%= link_to "will it fit", :controller => :apps, :action => :show, :app => :willitfit %></li>
-	<li><%= link_to "get together", :controller => :apps, :action => :show, :app => :gettogether %></li>
-</ul>
+<h1 class="hidden">Apps</h1>
+<div class="column">
+	<section class="full centered">
+		<%= image_tag "logo-white.png" %>
+	</section>
+</div>
+
+
+<div class="column">
+	<div class="one-third">
+		<article class=" app uberlayer">
+			<h2><%= link_to "Uberlayer", :controller => :apps, :action => :show, :app => :uberlayer %></h2>
+		</article>
+	</div>
+	<div class="one-third">
+		<article class=" app willitfit">
+			<h2><%= link_to "Will it fit", :controller => :apps, :action => :show, :app => :willitfit %></h2>
+
+		</article>
+	</div>
+	<div class="one-third">
+		<article class="app gettogether">
+			<h3><%= link_to "Get Together", :controller => :apps, :action => :show, :app => :gettogether %></h3>
+		</article>
+	</div>
+</div>

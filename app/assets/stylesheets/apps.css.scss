@@ -1,3 +1,47 @@
-// Place all the styles related to the Apps controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "_variables.css.scss";
+
+body.apps {
+	.wrapper.header {
+		@include wrapper-light;
+	}
+
+	.wrapper.content, .wrapper.footer {
+		@include wrapper-dark;
+
+	}
+
+	.app {
+		margin-top: $column-margin;
+		background-position: center top;
+		background-repeat: no-repeat;
+		height: 200px;
+		text-align: center;
+		padding-top: 150px;
+
+		opacity: 0.4;
+		
+		-webkit-transition: opacity 0.3s ease;
+		-moz-transition: opacity 0.3s ease;
+		-ms-transition: opacity 0.3s ease;
+		-o-transition: opacity 0.3s ease;
+		transition: opacity 0.3s ease;
+	}
+
+	.app:hover {
+		opacity: 1;
+	}
+
+	a, a:visited, a:hover {
+		color: black;
+	}
+
+	.willitfit {
+		background-image: url('/assets/apps/icon-willitfit.png');
+	}
+	.uberlayer {
+		background-image: url('/assets/apps/icon-uberlayer.png');
+	}
+	.gettogether {
+		background-image: url('/assets/apps/icon-gettogether.png');
+	}
+}
