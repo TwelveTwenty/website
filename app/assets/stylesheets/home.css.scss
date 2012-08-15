@@ -1,23 +1,54 @@
-ul.apps {
+@import "_variables.css.scss";
 
-	list-style: none;
+body.home {
 
-	li {
-		height: 172px;
-		background-repeat: no-repeat;
-		padding-left: 236px;
+	.apps {
+		list-style: none;
+		padding: 0px;
+
+		$padding-left: 216px;
+		$padding-right: 10px;
+
+		li {
+			min-height: 172px;
+			background-repeat: no-repeat;
+			padding: 20px $padding-right 0 $padding-left;
+			cursor: pointer;
+		}
+
+		li.uberlayer {
+			background-image: url('/assets/iconuberlayer.png');
+		}
+
+		li.willitfit {
+			background-image: url('/assets/iconwillitfit.png');
+		}
+
+		li.gettogether {
+			background-image: url('/assets/icongettogether.png');
+		}
+
+		@media (max-width: $site-width) {
+			li {
+				background-position: center top;
+				padding: 160px 50px 25px;
+				text-align: center;
+			}
+		}
+	}
+	//.apps
+
+	.wrapper.header {
+		@include wrapper-dark;
 	}
 
-	li.uberlayer {
-		background-image: url('/assets/iconuberlayer.png');
+	.wrapper.content, .wrapper.footer {
+		@include wrapper-light;
 	}
 
-	li.willitfit {
-		background-image: url('/assets/iconwillitfit.png');
-	}
-
-	li.gettogether {
-		background-image: url('/assets/icongettogether.png');
+	.blog-teaser a {
+		color: black;
 	}
 
 }
+//.home

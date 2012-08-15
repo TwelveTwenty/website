@@ -65,19 +65,19 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 	</ul>
 </header>
 
-<div class="dark" id="heading">
+<div class="wrapper header" id="heading">
 	<div class="container">
 		<%= yield :header %>
 	</div>
 </div>
 
-<div class="light">
+<div class="wrapper content">
 	<div class="container">
 		<%= yield %>
 	</div>
 </div>
 
-<footer class="dark">
+<footer class="wrapper footer">
 	<div class="container">
 		<ul>
 			<li><a href="http://some-external-website.com">External footer link 1</a></li>

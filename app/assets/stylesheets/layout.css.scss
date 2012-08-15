@@ -21,6 +21,10 @@ body.debug-layout {
 		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJElEQVQIW2NkYGAwBuKzQAwHjFAWigRMECQHl0AWhEugC4IlAPMHBDmyOst9AAAAAElFTkSuQmCC);
 	}
 
+	.two-thirds {
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHUlEQVQIW2NkgAK11hNpjCA2iHGr2mIWI4wBEgQAm2QJ3Z7sbdcAAAAASUVORK5CYII=);
+	}
+
 }
 
 /** DEBUGGING LAYOUT END */
@@ -43,13 +47,17 @@ body.debug-layout {
 	content: "";
 }
 
-.one-third, .half, .full {
+.one-third, .half, .full, .two-thirds {
 	float: left;
 	margin-left: 24px;
 }
 
 .one-third {
 	width: $column-at-one-third;
+}
+
+.two-thirds {
+	width: $column-at-two-thirds;
 }
 
 .half {
@@ -82,7 +90,7 @@ body.debug-layout {
 		width: $site-width-mobile;
 	}
 
-	.one-third, .half, .full {
+	.one-third, .half, .full, .two-thirds {
 		width: $column-at-half;
 		margin-bottom: 24px;
 	}

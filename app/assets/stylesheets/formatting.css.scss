@@ -1,21 +1,38 @@
+@import "_variables.css.scss";
+
+body {
+	p, ol, ul, td {
+		font-size: 14px;
+		font-family: 'Poly', serif;
+		font-weight: normal;
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+}
+
 h1, h2, h3 {
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 	font-weight: normal;
 }
 
+h1 {
+	font-size: 25px;
+	line-height: 30px;
+}
+
+h2 {
+	font-size: 16px;
+	line-height: 20px;
+}
+
 em {
 	font-family: 'Poly', serif;
 }
 
-a, a:visited, a:hover {
+body a, body a:visited, body a:hover {
 	background-color: transparent;
-	color: inherit;
+	color: #e97058;
 	text-decoration: none;
-}
-
-section.body {
-	padding: 20px;
 }
 
 a.arrow {
@@ -25,10 +42,18 @@ a.arrow {
 	padding-right: 15px;
 }
 
-ul, h1 {
+body a:hover {
+	text-decoration: underline;
+}
+
+ul {
 	margin: 0;
 }
 
-h1 {
-	padding-top: 20px;
+.centered {
+	text-align: center;
+}
+
+.padded {
+	padding: $column-margin;
 }
