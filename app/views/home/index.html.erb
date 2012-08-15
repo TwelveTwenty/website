@@ -12,8 +12,7 @@
 			<h2>Latest tweets</h2>
 			<em>Get Together from
 				<a href="https://twitter.com/twelve_20">@twelve_20</a> is quite possibly one of the most beautiful and pleasant ways to plan social events
-				<a href="http://twelvetwenty.nl/gettogether">http://twelvetwenty.nl/gettogether</a>
-			</em>
+				<a href="http://twelvetwenty.nl/gettogether">http://twelvetwenty.nl/gettogether</a> </em>
 			<em>Follow us <a href="https://twitter.com/twelve_20">@twelve_20</a></em>
 		</section>
 	</div>
@@ -50,9 +49,15 @@
 	<% @blogs.each do |blog| %>
 
 		<%= link_to blog do %>
-			<article class="one-third padded">
-				<h3><%= blog.title %></h3>
-				<p><%= strip_tags blog.body.truncate(100) %></p>
+			<article class="one-third">
+				<header style="background-image: url('/assets/test-blog-teaser-image.png')"></header>
+				<div class="padded">
+					<h3><%= blog.title %></h3>
+					<p><%= strip_tags blog.body.truncate(100) %></p>
+					<em><%= link_to "read more", blog, :class => "arrow" %></em>
+				</div>
+				<footer>
+				</footer>
 			</article>
 		<% end %>
 
