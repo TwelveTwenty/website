@@ -29,3 +29,7 @@
 .wrapper.content, .wrapper.footer {
 	@include wrapper-dark;
 }
+
+.wrapper.content {
+	padding: 39px 0;
+}

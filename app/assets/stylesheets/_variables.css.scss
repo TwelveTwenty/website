@@ -12,10 +12,21 @@ $site-width-mobile: $column-at-half + 2 * $column-margin;
 	background-color: black;
 	background-image: url('/assets/bg-black-pattern.png');
 	color: white;
+
+	a {
+		h1, h2, h3 {
+			color: white;
+		}
+	}
 }
 
 @mixin wrapper-light {
 	background-color: white;
 	background-image: url('/assets/bg-white-pattern.png');
 	color: black;
+	a {
+		h1, h2, h3 {
+			color: black;
+		}
+	}
 }

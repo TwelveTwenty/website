@@ -57,12 +57,16 @@ body > header {
 	}
 
 	body > header {
+
+		background-image: url('/assets/nav-pattern.png');
+
 		width: auto;
 		position: relative;
 		background-repeat: repeat;
 		margin-bottom: $column-margin;
 
 		ul {
+			padding: 10px 0;
 			background-image: none;
 			height: auto;
 			line-height: 35px;
