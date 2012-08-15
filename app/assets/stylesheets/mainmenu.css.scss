@@ -1,0 +1,51 @@
+@import "_variables.css.scss";
+
+@media (max-width: $site-width) {
+
+}
+
+/**
+* HEADER
+*/
+
+body > header {
+	
+	position: fixed;
+	background-image: url('/assets/navigationstroke.png');
+	background-repeat: repeat-x;
+	width: 100%;
+	top: 0;
+
+	ul {
+
+		text-align: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		background-image: url('/assets/navigationpunt.png');
+		background-repeat: no-repeat;
+		background-position: top center;
+		line-height: 60px;
+		height: 90px;
+
+		li {
+			font-family: 'Oswald', sans-serif;
+			font-size: 13px;
+			padding: 0px 30px;
+			display: inline-block;
+			color: white;
+			text-transform: uppercase;
+		}
+
+		li.current {
+			text-decoration: underline;
+		}
+
+		a, a:visited, a:hover {
+			color: white;
+		}
+
+	}
+}
+

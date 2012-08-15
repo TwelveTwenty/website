@@ -1,0 +1,5 @@
+$site-width: 762px;
+$column-margin: 24px;
+$column-at-one-third: ($site-width - 4 * $column-margin) / 3;
+$column-at-half: ($site-width - 3 * $column-margin) / 2;
+$column-at-full: ($site-width - 2 * $column-margin);

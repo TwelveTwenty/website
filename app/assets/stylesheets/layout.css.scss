@@ -1,17 +1,4 @@
-$site-width: 762px;
-$column-margin: 24px;
-$column-at-one-third: ($site-width - 4 * $column-margin) / 3;
-$column-at-half: ($site-width - 3 * $column-margin) / 2;
-$column-at-full: ($site-width - 2 * $column-margin);
-
-// For desktops
-.visible-phone     { display: none !important; }
-.visible-tablet    { display: none !important; }
-.visible-desktop   { } // Don't set initially
-.hidden-phone      { }
-.hidden-tablet     { }
-.hidden-desktop    { display: none !important; }
-
+@import "_variables.css.scss";
 
 /** DEBUGGING LAYOUT */
 
@@ -77,6 +64,15 @@ body.debug-layout {
 }
 
 /** This is inspired by Twitter Bootstrap */
+
+// For desktops
+.visible-phone     { display: none !important; }
+.visible-tablet    { display: none !important; }
+.visible-desktop   { } // Don't set initially
+.hidden-phone      { }
+.hidden-tablet     { }
+.hidden-desktop    { display: none !important; }
+
 
 // Phones only
 @media (max-width: $site-width) {
