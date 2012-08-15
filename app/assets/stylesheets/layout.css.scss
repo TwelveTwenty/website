@@ -26,11 +26,8 @@ body.debug-layout {
 /** DEBUGGING LAYOUT END */
 
 .container {
-	margin: 0 auto;
-}
-
-.container {
 	width: 762px;
+	margin: 0 auto;
 }
 
 .row {
@@ -77,8 +74,12 @@ body.debug-layout {
 // Phones only
 @media (max-width: $site-width) {
 
+	body, html {
+		min-width: $site-width-mobile;
+	}
+
 	.container {
-		width: $column-at-half + 2 * $column-margin;
+		width: $site-width-mobile;
 	}
 
 	.one-third, .half, .full {

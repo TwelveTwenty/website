@@ -77,3 +77,91 @@ This is my current schema
 
 * `08:04` I just ran into a problem using a seed file: `/db/seeds.rb:20: invalid multibyte char (US-ASCII)`. I solved this by putting `# encoding: UTF-8` at the top of my Seed file
 * `13:22` Working on the CSS of the homepage
+
+# Wednesday, August 15th 2012
+
+* `10:01` I had a problem with iOS' viewport property, if you put it to `content="width=device-width"` the document becomes the extact width of the device, not the max width of the content. I fixed this with a min-width on the body.
+* `10:58` Have been working on a new layout system, therefor I have been looking at Twitter Bootstrap, to see how they do it. I also changed the column widths to be in whole pixels. (full site is 762px and the margins are 24px)
+
+This is the layout's css
+
+    .container {
+    	width: 762px;
+    	margin: 0 auto;
+    }
+
+    .row {
+    	margin-bottom: 24px;
+    }
+
+    .row::after {
+    	clear: both;
+    }
+
+    .row::before, .row::after {
+    	display: table;
+    	content: "";
+    }
+
+    .one-third, .half, .full {
+    	float: left;
+    	margin-left: 24px;
+    }
+
+    .one-third {
+    	width: $column-at-one-third;
+    }
+
+    .half {
+    	width: $column-at-half;
+    }
+
+    .full {
+    	width: $column-at-full;
+    }
+
+    /** This is inspired by Twitter Bootstrap */
+
+    // For desktops
+    .visible-phone     { display: none !important; }
+    .visible-tablet    { display: none !important; }
+    .visible-desktop   { } // Don't set initially
+    .hidden-phone      { }
+    .hidden-tablet     { }
+    .hidden-desktop    { display: none !important; }
+
+
+    // Phones only
+    @media (max-width: $site-width) {
+
+    	body, html {
+    		min-width: $site-width-mobile;
+    	}
+
+    	.container {
+    		width: $site-width-mobile;
+    	}
+
+    	.one-third, .half, .full {
+    		width: $column-at-half;
+    		margin-bottom: 24px;
+    	}
+
+    	.row {
+    		margin-bottom: 0px;
+    	}
+
+    	.visible-phone     { display: inherit !important; }
+    	.hidden-phone      { display: none !important; }
+    	.hidden-desktop    { display: inherit !important; }
+    	.visible-desktop   { display: none !important; }
+    }
+
+    // Bigger than phone
+    @media (min-width: $site-width) {
+
+    	.visible-tablet    { display: inherit !important; }
+    	.hidden-tablet     { display: none !important; }
+    	.hidden-desktop    { display: inherit !important; }
+    	.visible-desktop   { display: none !important ; }
+    }
