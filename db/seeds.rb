@@ -14,6 +14,7 @@ There have been times when I blamed the team, or parts of it, times when I blame
 Twelve Twenty is the place me and my like-minded colleagues have retreated to, escaping the single-serving development environment. This is the place where we can iterate, refine and polish as much as we deem necessary, with the hope people will want to use, enjoy and maybe sometimes learn from our apps.
 BLOG
 b.author = "Eric Paul"
+b.artwork = "/assets/dummy/test-blog-header.jpg"
 b.save
 
 
@@ -60,6 +61,7 @@ Five hours is just a nice block of time in which to get something done. Social m
 The center piece of our upcoming iPhone app <a href="/gettogether">GetTogether</a> is a week view of all your calendars. GetTogether hides early mornings and late nights and shows the rest of your schedule in the five hour grid. Of course events are shown to the minute, but in creating new events you're limited by design to stick to the grid segments. Although this might sounds awkward at first, it speeds up planning by a great deal, which leaves time for you to enjoy your day. Don't bother yourself with the exact times that “Launch party with Jankees and Timo” starts and ends, chances are you'll be talking to each other as the date draws closer. Just remember, any <em>good</em> party will last five hours!
 BLOG
 b.author = "Eric Paul"
+b.artwork = "/assets/dummy/test-blog-header.jpg"
 b.save
 
 b = Blog.new
@@ -69,7 +71,7 @@ b.body = <<-BLOG
 
 With the entire app merely existing out of these three steps, we took our time to make them as smooth and pleasant as possible. For example, you might notice that the ‘tokens’ that appear when you select friends from your address book, contain a color coding. We don’t want the app to clutter with the names of your friends, so when you're done editing them, the app summarizes any number of friends into just one token. That token gets a checkered ribbon with the colors corresponding to your friend’s position in your list of contacts.
 
-<a href="http://twelvetwenty.nl/blog/wp-content/uploads/2012/05/gt-token-series.png"><img class="alignnone size-full wp-image-71" title="gt-token-series" src="http://twelvetwenty.nl/blog/wp-content/uploads/2012/05/gt-token-series.png" alt="" width="590" height="38" /></a>
+<a href="http://twelvetwenty.nl/blog/wp-content/uploads/2012/05/gt-token-series.png"><img class="alignnone size-full wp-image-71" title="gt-token-series" src="http://twelvetwenty.nl/blog/wp-content/uploads/2012/05/gt-token-series.png" alt="" /></a>
 
 What we noticed after using the app for a while, is that it's not just a graphical addition to the app. When you have an iPhone for a couple of years, the number of contacts can easily become very high. Ranges of 500 to 1000 contacts are not exceptional. The color coding helps to get a sense of direction when scrolling through the long list of contacts.
 
@@ -80,14 +82,16 @@ b.save
 
 b = Blog.new
 b.title = "Physical dimensions on your computer screen"
+b.artwork = "/assets/dummy/test-blog-header.jpg"
 b.body = <<-BLOG
 <em>For designers and design aficionados we made "Will it fit". An OSX app to review your designs for print or other media at their true physical size. You can check out the short video that tells you all about Will it fit <a href="http://www.twelvetwenty.nl/willitfit" target="_blank">on the product page</a>.</em>
 
 At first we thought it would be a pretty simple and painless application to design and build. We ended up working on it for a couple of months. One thing to overcome was to determine the screen's PPI (pixels per inch) or pixel density. For this we need the <em><span style="color: #000000;">resolution</span></em> of the user's screen and the <em>physical </em><span style="color: #000000;"><em>size</em> of the display</span>. The physical size of any screen (e.g. 15,1 inches) is not a property we can detect or read somewhere, so we had to collect the data by hand. Most of the Apple displays are in our database by now, but for the screens that aren't, we had to make a calibration helper for the user determine the right physical dimensions.
 
-<img class="alignnone size-full wp-image-52" title="02_willitfit" src="http://twelvetwenty.nl/blog/wp-content/uploads/2012/05/02_willitfit2.png" alt="" width="560" height="146" />
+<img class="alignnone size-full wp-image-52" title="02_willitfit" src="http://twelvetwenty.nl/blog/wp-content/uploads/2012/05/02_willitfit2.png" alt="" />
 
 The user has to measure a line, to tell us how big their screen is. Next to it, we display a digital tape measure that changes its scale according to what you enter into the measure box. That way the user gets immediate feedback on whether he's entering the right dimensions.
 BLOG
 b.author = "Timo Kuilder"
+b.artwork = "/assets/dummy/test-blog-header.jpg"
 b.save

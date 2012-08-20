@@ -1,3 +1,42 @@
-// Place all the styles related to the Blogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "_variables.css.scss";
+
+body.blogs {
+	.wrapper.header {
+		padding: 0; /* hide header */
+	}
+
+	.wrapper.header, .wrapper.footer {
+		@include wrapper-dark;
+	}
+
+	.wrapper.content {
+		@include wrapper-light;
+	}
+
+	.wrapper h1 {
+		margin: 0px;
+	}
+
+	.wrapper.content img.artwork {
+		width: 100%;
+	}
+
+	.wrapper.content img {
+		max-width: 100%;
+	}
+
+	.wrapper.content p {
+		line-height: 1.4em;
+	}
+
+	article footer {
+		background-image: url('/assets/blog345-bottom.png');
+		height: 61px;
+		margin-bottom: 50px;
+	}
+
+	article .content {
+		background-image: url('/assets/blog345-side.png');
+		background-repeat: repeat-y;
+	}
+}

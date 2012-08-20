@@ -169,3 +169,10 @@ This is the layout's css
 # Monday, August 20th 2012
 
 * `13:43` Just finished the Contact page, is pretty straight forward with the css I created last week
+* `16:17` Just finished the blog layout, needs some new assets though found this neat Rails trick..
+
+Add a link with a block, so you can add HTML content
+
+    <%= link_to blog do %>
+    	<h1><%= blog.title %></h1>
+    <% end %>
