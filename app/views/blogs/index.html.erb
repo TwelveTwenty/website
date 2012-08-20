@@ -1,20 +1,4 @@
 <h1 class="hidden">Blog</h1>
 <% @blogs.each do |blog| %>
-	<article>
-		<%= image_tag blog.artwork, :class => "artwork" %>
-
-		<div class="content">
-			<div class="padded">
-				<header>
-					<%= link_to blog do %>
-						<h1><%= blog.title %></h1>
-					<% end %>
-					<h2>Written by <%= blog.author %></h2>
-				</header>
-				<%= simple_format blog.body %>
-			</div>
-		</div>
-		<footer></footer>
-
-	</article>
+	<%= render "blog", :blog => blog %>
 <% end %>
