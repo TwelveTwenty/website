@@ -1,34 +1,30 @@
-<div class="row">
-	<section class="one-third">
-		Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
-	</section>
+<% content_for :header do %>
 
-	<section class="one-third">
-		Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
-	</section>
+	<div class="column" xmlns="http://www.w3.org/1999/html">
+		<section class="full centered">
+			<%= image_tag "logo-white.png" %>
+		</section>
+	</div>
 
-	<section class="one-third">
-		Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
-	</section>
-</div>
 
-<div class="row">
-	<section class="half">
-		Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
-	</section>
+<% end %>
 
-	<section class="half">
-		Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
-	</section>
-</div>
 
-<div class="row">
-	<section class="full">
+<div class="column">
+	<section class="two-thirds">
 		<h1>Contact</h1>
-		<p>Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
-		<ul>
-			<li><a href="mailto:x@x.com">Send us email</a></li>
-			<li><a href="http://twitter.com/x">Follow us on Rwitter</a></li>
-		</ul>
+		<p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+		<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+	</section>
+</div>
+
+<div class="column contact-us">
+	<section class="half centered">
+		<%= image_tag "contact/iconmail.png" %>
+		<a href="">SEND US AN EMAIL<%= image_tag "contact/btnarrow.png" %></a>
+	</section>
+	<section class="half centered">
+		<%= image_tag "contact/icontwitter.png" %>
+		<a href="">FOLLOW US ON TWITTER<%= image_tag "contact/btnarrow.png" %></a>
 	</section>
 </div>

@@ -1,3 +1,47 @@
-// Place all the styles related to the Contact controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "_variables.css.scss";
+
+body.contact {
+	h1 {
+		font-size: 18px;
+		padding-left: 40px;
+		background-image: url('/assets/contact/red-dots.png');
+		background-repeat: no-repeat;
+		background-position: center left;
+	}
+	p {
+		padding-left: 40px;
+	}
+
+	.contact-us section {
+		height: 210px;
+		margin-top: 40px;
+		background-image: url('/assets/contact/bgbtn.png');
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		position: relative;
+	}
+
+	.contact-us a {
+		position: absolute;
+		bottom: 15px;
+		left: 55px;
+
+		width: 236px;
+		height: 45px;
+
+		line-height: 45px;
+		font-family: $oswald;
+		font-size: 15px;
+		color: white;
+
+		background-image: url('/assets/contact/btn.png');
+	}
+	.contact-us a:hover {
+		text-decoration: none;
+	}
+
+	.contact-us a img {
+		margin: 4px;
+		float: right;
+	}
+}

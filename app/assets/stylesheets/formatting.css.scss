@@ -11,7 +11,7 @@ body {
 
 h1, h2, h3 {
 	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
+	font-family: $oswald;
 	font-weight: normal;
 }
 
@@ -26,7 +26,7 @@ h2 {
 }
 
 em {
-	font-family: 'Poly', serif;
+	font-family: $poly;
 }
 
 body a, body a:visited, body a:hover {

@@ -165,3 +165,7 @@ This is the layout's css
     	.hidden-desktop    { display: inherit !important; }
     	.visible-desktop   { display: none !important ; }
     }
+
+# Monday, August 20th 2012
+
+* `13:43` Just finished the Contact page, is pretty straight forward with the css I created last week
