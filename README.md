@@ -79,10 +79,10 @@ Open your web browser at 127.0.0.1:3000 to view the project
 
 Run these rake tasks (I'm using the [asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html))
 
-	$ rake db:create
-	$ rake db:migrate
-	$ rake assets:precompile
-	$ rake db:seed
+	$ rake db:create RAILS_ENV=production
+	$ rake db:migrate RAILS_ENV=production
+	$ rake assets:precompile RAILS_ENV=production
+	$ rake db:seed RAILS_ENV=production
 
 Then start the rails server with this command:
 
