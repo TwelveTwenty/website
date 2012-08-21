@@ -1,5 +1,17 @@
 @import "_variables.css.scss";
 
+::-moz-selection {
+	color: white;
+    background: $red;
+    text-shadow: none;
+}
+
+::selection {
+	color: white;
+    background: $red;
+    text-shadow: none;
+}
+
 body {
 	font-size: 14px;
 
@@ -7,18 +19,6 @@ body {
 		font-family: 'Poly', serif;
 		font-weight: normal;
 		-webkit-font-smoothing: subpixel-antialiased;
-	}
-
-	::-moz-selection {
-		color: white;
-	    background: $black;
-	    text-shadow: none;
-	}
-
-	::selection {
-		color: white;
-	    background: $black;
-	    text-shadow: none;
 	}
 
 }
@@ -45,7 +45,7 @@ em {
 
 body a, body a:visited, body a:hover {
 	background-color: transparent;
-	color: #e97058;
+	color: $red;
 	text-decoration: none;
 }
 
