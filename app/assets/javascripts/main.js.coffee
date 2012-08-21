@@ -3,7 +3,18 @@ main.js.coffee
 ###
 
 class Main
+
 	constructor: ->
+		@addScrollListeners()
+		@enableResposiveMenu()
+
+	addScrollListeners: ->
+		@spacer = ($ 'body > header .spacer')
+		($ document).bind "touchmove", => @handleScroll()
+		($ window).scroll => @handleScroll()
+		@handleScroll()
+
+	enableResposiveMenu: ->
 		@list = ($ '.main-menu')
 		@header = @list.closest('header')
 
@@ -22,4 +33,14 @@ class Main
 				@header.removeClass('closed')
 				@header.addClass('open')
 
-	($ document).ready -> new Main()
+	handleScroll: ->
+		pos = ($ window).scrollTop()
+		c = ($ "#logo")
+		delta = Math.max(200 - pos, 0)
+		if delta is 0
+			@spacer.addClass('show')
+		else
+			@spacer.removeClass('show')
+
+
+($ document).ready -> new Main()
