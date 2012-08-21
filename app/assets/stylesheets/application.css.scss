@@ -45,6 +45,7 @@ body .wrapper:after {
 }
 
 .wrapper.footer {
+	padding: 10px 0;
 	text-align: center;
 	ul {
 		padding: 10px 0;
@@ -56,4 +57,10 @@ body .wrapper:after {
 		display: inline;
 		padding-left: 10px;
 	}
+}
+
+.footer-border {
+	height: 8px;
+	background-image: url('/assets/footerpattern.png');
+	background-repeat: repeat-x;
 }
