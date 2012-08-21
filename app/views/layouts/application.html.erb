@@ -84,7 +84,15 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 			<li><%= link_to image_tag("icontwitter.png"), "http://twitter.com/twelve_20" %></li>
 			<li><%= link_to image_tag("iconfacebook.png"), "https://www.facebook.com/pages/Twelve-Twenty/427990657252433" %></li>
 		</ul>
+
+	  <% if current_user %>
+		Signed in as <strong><%= current_user.name %></strong>!
+		<%= link_to "Sign out", signout_path, id: "sign_out" %>
+	  <% else %>
+		<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+	  <% end %>
 	</div>
+
 </footer>
 
 <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
