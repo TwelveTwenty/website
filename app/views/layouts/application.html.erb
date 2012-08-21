@@ -55,14 +55,25 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 </p><![endif]-->
 
 <header>
-	<ul>
-		<li class="<%= "current" if params[:controller] == "home" %>"><%= link_to_unless_current "home", {:controller => :home} %></li>
-		<li class="<%= "current" if params[:controller] == "apps" %>"><%= link_to_unless_current "Apps", :controller => :apps %></li>
-		<li class="<%= "current" if params[:controller] == "about" %>"><%= link_to_unless_current "About", :controller => :about %></li>
-		<li class="<%= "current" if params[:controller] == "goodies" %>"><%= link_to_unless_current "Goodies", :controller => :goodies %></li>
-		<li class="<%= "current" if params[:controller] == "contact" %>"><%= link_to_unless_current "Contact", :controller => :contact %></li>
-		<li class="<%= "current" if params[:controller] == "blog" %>"><%= link_to_unless_current "Blog", :controller => :blogs %></li>
-	</ul>
+	<div class="container main-menu-toggle hidden-desktop">
+		<ul class="toggle-menu">
+			<li id="toggle-button" class="toggle-button">
+				<div class="arrow"><%= image_tag "menu-arrow.png" %></div>
+				MENU
+			</li>
+		</ul>
+	</div>
+	<div class="divider"></div>
+	<div class="container">
+		<ul class="main-menu">
+			<li class="item <%= "current" if params[:controller] == "home" %>"><%= link_to_unless_current "home", {:controller => :home} %></li>
+			<li class="item <%= "current" if params[:controller] == "apps" %>"><%= link_to_unless_current "Apps", :controller => :apps %></li>
+			<li class="item <%= "current" if params[:controller] == "about" %>"><%= link_to_unless_current "About", :controller => :about %></li>
+			<li class="item <%= "current" if params[:controller] == "goodies" %>"><%= link_to_unless_current "Goodies", :controller => :goodies %></li>
+			<li class="item <%= "current" if params[:controller] == "contact" %>"><%= link_to_unless_current "Contact", :controller => :contact %></li>
+			<li class="item <%= "current" if params[:controller] == "blog" %>"><%= link_to_unless_current "Blog", :controller => :blogs %></li>
+		</ul>
+	</div>
 </header>
 
 <div class="wrapper header" id="heading">
@@ -77,7 +88,6 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 	</div>
 </div>
 
-
 <footer class="wrapper footer">
 	<div class="container">
 		<ul>
@@ -85,12 +95,12 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 			<li><%= link_to image_tag("facebook-up.png"), "https://www.facebook.com/pages/Twelve-Twenty/427990657252433" %></li>
 		</ul>
 
-	  <% if current_user %>
-		Signed in as <strong><%= current_user.name %></strong>!
-		<%= link_to "Sign out", signout_path, id: "sign_out" %>
-	  <% else %>
-		<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-	  <% end %>
+		<% if current_user %>
+			Signed in as <strong><%= current_user.name %></strong>!
+			<%= link_to "Sign out", signout_path, id: "sign_out" %>
+		<% else %>
+			<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+		<% end %>
 	</div>
 
 </footer>

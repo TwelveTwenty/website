@@ -70,12 +70,6 @@ body.debug-layout {
 
 /** This is inspired by Twitter Bootstrap */
 
-// For desktops
-.visible-mobile    { display: none !important; }
-.hidden-mobile      { }
-.visible-desktop   { } // Don't set initially
-.hidden-desktop    { display: none !important; }
-
 // Phones only
 @media (max-width: $site-width) {
 
@@ -99,14 +93,13 @@ body.debug-layout {
 	.visible-mobile     { display: inherit !important; }
 	.hidden-mobile      { display: none !important; }
 	.hidden-desktop    { display: inherit !important; }
-	.visible-desktop   { display: none !important; }
+	.visible-desktop   { display: inherit !important; }
 }
 
 // Bigger than phone
 @media (min-width: $site-width) {
-
 	.visible-mobile    { display: inherit !important; }
-	.hidden-mobile     { display: none !important; }
-	.hidden-desktop    { display: inherit !important; }
+	.hidden-mobile     { display: inherit !important; }
+	.hidden-desktop    { display: none !important; }
 	.visible-desktop   { display: none !important ; }
 }
