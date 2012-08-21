@@ -1,0 +1,9 @@
+{"frames":{
+	"regY":0,
+	"width":141,
+	"count":52,
+	"regX":0,
+	"height":161
+}, "animations":{
+	"all":[0, 51]
+}, "images":["/assets/animations/logo-animatie-zwart-helft.png"]}
