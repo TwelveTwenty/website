@@ -34,13 +34,26 @@ body.blogs {
 	}
 
 	article footer {
-		background-image: url('/assets/blog345-bottom.png');
+		background-image: url('/assets/blog762-bottom.png');
 		height: 61px;
 		margin-bottom: 50px;
 	}
 
 	article .content {
-		background-image: url('/assets/blog345-side.png');
+		background-image: url('/assets/blog762-side.png');
 		background-repeat: repeat-y;
+	}
+}
+
+@media (max-width: $site-width) {
+
+	body.blogs {
+		article footer {
+			background-image: url('/assets/blog345-bottom.png');
+		}
+
+		article .content {
+			background-image: url('/assets/blog345-side.png');
+		}
 	}
 }
