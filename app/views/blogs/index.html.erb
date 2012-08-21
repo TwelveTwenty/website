@@ -1,4 +1,6 @@
 <h1 class="hidden">Blog</h1>
-<% @blogs.each do |blog| %>
-	<%= render "blog", :blog => blog %>
-<% end %>
+<div class="container">
+	<% @blogs.each do |blog| %>
+		<%= render "blog", :blog => blog %>
+	<% end %>
+</div>

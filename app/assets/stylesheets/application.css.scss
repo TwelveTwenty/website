@@ -40,7 +40,7 @@ body .wrapper:after {
 	@include wrapper-dark;
 }
 
-.wrapper.content {
+.wrapper.content .container {
 	padding: 39px 0;
 }
 
@@ -60,6 +60,7 @@ body .wrapper:after {
 }
 
 .footer-border {
+	margin-top: 18px;
 	height: 8px;
 	background-image: url('/assets/footerpattern.png');
 	background-repeat: repeat-x;

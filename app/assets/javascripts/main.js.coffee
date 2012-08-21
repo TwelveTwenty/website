@@ -29,7 +29,7 @@ class Main
 			else
 				# now open
 				height = @list.find('li:first').outerHeight() * @list.find('li').length
-				@list.css('height', height + 20 + 'px')
+				@list.css('height', height - 10 + 'px')
 				@header.removeClass('closed')
 				@header.addClass('open')
 
