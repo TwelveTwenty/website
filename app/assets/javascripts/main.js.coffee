@@ -36,7 +36,7 @@ class Main
 	handleScroll: ->
 		pos = ($ window).scrollTop()
 		c = ($ "#logo")
-		delta = Math.max(200 - pos, 0)
+		delta = Math.max(160 - pos, 0)
 		if delta is 0
 			@spacer.addClass('show')
 		else
