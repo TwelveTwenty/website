@@ -7,6 +7,19 @@ body {
 		font-weight: normal;
 		-webkit-font-smoothing: subpixel-antialiased;
 	}
+
+	::-moz-selection {
+		color: white;
+	    background: $black;
+	    text-shadow: none;
+	}
+
+	::selection {
+		color: white;
+	    background: $black;
+	    text-shadow: none;
+	}
+
 }
 
 h1, h2, h3 {
