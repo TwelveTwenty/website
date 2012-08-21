@@ -1,8 +1,9 @@
 @import "_variables.css.scss";
 
 body {
+	font-size: 14px;
+
 	p, ol, ul, td {
-		font-size: 14px;
 		font-family: 'Poly', serif;
 		font-weight: normal;
 		-webkit-font-smoothing: subpixel-antialiased;
