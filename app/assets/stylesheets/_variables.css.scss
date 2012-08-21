@@ -10,8 +10,8 @@ $site-width-mobile: $column-at-half + 2 * $column-margin;
 
 $black: #282828;
 
-$oswald: 'Oswald', sans-serif;
-$poly: 'Poly', serif;
+$oswald: 'Oswald', Tahoma, sans-serif;
+$poly: 'Poly', Georgia, serif;
 
 
 @mixin wrapper-dark {
@@ -29,10 +29,10 @@ $poly: 'Poly', serif;
 @mixin wrapper-light {
 	background-color: white;
 	background-image: url('/assets/bg-white-pattern.png');
-	color: black;
+	color: $black;
 	a {
 		h1, h2, h3 {
-			color: black;
+			color: $black;
 		}
 	}
 }
