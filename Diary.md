@@ -176,3 +176,11 @@ Add a link with a block, so you can add HTML content
     <%= link_to blog do %>
     	<h1><%= blog.title %></h1>
     <% end %>
+
+# Tuesday, August 21th 2012
+
+* Doing a lot of css coding, nothing special to tell in the diary
+
+# Wednesday, August 22th 2012
+
+* Doing a lot of css coding, nothing special to tell in the diary
