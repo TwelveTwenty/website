@@ -41,6 +41,8 @@ class Logo
 
 		@logoAnimation.onAnimationEnd = =>
 			@logoAnimation.gotoAndStop(50)
+			Ticker.setFPS 0
+			Ticker.setPaused(true)
 
 		@logoAnimation.play()
 
