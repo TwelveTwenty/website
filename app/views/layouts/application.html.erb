@@ -66,13 +66,13 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 	<div class="divider"></div>
 	<div class="container">
 		<ul class="main-menu">
-			<li class="item <%= "current" if params[:controller] == "home" %>"><%= link_to_unless_current "home", {:controller => :home} %></li>
-			<li class="item <%= "current" if params[:controller] == "apps" %>"><%= link_to_unless_current "Apps", :controller => :apps %></li>
-			<li class="item <%= "current" if params[:controller] == "about" %>"><%= link_to_unless_current "About", :controller => :about %></li>
+			<li class="item <%= "current" if params[:controller] == "home" %>"><%= link_to "home", {:controller => :home} %></li>
+			<li class="item <%= "current" if params[:controller] == "apps" %>"><%= link_to "Apps", :controller => :apps %></li>
+			<li class="item <%= "current" if params[:controller] == "about" %>"><%= link_to "About", :controller => :about %></li>
 			<li class="item spacer">&nbsp;</li>
-			<li class="item <%= "current" if params[:controller] == "goodies" %>"><%= link_to_unless_current "Goodies", :controller => :goodies %></li>
-			<li class="item <%= "current" if params[:controller] == "contact" %>"><%= link_to_unless_current "Contact", :controller => :contact %></li>
-			<li class="item <%= "current" if params[:controller] == "blog" %>"><%= link_to_unless_current "Blog", :controller => :blogs %></li>
+			<li class="item <%= "current" if params[:controller] == "goodies" %>"><%= link_to "Goodies", :controller => :goodies %></li>
+			<li class="item <%= "current" if params[:controller] == "contact" %>"><%= link_to "Contact", :controller => :contact %></li>
+			<li class="item <%= "current" if params[:controller] == "blogs" %>"><%= link_to "Blog", :controller => :blogs %></li>
 		</ul>
 	</div>
 </header>

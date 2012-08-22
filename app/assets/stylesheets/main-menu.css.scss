@@ -58,8 +58,9 @@ body > header {
 		background-position: center 10px;
 	}
 
-	li.current {
-		text-decoration: underline;
+	li.current a {
+		border-top: white 1px solid;
+		border-bottom: white 1px solid;
 	}
 
 	a, a:visited, a:hover {
@@ -126,6 +127,9 @@ body > header {
 
 	.item.current {
 		opacity: 1;
+	}
+	.item.current a {
+		border-width: 0;
 	}
 
 	.item {
