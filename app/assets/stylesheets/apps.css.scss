@@ -2,6 +2,8 @@
 
 body.apps {
 
+	@include dark-light;
+
 	.app {
 		margin-top: $column-margin;
 		background-position: center top;
@@ -33,6 +35,7 @@ body.apps {
 	}
 
 	.requirements {
+		color: white;
 		background-color: $black;
 		padding-top: 5px;
 		background-image: none;
