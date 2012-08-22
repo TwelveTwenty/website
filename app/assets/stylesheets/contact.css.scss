@@ -1,4 +1,4 @@
-@import "_variables.css.scss";
+@import "_variables-mixins.css.scss";
 
 body.contact {
 	h1 {
@@ -36,6 +36,7 @@ body.contact {
 
 		background-image: url('/assets/contact/btn.png');
 	}
+
 	.contact-us a:hover {
 		text-decoration: none;
 	}

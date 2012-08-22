@@ -1,17 +1,11 @@
-@import "_variables.css.scss";
+@import "_variables-mixins.css.scss";
 
 body.blogs {
 	.wrapper.header {
 		padding: 0; /* hide header */
 	}
 
-	.wrapper.header, .wrapper.footer {
-		@include wrapper-dark;
-	}
-
-	.wrapper.content {
-		@include wrapper-light;
-	}
+	@include dark-light;
 
 	.wrapper h1 {
 		margin: 0px;

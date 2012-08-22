@@ -1,13 +1,5 @@
-@import "_variables.css.scss";
+@import "_variables-mixins.css.scss";
 
 body.goodies {
-
-	.wrapper.header, .wrapper.footer {
-		@include wrapper-dark;
-	}
-
-	.wrapper.content {
-		@include wrapper-light;
-	}
-
+	@include dark-light;
 }

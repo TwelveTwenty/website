@@ -14,7 +14,7 @@
  *= require_tree .
  */
 
-@import "_variables.css.scss";
+@import "_variables-mixins.css.scss";
 
 * {
 	-moz-box-sizing: border-box;
@@ -29,15 +29,6 @@ body .wrapper:before, body .wrapper:after {
 
 body .wrapper:after {
 	clear: both;
-}
-
-.wrapper.header {
-	padding: 39px 0;
-	@include wrapper-light;
-}
-
-.wrapper.content, .wrapper.footer {
-	@include wrapper-dark;
 }
 
 .wrapper.content .container {
@@ -60,8 +51,11 @@ body .wrapper:after {
 }
 
 .footer-border {
-	margin-top: 0px;
+	margin-top: 30px;
 	height: 8px;
 	background-image: url('/assets/footerpattern.png');
 	background-repeat: repeat-x;
 }
+
+// light - dark is default
+@include light-dark;

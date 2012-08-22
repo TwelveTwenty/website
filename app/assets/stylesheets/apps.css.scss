@@ -1,13 +1,6 @@
-@import "_variables.css.scss";
+@import "_variables-mixins.css.scss";
 
 body.apps {
-	.wrapper.header {
-		@include wrapper-light;
-	}
-
-	.wrapper.content, .wrapper.footer {
-		@include wrapper-dark;
-	}
 
 	.app {
 		margin-top: $column-margin;
