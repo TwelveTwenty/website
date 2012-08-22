@@ -95,3 +95,37 @@ BLOG
 b.author = "Timo Kuilder"
 b.artwork = "/assets/dummy/test-blog-header.jpg"
 b.save
+
+g = Goody.new
+g.title = "Test goody"
+g.author = "Timo danger"
+g.thumb_url = "/assets/dummy/test-blog-header.jpg"
+g.download_url = "twelvetwenty.nl/downloadurl"
+g.teaser = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+g.body = <<-BLOG
+<em>For designers and design aficionados we made "Will it fit". An OSX app to review your designs for print or other media at their true physical size. You can check out the short video that tells you all about Will it fit <a href="http://www.twelvetwenty.nl/willitfit" target="_blank">on the product page</a>.</em>
+
+At first we thought it would be a pretty simple and painless application to design and build. We ended up working on it for a couple of months. One thing to overcome was to determine the screen's PPI (pixels per inch) or pixel density. For this we need the <em><span style="color: #000000;">resolution</span></em> of the user's screen and the <em>physical </em><span style="color: #000000;"><em>size</em> of the display</span>. The physical size of any screen (e.g. 15,1 inches) is not a property we can detect or read somewhere, so we had to collect the data by hand. Most of the Apple displays are in our database by now, but for the screens that aren't, we had to make a calibration helper for the user determine the right physical dimensions.
+
+<img class="alignnone size-full wp-image-52" title="02_willitfit" src="http://twelvetwenty.nl/blog/wp-content/uploads/2012/05/02_willitfit2.png" alt="" />
+
+The user has to measure a line, to tell us how big their screen is. Next to it, we display a digital tape measure that changes its scale according to what you enter into the measure box. That way the user gets immediate feedback on whether he's entering the right dimensions.
+BLOG
+g.save
+
+g = Goody.new
+g.title = "Website open source"
+g.author = "Jankees"
+g.thumb_url = "/assets/dummy/test-blog-header.jpg"
+g.download_url = "twelvetwenty.nl/downloadurl"
+g.teaser = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+g.body = <<-BLOG
+<em>For designers and design aficionados we made "Will it fit". An OSX app to review your designs for print or other media at their true physical size. You can check out the short video that tells you all about Will it fit <a href="http://www.twelvetwenty.nl/willitfit" target="_blank">on the product page</a>.</em>
+
+At first we thought it would be a pretty simple and painless application to design and build. We ended up working on it for a couple of months. One thing to overcome was to determine the screen's PPI (pixels per inch) or pixel density. For this we need the <em><span style="color: #000000;">resolution</span></em> of the user's screen and the <em>physical </em><span style="color: #000000;"><em>size</em> of the display</span>. The physical size of any screen (e.g. 15,1 inches) is not a property we can detect or read somewhere, so we had to collect the data by hand. Most of the Apple displays are in our database by now, but for the screens that aren't, we had to make a calibration helper for the user determine the right physical dimensions.
+
+<img class="alignnone size-full wp-image-52" title="02_willitfit" src="http://twelvetwenty.nl/blog/wp-content/uploads/2012/05/02_willitfit2.png" alt="" />
+
+The user has to measure a line, to tell us how big their screen is. Next to it, we display a digital tape measure that changes its scale according to what you enter into the measure box. That way the user gets immediate feedback on whether he's entering the right dimensions.
+BLOG
+g.save
