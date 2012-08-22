@@ -31,7 +31,7 @@ body .wrapper:after {
 	clear: both;
 }
 
-.wrapper.content .container {
+.wrapper.content {
 	padding: 39px 0;
 }
 
@@ -51,7 +51,6 @@ body .wrapper:after {
 }
 
 .footer-border {
-	margin-top: 30px;
 	height: 8px;
 	background-image: url('/assets/footerpattern.png');
 	background-repeat: repeat-x;
