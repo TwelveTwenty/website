@@ -17,6 +17,9 @@ body.apps {
 		text-align: center;
 		padding-top: 150px;
 
+		display: inline-block;
+		width: 133px;
+
 		-webkit-transition: opacity 0.3s ease;
 		-moz-transition: opacity 0.3s ease;
 		-ms-transition: opacity 0.3s ease;
@@ -27,9 +30,11 @@ body.apps {
 	.willitfit {
 		background-image: url('/assets/apps/icon-willitfit.png');
 	}
+
 	.uberlayer {
 		background-image: url('/assets/apps/icon-uberlayer.png');
 	}
+
 	.gettogether {
 		background-image: url('/assets/apps/icon-gettogether.png');
 	}
