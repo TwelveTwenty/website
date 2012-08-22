@@ -17,17 +17,11 @@ body.apps {
 		text-align: center;
 		padding-top: 150px;
 
-		opacity: 1;
-		
 		-webkit-transition: opacity 0.3s ease;
 		-moz-transition: opacity 0.3s ease;
 		-ms-transition: opacity 0.3s ease;
 		-o-transition: opacity 0.3s ease;
 		transition: opacity 0.3s ease;
-	}
-
-	.app:hover {
-		opacity: 0.4;
 	}
 
 	.willitfit {
