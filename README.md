@@ -19,6 +19,18 @@ Ensure you have the latest version of Ruby I'm using 1.9.3p194
 
 If you don't have the latest consider installing [rbenv](https://github.com/sstephenson/rbenv/#section_2) and [Ruby build](https://github.com/sstephenson/ruby-build#installation)
 
+First install [Homebrew](http://mxcl.github.com/homebrew/) to install [ImageMagic](https://github.com/mxcl/homebrew/blob/master/Library/Formula/imagemagick.rb) (if you haven't got it already)
+
+	$ ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+
+Then install ImageMagic
+
+	$ brew install imagemagick
+	# ==> Installing imagemagick dependency: pkg-config
+    # ==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/pkg-config-0.27.mountainlion.bottle.tar.gz
+    # [...]
+
+
 Open the terminal and install `bundler`
 
     $ gem install bundler

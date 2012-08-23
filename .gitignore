@@ -18,3 +18,4 @@
 
 # ignore assets from asset pipeline
 public/assets/
+public/uploads/
