@@ -2,7 +2,7 @@
 
 body.apps {
 
-	@include dark-light;
+	@include light-dark;
 
 	.app {
 		margin-top: $column-margin;
