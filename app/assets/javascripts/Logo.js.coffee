@@ -1,25 +1,24 @@
 class Logo
 	constructor: ->
-
-		@logo = ($ "img[src='/assets/logo-white.png']:first")
-
-		if @logo.length is 0
-			@logo = ($ "img[src='/assets/logo.png']:first")
-			@black = true
-
+		@logo = ($ "[data-animate='logo']")
+		@color = @logo.data('color')
+		@canvas = ($ "<canvas class='logo block'></canvas>").insertBefore(@logo)
 		@logo.load => @imageLoaded() if @logo.length > 0
+		@logo.hide()
+
 
 	imageLoaded: ->
-		width = @logo.outerWidth('width')
-		height = @logo.outerHeight('height')
+		width = @logo.outerWidth()
+		height = @logo.outerHeight()
 
-		@canvas = ($ "<canvas width='#{width}' height='#{height}' class='logo block'></canvas>").insertBefore(@logo)
-		@logo.remove()
+		@canvas.attr('width',width)
+		@canvas.attr('height',height)
+
+
 
 		@stage = new Stage @canvas.get(0)
 
-
-		if @black
+		if @color is 'black'
 			url = "/assets/animations/logo-animatie-zwart-helft.json"
 		else
 			url = "/assets/animations/logo-animatie-wit-helft.json"
