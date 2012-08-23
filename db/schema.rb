@@ -11,21 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120821071125) do
+ActiveRecord::Schema.define(:version => 20120823111921) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
     t.string   "author"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.text     "body"
     t.string   "artwork"
+    t.datetime "publish_date"
   end
 
   create_table "goodies", :force => true do |t|
     t.string   "title"
     t.string   "author"
-    t.string   "thumb_url"
+    t.string   "thumb"
     t.string   "download_url"
     t.text     "teaser"
     t.text     "body"
