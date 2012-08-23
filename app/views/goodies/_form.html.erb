@@ -1,41 +1,54 @@
 <%= form_for(@goody) do |f| %>
-  <% if @goody.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@goody.errors.count, "error") %> prohibited this goody from being saved:</h2>
+	<% if @goody.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@goody.errors.count, "error") %> prohibited this goody from being saved:</h2>
 
-      <ul>
-      <% @goody.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+			<ul>
+				<% @goody.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 
-  <div class="field">
-    <%= f.label :title, "title" %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :author, "author" %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :thumb_url, "thumb url" %><br />
-    <%= f.text_field :thumb_url %>
-  </div>
-  <div class="field">
-    <%= f.label :download_url, "download url" %><br />
-    <%= f.text_field :download_url %>
-  </div>
-  <div class="field">
-    <%= f.label :teaser, "teaser" %><br />
-    <%= f.text_area :teaser %>
-  </div>
-  <div class="field">
-    <%= f.label :body, "body" %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit "go" %>
-  </div>
+	<div class="field">
+		<%= f.label :title, "title" %>
+		<br/>
+		<%= f.text_field :title %>
+	</div>
+
+	<div class="field">
+		<%= f.label :author, "author" %>
+		<br/>
+		<%= f.text_field :author %>
+	</div>
+
+	<div class="field">
+		<%= f.label :thumb_url, "thumb url" %>
+		<br/>
+		<%= f.file_field :thumb_url %>
+	</div>
+
+	<div class="field">
+		<%= f.label :download_url, "download url" %>
+		<br/>
+		<%= f.text_field :download_url %>
+	</div>
+
+	<div class="field">
+		<%= f.label :teaser, "teaser" %>
+		<br/>
+		<%= f.text_area :teaser %>
+	</div>
+
+	<div class="field">
+		<%= f.label :body, "body" %>
+		<br/>
+		<%= f.text_area :body %>
+	</div>
+
+	<div class="actions">
+		<%= f.submit "go" %>
+	</div>
+
 <% end %>

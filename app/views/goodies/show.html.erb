@@ -1,35 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @goody.title %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @goody.author %>
-</p>
-
-<p>
-  <b>Thumb url:</b>
-  <%= @goody.thumb_url %>
-</p>
-
-<p>
-  <b>Download url:</b>
-  <%= @goody.download_url %>
-</p>
-
-<p>
-  <b>Teaser:</b>
-  <%= @goody.teaser %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @goody.body %>
-</p>
-
-
-<%= link_to 'Edit', edit_goody_path(@goody) %> |
-<%= link_to 'Back', goodies_path %>
+<div class="container">
+	<%= render "goody", :goody => @goody, :detail => true %>
+</div>

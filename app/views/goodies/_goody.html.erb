@@ -1,0 +1,20 @@
+<article class="full">
+
+	<div class="content">
+		<div class="padded">
+			<header>
+				<% if defined? detail %>
+					<h1><%= goody.title %></h1>
+				<% else %>
+					<%= link_to goody do %>
+						<h1><%= goody.title %></h1>
+					<% end %>
+				<% end %>
+				<h2>Written by <%= goody.author %></h2>
+			</header>
+			<%= markdown goody.body %>
+		</div>
+	</div>
+	<footer></footer>
+
+</article>
