@@ -6,15 +6,12 @@ class Logo
 		@logo.load => @imageLoaded() if @logo.length > 0
 		@logo.hide()
 
-
 	imageLoaded: ->
 		width = @logo.outerWidth()
 		height = @logo.outerHeight()
 
 		@canvas.attr('width',width)
 		@canvas.attr('height',height)
-
-
 
 		@stage = new Stage @canvas.get(0)
 
@@ -47,6 +44,5 @@ class Logo
 
 		@canvas.mouseenter (e) =>
 			@logoAnimation.play()
-
 
 ($ document).ready -> new Logo()
