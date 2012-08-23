@@ -1,27 +1,39 @@
 <%= form_for(@blog) do |f| %>
+	<% if @blog.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
 
+			<ul>
+				<% @blog.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 
-  <% if @blog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+	<div class="field">
+		<%= f.label :artwork, "artwork" %>
+		<br/>
+		<%= f.file_field :artwork %>
+	</div>
 
-      <ul>
-      <% @blog.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<div class="field">
+		<%= f.label :title, "title" %>
+		<br/>
+		<%= f.text_field :title %>
+	</div>
+	<div class="field">
+		<%= f.label :author, "author" %>
+		<br/>
+		<%= f.text_field :author %>
+	</div>
+	<div class="field">
+		<%= f.label :body, "body" %>
+		<br/>
+		<%= f.text_area :body %>
+	</div>
 
-  <div class="field">
-    <%= f.label :title, "title" %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :author, "author" %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Create" %>
-  </div>
+	<div class="actions">
+		<%= f.submit "Create" %>
+	</div>
 <% end %>

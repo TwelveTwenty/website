@@ -1,5 +1,5 @@
 <article class="full">
-	<%= image_tag blog.artwork, :class => "artwork" %>
+	<%= image_tag blog.artwork_url(:full).to_s, :class => "artwork" %>
 
 	<div class="content">
 		<div class="padded">
@@ -13,7 +13,7 @@
 				<% end %>
 				<h2>Written by <%= blog.author %></h2>
 			</header>
-			<%= simple_format blog.body %>
+			<%= markdown blog.body %>
 		</div>
 	</div>
 	<footer></footer>
