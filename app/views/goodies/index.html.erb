@@ -13,13 +13,15 @@
 		<% @goodies.each do |goody| %>
 
 			<article class="one-third">
-
 				<header style="background-image: url('<%= image_path goody.thumb_url(:goody_thumb).to_s %>')"></header>
 				<div class="content">
 					<div class="padded">
 						<h3><%= goody.title %></h3>
 						<p><%= h goody.teaser %></p>
 						<em><%= link_to "read more", goody, :class => "arrow" %></em>
+						<%if current_user %>
+							<br><em><%= link_to "edit goody", edit_goody_path(goody), {:class => 'arrow'} %></em>
+						<% end %>
 					</div>
 				</div>
 				<footer></footer>

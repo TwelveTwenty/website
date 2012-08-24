@@ -3,6 +3,9 @@ Website::Application.configure do
   FACEBOOK_KEY = '261540923962901'
   FACEBOOK_SECRET = '4f9546b912f6d1407cb3410ce8e8112a'
 
+  # Jankees, Timo & EP
+  AUTHORIZED_FACEBOOK_USERS = %w{1309475283 609592416 100003525807466}
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests

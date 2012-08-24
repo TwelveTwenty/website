@@ -1,4 +1,7 @@
 class GoodiesController < ApplicationController
+
+  before_filter :authenticate, :except => [:index, :show]
+
   # GET /goodies
   # GET /goodies.json
   def index

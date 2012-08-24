@@ -56,5 +56,10 @@ body .wrapper:after {
 	background-repeat: repeat-x;
 }
 
+.login, .login a,.login a:active, .login a:visited {
+	color: white;
+	font-size: 10px;
+}
+
 // light - dark is default
 @include light-dark;

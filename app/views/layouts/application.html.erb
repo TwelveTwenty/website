@@ -95,10 +95,9 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 			<li><%= link_to image_tag("facebook-up.png"), "https://www.facebook.com/pages/Twelve-Twenty/427990657252433" %></li>
 		</ul>
 
-		<div class="hidden">
+		<div class="login">
 			<% if current_user %>
-				Signed in as <strong><%= current_user.name %></strong>!
-				<%= link_to "Sign out", signout_path, id: "sign_out" %>
+				<%= link_to "Not #{current_user.name}? Sign out.", signout_path, id: "sign_out" %>
 			<% else %>
 				<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
 			<% end %>

@@ -184,3 +184,12 @@ Add a link with a block, so you can add HTML content
 # Wednesday, August 22th 2012
 
 * Doing a lot of css coding, nothing special to tell in the diary
+* Added the CarrierWave gem, to provide uploading to the app
+* Setup an Heroku instance to test the applicaiton on
+
+# Friday, August 24th
+
+* Added authentication to Goodies controller and Blog controller
+* Defined a method 'authenticate' in the ApplicationController for the authentication
+* Added a before_filter in GoodiesController and BlogController
+* Added an array with valid Admin Facebook id's (maybe I'll make an UI later)

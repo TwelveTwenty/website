@@ -1,5 +1,6 @@
 <h1 class="hidden">Blog</h1>
 <div class="container">
+	<%= link_to "New blog post", new_blog_path, {:class => 'arrow'} if current_user %>
 	<% @blogs.each do |blog| %>
 		<%= render "blog", :blog => blog %>
 	<% end %>
