@@ -193,3 +193,4 @@ Add a link with a block, so you can add HTML content
 * Defined a method 'authenticate' in the ApplicationController for the authentication
 * Added a before_filter in GoodiesController and BlogController
 * Added an array with valid Admin Facebook id's (maybe I'll make an UI later)
+* Scaffolded a controller and views for Images, those images can be used in Blog posts and Goodies
