@@ -1,10 +1,14 @@
 <% content_for :header do %>
-
 	<h1 class="hidden">Goodies</h1>
 	<div class="column hidden-mobile">
 		<section class="full centered">
 			<%= image_tag "logo-white.png", :alt => "Twelve Twenty logo",:data => {:animate => 'logo', :color => 'white'} %>
 		</section>
+		<% if current_user %>
+			<section class="full centered">
+				<%= link_to "Add goody", new_goody_path %>
+			</section>
+		<% end %>
 	</div>
 <% end %>
 
@@ -16,13 +20,18 @@
 				<div class="content">
 					<div class="padded">
 						<h3><%= goody.title %></h3>
-						<p><%= h goody.teaser %></p>
-						<em><%= link_to "read more", goody, :class => "arrow" %></em>
+						<p><%= markdown goody.teaser %></p>
+
 						<%if current_user %>
+							<h4>Admin links</h4>
 							<ul>
-								<li><%= link_to "Edit this goody", edit_goody_path(goody), {:class => 'arrow'} %></li>
-								<li><%= link_to "Destroy this goody", goody, method: :delete, :class => 'arrow', data: {confirm: 'Are you sure?'} %></li>
+								<li><%= link_to "Edit this goody", edit_goody_path(goody) %></li>
+								<li><%= link_to "Destroy this goody", goody, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+								<li><%= link_to "Show goody", goody %></li>
 							</ul>
+
+						<% else %>
+							<em><%= link_to "read more", goody, :class => "arrow" %></em>
 						<% end %>
 					</div>
 				</div>

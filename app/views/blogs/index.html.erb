@@ -1,7 +1,22 @@
-<h1 class="hidden">Blog</h1>
+<% content_for :header do %>
+	<h1 class="hidden">Goodies</h1>
+	<div class="column hidden-mobile">
+		<section class="full centered">
+			<%= image_tag "logo-white.png", :alt => "Twelve Twenty logo",:data => {:animate => 'logo', :color => 'white'} %>
+		</section>
+		<% if current_user %>
+			<section class="full centered">
+				<%= link_to "Add blog post", new_goody_path %>
+			</section>
+		<% end %>
+	</div>
+<% end %>
+
+
 <div class="container">
-	<%= link_to "New blog post", new_blog_path, {:class => 'arrow'} if current_user %>
-	<% @blogs.each do |blog| %>
-		<%= render "blog", :blog => blog %>
-	<% end %>
+	<div class="row">
+		<% @blogs.each do |blog| %>
+			<%= render "blog", :blog => blog %>
+		<% end %>
+	</div>
 </div>

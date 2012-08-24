@@ -15,9 +15,11 @@
 			</header>
 			<%= markdown blog.body %>
 			<%  if current_user %>
+				<h4>Admin links</h4>
 				<ul>
-					<li><%= link_to "Edit this blog post", edit_blog_path(blog), {:class => 'arrow'} %></li>
-					<li><%= link_to "Destroy this blog post", blog, method: :delete, :class => 'arrow', data: {confirm: 'Are you sure?'} %></li>
+					<li><%= link_to "Edit this blog post", edit_blog_path(blog) %></li>
+					<li><%= link_to "Destroy this blog post", blog, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+					<li><%= link_to "Open this blog post", blog %></li>
 				</ul>
 			<% end %>
 		</div>
