@@ -1,10 +1,6 @@
 @import "_variables-mixins.css.scss";
 
 body.blogs {
-	.wrapper.header {
-		padding: 0; /* hide header */
-	}
-
 	@include dark-light;
 
 	.wrapper h1 {

@@ -14,7 +14,14 @@
 				<h2>Written by <%= blog.author %></h2>
 			</header>
 			<%= markdown blog.body %>
-			<%= link_to "Edit this blog post", edit_blog_path(blog), {:class => 'arrow'} if current_user %>
+			<%  if current_user %>
+				<h4>Admin links</h4>
+				<ul>
+					<li><%= link_to "Edit this blog post", edit_blog_path(blog) %></li>
+					<li><%= link_to "Destroy this blog post", blog, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+					<li><%= link_to "Open this blog post", blog %></li>
+				</ul>
+			<% end %>
 		</div>
 	</div>
 	<footer></footer>

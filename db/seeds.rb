@@ -99,7 +99,7 @@ b.save
 g = Goody.new
 g.title = "Test goody"
 g.author = "Timo danger"
-g.thumb = "/assets/dummy/test-blog-header.jpg"
+g.artwork = "/assets/dummy/test-blog-header.jpg"
 g.download_url = "twelvetwenty.nl/downloadurl"
 g.teaser = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 g.body = <<-BLOG
@@ -116,7 +116,7 @@ g.save
 g = Goody.new
 g.title = "Website open source"
 g.author = "Jankees"
-g.thumb = "/assets/dummy/test-blog-header.jpg"
+g.artwork = "/assets/dummy/test-blog-header.jpg"
 g.download_url = "twelvetwenty.nl/downloadurl"
 g.teaser = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 g.body = <<-BLOG

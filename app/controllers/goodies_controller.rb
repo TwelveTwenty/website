@@ -5,7 +5,7 @@ class GoodiesController < ApplicationController
   # GET /goodies
   # GET /goodies.json
   def index
-    @goodies = Goody.all
+    @goodies = Goody.order('id desc').all
 
     respond_to do |format|
       format.html # index.html.erb
