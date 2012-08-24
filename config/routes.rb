@@ -1,5 +1,7 @@
 Website::Application.routes.draw do
 
+  resources :images
+
   resources :goodies
 
   match 'apps/:app' => 'apps#show', :constraints => {:name => /(gettogether|willitfit|uberlayer)/i}
