@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120823111921) do
+ActiveRecord::Schema.define(:version => 20120824073702) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20120823111921) do
   create_table "goodies", :force => true do |t|
     t.string   "title"
     t.string   "author"
-    t.string   "thumb"
+    t.string   "artwork"
     t.string   "download_url"
     t.text     "teaser"
     t.text     "body"

@@ -11,16 +11,18 @@
 <div class="container">
 	<div class="row blog-teaser">
 		<% @goodies.each do |goody| %>
-
 			<article class="one-third">
-				<header style="background-image: url('<%= image_path goody.thumb_url(:goody_thumb).to_s %>')"></header>
+				<header style="background-image: url('<%= image_path goody.artwork_url(:goody_thumb).to_s %>')"></header>
 				<div class="content">
 					<div class="padded">
 						<h3><%= goody.title %></h3>
 						<p><%= h goody.teaser %></p>
 						<em><%= link_to "read more", goody, :class => "arrow" %></em>
 						<%if current_user %>
-							<br><em><%= link_to "edit goody", edit_goody_path(goody), {:class => 'arrow'} %></em>
+							<ul>
+								<li><%= link_to "Edit this goody", edit_goody_path(goody), {:class => 'arrow'} %></li>
+								<li><%= link_to "Destroy this goody", goody, method: :delete, :class => 'arrow', data: {confirm: 'Are you sure?'} %></li>
+							</ul>
 						<% end %>
 					</div>
 				</div>
