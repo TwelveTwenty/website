@@ -14,7 +14,9 @@
 			<% @images.each do |image| %>
 				<tr>
 					<td><%= image_tag image.artwork_url(:images_thumb).to_s %></td>
-					<td>![<%= image.alt %>](<%= image.artwork_url.to_s %>)</td>
+					<td class="copy-to-clipboard">
+						<textarea style="width: 400px; height: 100px;">![<%= image.alt %>](<%= image.artwork_url.to_s %>)</textarea>
+					</td>
 					<td><%= link_to 'Show', image %></td>
 					<td><%= link_to 'Edit', edit_image_path(image) %></td>
 					<td><%= link_to 'Destroy', image, method: :delete, data: {confirm: 'Are you sure?'} %></td>

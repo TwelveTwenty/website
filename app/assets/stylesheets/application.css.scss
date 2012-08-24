@@ -61,5 +61,14 @@ body .wrapper:after {
 	font-size: 10px;
 }
 
+.copy-to-clipboard {
+	cursor: pointer;
+}
+
+.copy-to-clipboard:hover {
+	background-color: #707070;
+	color: white;
+}
+
 // light - dark is default
 @include light-dark;
