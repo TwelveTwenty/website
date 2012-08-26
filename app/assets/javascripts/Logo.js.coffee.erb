@@ -16,9 +16,9 @@ class Logo
 		@stage = new Stage @canvas.get(0)
 
 		if @color is 'black'
-			url = "/assets/animations/logo-animatie-zwart-helft.json"
+			url = "<%= image_path "animations/logo-animatie-zwart-helft.json" %>"
 		else
-			url = "/assets/animations/logo-animatie-wit-helft.json"
+			url = "<%= image_path "animations/logo-animatie-wit-helft.json" %>"
 
 		$.ajax
 			url: url,
