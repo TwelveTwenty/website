@@ -17,7 +17,11 @@
 		</article>
 	</div>
 
-	<%= render 'slideshow', :images => ["/assets/dummy/test-slideshow.png"], :alt => "Will it fit screenshots" %>
+	<div class="row full">
+		<div class="slideshow">
+			<%= render 'slideshow', :images => %w{dummy/test-blog-header.jpg} %>
+		</div>
+	</div>
 
 	<div class="row">
 		<article class="half text">

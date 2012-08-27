@@ -7,6 +7,9 @@
 		width: 346px;
 		height: 675px;
 		padding: 113px 18px 110px 20px;
+
+		img {
+		}
 	}
 
 	.photo-container {
@@ -14,12 +17,13 @@
 		height: 479px;
 
 		margin: 0;
-		padding: 0 0 40px 0;
+		padding: 0 20px 50px 0;
 
 		background-image: url('/assets/apps/imageframe.png');
 		background-repeat: no-repeat;
 
 		ol {
+			overflow: hidden;
 			height: 100%;
 			margin: 0;
 			padding: 9px;

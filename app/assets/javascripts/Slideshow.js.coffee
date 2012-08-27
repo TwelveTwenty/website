@@ -6,23 +6,29 @@ class Slideshow
 		@image_container_list = @el.find('.photo-container ol')
 		@controller_list_items = @el.find('.controls ol li')
 
+		if @image_container_list.find('li').length < 2
+			@el.find('.controls').hide()
+			@showNext()
+			return
+		else
+			@interval = setInterval (=> @showNext()), 5000
+			@el.find('.photo-container').on 'click', @handleContainerClick
+
 		i = 0
 		for photo in @image_container_list.find('li')
 			photo_in_li = ($ photo)
 			current_controller_list_item = ($ @controller_list_items[i])
 
 			# add identifier to photo and controller list item
-			photo_in_li.attr('data-photonumber', i);
-			current_controller_list_item.attr('data-photonumber', i);
+			photo_in_li.attr('data-photonumber', i)
+			current_controller_list_item.attr('data-photonumber', i)
 
 			# add listener to controller list item
 			current_controller_list_item.on 'click', @handleControlListItemClick
 
 			i++
 
-		@el.find('.photo-container').on 'click', @handleContainerClick
 		@showNext()
-		@interval = setInterval (=> @showNext()), 5000
 
 	handleContainerClick: =>
 		clearInterval(@interval)
@@ -46,7 +52,7 @@ class Slideshow
 		active.removeClass('active')
 		next.addClass('active')
 
-		active.hide();
+		active.hide()
 		next.fadeIn(300)
 
 		# remove current from all control li's
