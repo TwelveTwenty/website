@@ -12,7 +12,9 @@
 			<p>Swipe through your weekly schedule and plan a social event all within seconds of opening the app. Get Together let's you focus on the most important aspects of an event: what, when and with whom. And because it uses your iPhone's built-in calendars, it's a perfect companion to Apple's Calendar app.</p>
 		</article>
 		<article class="half">
-			<%= image_tag "apps/gettogether/iphone.png" %>
+			<div class="slideshow iphone">
+				<%= render 'slideshow', :iphone => true, :images => %w{dummy/test-blog-header.jpg dummy/test-slideshow.png dummy/test-blog-teaser-image.png dummy/test-blog-header.jpg dummy/test-slideshow.png} %>
+			</div>
 		</article>
 	</div>
 
@@ -35,15 +37,15 @@
 		<article class="half text">
 			<h2>Advanced features</h2>
 			<p>If you like to have total control over your calendars, you'll enjoy the many features of Get Together:
-				<ul>
-					<li>Default alerts</li>
-					<li>Prevent nightly alerts</li>
-					<li>Edit event details</li>
-					<li>Share events via email</li>
-					<li>Fast calendar switching</li>
-					<li>Week number display</li>
-					<li>Context aware help system</li>
-				</ul>
+			<ul>
+				<li>Default alerts</li>
+				<li>Prevent nightly alerts</li>
+				<li>Edit event details</li>
+				<li>Share events via email</li>
+				<li>Fast calendar switching</li>
+				<li>Week number display</li>
+				<li>Context aware help system</li>
+			</ul>
 			</p>
 		</article>
 		<article class="half text">

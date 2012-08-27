@@ -12,7 +12,11 @@
 		</article>
 	</div>
 
-	<%= render 'slideshow', :images => %w{dummy/test-blog-header.jpg dummy/test-slideshow.png dummy/test-blog-teaser-image.png dummy/test-blog-header.jpg dummy/test-slideshow.png} %>
+	<div class="row">
+		<div class="slideshow full">
+			<%= render 'slideshow', :images => %w{dummy/test-blog-header.jpg dummy/test-slideshow.png dummy/test-blog-teaser-image.png dummy/test-blog-header.jpg dummy/test-slideshow.png} %>
+		</div>
+	</div>
 
 	<div class="row">
 		<article class="one-third centered-column centered">

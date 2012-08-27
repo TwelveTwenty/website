@@ -1,23 +1,32 @@
 @import "_variables-mixins.css.scss";
 
-.full.slideshow {
+.slideshow {
+
+	&.iphone .photo-container {
+		background-image: url('/assets/apps/gettogether/iphone.png');
+		width: 346px;
+		height: 675px;
+		padding: 113px 18px 110px 20px;
+	}
 
 	.photo-container {
 		cursor: pointer;
 		height: 479px;
 
 		margin: 0;
-		padding: 0;
+		padding: 0 0 40px 0;
 
 		background-image: url('/assets/apps/imageframe.png');
 		background-repeat: no-repeat;
 
 		ol {
+			height: 100%;
 			margin: 0;
 			padding: 9px;
 		}
 
 		li {
+			height: 100%;
 			display: none;
 			list-style: none;
 
@@ -81,11 +90,16 @@
 			}
 		}
 
-	} @media (min-width: $site-width) {
-	width: 696px;
-}
+	}
+
 
 }
 
+
+@media (min-width: $site-width) {
+	.full.slideshow {
+		width: 696px;
+	}
+}
 
 
