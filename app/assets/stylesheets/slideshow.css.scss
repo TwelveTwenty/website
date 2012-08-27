@@ -1,0 +1,63 @@
+@import "_variables-mixins.css.scss";
+
+
+.full.slideshow {
+
+	.photo-container {
+		cursor: pointer;
+		height: 479px;
+
+		margin: 0;
+		padding: 0;
+
+		background-image: url('/assets/apps/imageframe.png');
+		background-repeat: no-repeat;
+
+		ol {
+			margin: 0;
+			padding: 9px;
+		}
+
+		li {
+			display: none;
+			list-style: none;
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.controls {
+		margin-top: 10px;
+
+		.current {
+			color: fuchsia;
+		}
+
+		li {
+			cursor: pointer;
+		}
+	}
+
+	@media (max-width: $site-width) {
+
+		.photo-container {
+			height: inherit;
+			background-image: none;
+
+			ol {
+				padding: 0;
+			}
+		}
+
+	}
+
+	@media (min-width: $site-width) {
+		width: 696px;
+	}
+
+}
+
+
+
