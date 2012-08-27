@@ -2,14 +2,14 @@
 
 ::-moz-selection {
 	color: white;
-    background: $red;
-    text-shadow: none;
+	background: $red;
+	text-shadow: none;
 }
 
 ::selection {
 	color: white;
-    background: $red;
-    text-shadow: none;
+	background: $red;
+	text-shadow: none;
 }
 
 th {
@@ -75,15 +75,4 @@ ul {
 
 .padded {
 	padding: $column-margin;
-}
-
-.full .video {
-	height: 400px;
-}
-
-@media (max-width: $site-width) {
-	.full .video {
-		height: 200px;
-	}
-
 }
