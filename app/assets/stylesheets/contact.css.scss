@@ -12,37 +12,4 @@ body.contact {
 		padding-left: 40px;
 	}
 
-	.contact-us section {
-		height: 210px;
-		margin-top: 40px;
-		background-image: url('/assets/contact/pattern-striped-block.png');
-		background-repeat: no-repeat;
-		background-position: bottom center;
-		position: relative;
-	}
-
-	.contact-us a {
-		position: absolute;
-		bottom: 15px;
-		left: 55px;
-
-		width: 236px;
-		height: 45px;
-
-		line-height: 45px;
-		font-family: $oswald;
-		font-size: 15px;
-		color: white;
-
-		background-image: url('/assets/contact/btn.png');
-	}
-
-	.contact-us a:hover {
-		text-decoration: none;
-	}
-
-	.contact-us a img {
-		margin: 4px;
-		float: right;
-	}
 }

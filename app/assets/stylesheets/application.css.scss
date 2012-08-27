@@ -56,7 +56,7 @@ body .wrapper:after {
 	background-repeat: repeat-x;
 }
 
-.login, .login a,.login a:active, .login a:visited {
+.login, .login a, .login a:active, .login a:visited {
 	color: white;
 	font-size: 10px;
 }
@@ -68,6 +68,55 @@ body .wrapper:after {
 .copy-to-clipboard:hover {
 	background-color: #707070;
 	color: white;
+}
+
+.call-to-action section {
+	height: 210px;
+	margin-top: 40px;
+	background-image: url('/assets/contact/pattern-striped-block.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	position: relative;
+}
+
+.call-to-action a {
+	position: absolute;
+	bottom: 15px;
+	left: 55px;
+
+	width: 236px;
+	height: 45px;
+
+	line-height: 45px;
+	font-family: $oswald;
+	font-size: 15px;
+	color: white;
+
+	background-image: url('/assets/contact/btn.png');
+}
+
+.call-to-action a:hover {
+	text-decoration: none;
+}
+
+.call-to-action a img {
+	margin: 4px;
+	float: right;
+}
+
+.call-to-action .appstore {
+	background-image: url('/assets/apps/price.png');
+	background-position: no-repeat;
+
+	line-height: 190px;
+	display: inline-block;
+
+	font-family: $oswald;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+
+	width: 130px;
+	height: 131px;
 }
 
 // light - dark is default
