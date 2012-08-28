@@ -1,6 +1,6 @@
 Website::Application.routes.draw do
 
-  resources :images
+  resources :artworks
 
   resources :goodies
 

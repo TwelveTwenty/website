@@ -4,15 +4,16 @@
 
 		<p>
 			<b>Alt:</b>
-			<%= @image.alt %>
+			<%= @artwork.alt %>
 		</p>
 
 		<p>
 			<b>Artwork:</b>
-			<%= @image.artwork %>
+			<%= @artwork.artwork %>
 		</p>
 
-		<%= link_to 'Edit', edit_image_path(@image) %> |
-		<%= link_to 'Back', images_path %>
+
+		<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
+		<%= link_to 'Back', artworks_path %>
 	</div>
 </div>

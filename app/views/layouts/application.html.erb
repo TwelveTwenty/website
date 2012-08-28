@@ -74,7 +74,7 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 			<li class="item <%= "current" if params[:controller] == "about" %>"><%= link_to "About", :controller => :about %></li>
 			<li class="item <%= "current" if params[:controller] == "contact" %>"><%= link_to "Contact", :controller => :contact %></li>
 			<% if current_user %>
-				<li class="item <%= "current" if params[:controller] == "Images" %>"><%= link_to "images", :controller => :images %></li>
+				<li class="item <%= "current" if params[:controller] == "artworks" %>"><%= link_to "Artwork", :controller => :artworks %></li>
 			<% end %>
 		</ul>
 	</div>

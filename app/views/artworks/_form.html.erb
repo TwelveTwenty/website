@@ -1,10 +1,10 @@
-<%= form_for(@image) do |f| %>
-  <% if @image.errors.any? %>
+<%= form_for(@artwork) do |f| %>
+  <% if @artwork.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
+      <h2><%= pluralize(@artwork.errors.count, "error") %> prohibited this artwork from being saved:</h2>
 
       <ul>
-      <% @image.errors.full_messages.each do |msg| %>
+      <% @artwork.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -17,9 +17,9 @@
   </div>
   <div class="field">
     <%= f.label :artwork, "artwork" %><br />
-    <%= f.file_field :artwork %>
+	  <%= f.file_field :artwork %>
   </div>
   <div class="actions">
-    <%= f.submit "submit" %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>
