@@ -36,7 +36,8 @@ body .wrapper:after {
 }
 
 .wrapper.footer {
-	padding: 10px 0;
+	position: relative;
+	padding: 5px 0;
 	text-align: center;
 	ul {
 		padding: 10px 0;
@@ -54,6 +55,12 @@ body .wrapper:after {
 	height: 8px;
 	background-image: url('/assets/footerpattern.png');
 	background-repeat: repeat-x;
+}
+
+.login {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
 }
 
 .login, .login a, .login a:active, .login a:visited {

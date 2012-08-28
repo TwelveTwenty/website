@@ -93,18 +93,20 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 <div class="footer-border"></div>
 <footer class="wrapper footer">
 	<div class="container">
+
+		<div class="login">
+			<% if current_user %>
+				<%= link_to image_tag("twitter-up.png"), signout_path, id: "sign_out" %>
+			<% else %>
+				<%= link_to image_tag("twitter-down.png"), "/auth/facebook", id: "sign_in" %>
+			<% end %>
+		</div>
+
 		<ul>
 			<li><%= link_to image_tag("twitter-up.png"), "http://twitter.com/twelve_20" %></li>
 			<li><%= link_to image_tag("facebook-up.png"), "https://www.facebook.com/pages/Twelve-Twenty/427990657252433" %></li>
 		</ul>
 
-		<div class="login">
-			<% if current_user %>
-				<%= link_to "Not #{current_user.name}? Sign out.", signout_path, id: "sign_out" %>
-			<% else %>
-				<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-			<% end %>
-		</div>
 	</div>
 
 </footer>
