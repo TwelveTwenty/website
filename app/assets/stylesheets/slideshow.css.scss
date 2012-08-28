@@ -17,7 +17,7 @@
 		height: 479px;
 
 		margin: 0;
-		padding: 0 20px 50px 0;
+		padding: 9px 12px 48px 11px;
 
 		background-image: url('/assets/apps/imageframe.png');
 		background-repeat: no-repeat;
@@ -26,17 +26,13 @@
 			overflow: hidden;
 			height: 100%;
 			margin: 0;
-			padding: 9px;
+			padding: 0px;
 		}
 
 		li {
 			height: 100%;
 			display: none;
 			list-style: none;
-
-			img {
-				max-width: 100%;
-			}
 		}
 	}
 
@@ -78,7 +74,6 @@
 
 		li.current {
 			background-image: url('/assets/apps/slideshow/controls-item-current.png');
-			color: fuchsia;
 		}
 
 	}
@@ -94,10 +89,7 @@
 				padding: 0;
 			}
 		}
-
 	}
-
-
 }
 
 
