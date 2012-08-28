@@ -5,7 +5,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.order('id desc').all
+    if current_user
+      @blogs = Blog.order('id desc').all
+    else
+      @blogs = Blog.where("draft = ?", true).order('id desc')
+    end
 
     respond_to do |format|
       format.html # index.html.erb

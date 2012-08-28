@@ -5,7 +5,12 @@ class GoodiesController < ApplicationController
   # GET /goodies
   # GET /goodies.json
   def index
-    @goodies = Goody.order('id desc').all
+
+    if current_user
+      @goodies = Goody.order('id desc').all
+    else
+      @goodies = Goody.where("draft = ?", true).order('id desc')
+    end
 
     respond_to do |format|
       format.html # index.html.erb

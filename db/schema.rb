@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828110529) do
+ActiveRecord::Schema.define(:version => 20120828202606) do
 
   create_table "artworks", :force => true do |t|
     t.string   "alt"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120828110529) do
     t.text     "body"
     t.string   "artwork"
     t.datetime "publish_date"
+    t.boolean  "draft"
   end
 
   create_table "goodies", :force => true do |t|
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20120828110529) do
     t.text     "body"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.boolean  "draft"
   end
 
   create_table "users", :force => true do |t|
