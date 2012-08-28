@@ -1,6 +1,7 @@
 @import "_variables-mixins.css.scss";
 
 body.contact {
+
 	h1 {
 		font-size: 18px;
 		padding-left: 40px;
@@ -8,8 +9,13 @@ body.contact {
 		background-repeat: no-repeat;
 		background-position: center left;
 	}
+
 	p {
 		padding-left: 40px;
+	}
+
+	.column .spacer {
+		height: 50px;
 	}
 
 }

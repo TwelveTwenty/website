@@ -86,9 +86,11 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 	</div>
 </div>
 
-<div class="wrapper content">
-	<%= yield %>
-</div>
+<% if yield.length > 0 %>
+	<div class="wrapper content">
+		<%= yield %>
+	</div>
+<% end %>
 
 <div class="footer-border"></div>
 <footer class="wrapper footer">

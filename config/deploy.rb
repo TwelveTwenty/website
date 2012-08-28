@@ -22,6 +22,7 @@ namespace :passenger do
   desc "Restart Application"
   task :restart do
     run "touch #{current_path}/tmp/restart.txt"
+    run "rake assets:precompile"
   end
 end
 

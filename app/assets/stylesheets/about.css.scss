@@ -23,5 +23,13 @@ body.about {
 	.people li a {
 		color: white;
 		font-style: italic;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.people p {
+		min-height: 160px;
 	}
 }

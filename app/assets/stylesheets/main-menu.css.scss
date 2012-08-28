@@ -6,6 +6,10 @@ $main-menu-height: 60px;
 * HEADER
 */
 
+.wrapper.header .container {
+	padding-top: 30px;
+}
+
 body > header {
 
 	position: fixed;
@@ -81,7 +85,7 @@ body > header {
 	}
 
 	a:hover {
-		opacity: 0.8;
+		color: #f6d7d5;
 	}
 
 }
