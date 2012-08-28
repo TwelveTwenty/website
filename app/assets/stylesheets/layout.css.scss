@@ -68,7 +68,7 @@ body.debug-layout {
 	width: $column-at-full;
 }
 
-.two-thirds.centered-column, .one-third.centered-column {
+.half.centered-column, .two-thirds.centered-column, .one-third.centered-column {
 	margin: 0 auto;
 	float: none;
 }

@@ -96,9 +96,9 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 
 		<div class="login">
 			<% if current_user %>
-				<%= link_to image_tag("twitter-up.png"), signout_path, id: "sign_out" %>
+				<%= link_to image_tag("keyhole.png"), signout_path, id: "sign_out" %>
 			<% else %>
-				<%= link_to image_tag("twitter-down.png"), "/auth/facebook", id: "sign_in" %>
+				<%= link_to image_tag("signin.png"), "/auth/facebook", id: "sign_in" %>
 			<% end %>
 		</div>
 
