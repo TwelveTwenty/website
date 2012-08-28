@@ -29,6 +29,9 @@ namespace :deploy do
   task :symlink_shared do
     run "rm #{release_path}/config/database.yml"
     run "ln -fs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+
+    run "rm #{release_path}/config/config.yml"
+    run "ln -fs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
   end
 end
 

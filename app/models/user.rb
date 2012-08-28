@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
     user = auth.slice(:provider, :uid)
 
     # return nil if user isn't authorized (array with users is found in environments)
-    return nil unless AUTHORIZED_FACEBOOK_USERS.include? user[:uid]
+    return nil unless APP_CONFIG[:facebook_authorized_users].include? user[:uid]
 
     where(user).first_or_initialize.tap do |user|
       user.provider = auth.provider

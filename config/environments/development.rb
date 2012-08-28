@@ -1,13 +1,4 @@
 Website::Application.configure do
-
-  FACEBOOK_KEY = '261540923962901'
-  FACEBOOK_SECRET = '4f9546b912f6d1407cb3410ce8e8112a'
-
-  # Jankees, Timo & EP => 1309475283 609592416 100003525807466
-  AUTHORIZED_FACEBOOK_USERS = %w{1309475283 609592416 100003525807466}
-
-  # Settings specified here will take precedence over those in config/application.rb
-
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
