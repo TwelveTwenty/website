@@ -36,7 +36,6 @@ body > header {
 		display: inline-block;
 		color: white;
 		text-transform: uppercase;
-
 	}
 
 	li.spacer {
@@ -59,12 +58,30 @@ body > header {
 	}
 
 	li.current a {
-		border-top: white 1px solid;
-		border-bottom: white 1px solid;
+		display: inline-block;
+		background-repeat: repeat-x;
+		background-position: 0 19px;
+		background-image: url("/assets/nav-stripe.png");
+	}
+
+	a {
+		-webkit-transition: opacity 0.1s ease;
+		-moz-transition: opacity 0.1s ease;
+		-ms-transition: opacity 0.1s ease;
+		-o-transition: opacity 0.1s ease;
+		transition: opacity 0.1s ease;
 	}
 
 	a, a:visited, a:hover {
 		color: white;
+
+	}
+	li.current a:hover {
+		opacity: 1;
+	}
+
+	a:hover {
+		opacity: 0.8;
 	}
 
 }
