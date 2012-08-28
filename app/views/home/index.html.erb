@@ -8,7 +8,7 @@
 			<h2>Make apps, not war.</h2>
 			<em>Here at Twelve Twenty, we make apps for the Mac, iPhone and iPad. The kind of apps we need ourselves, refined and polished for people like you to use and enjoy.</em>
 		</section>
-		<section class="one-third centered"><%= image_tag "logo.png", :alt => "Twelve Twenty logo", :data => {:animate => 'logo', :color => 'black'} %></section>
+		<section class="one-third centered"><%= image_tag "logo.png", :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-zwart-helft.json")} %></section>
 		<section class="one-third hidden-mobile centered">
 			<h2>Latest tweets</h2>
 			<em>Get Together from
@@ -29,14 +29,17 @@
 
 		<ul class="two-thirds apps">
 			<li class="willitfit">
+				<%= image_tag "home/willitfit-single.png", :alt => "Will It Fit", :data => {:rollover => true, :animate => true, :json => image_path("home/willitfiticon.json")} %>
 				<h2>Will it fit</h2>
 				<em>Review your designs at their true physical size without ever leaving your Mac.</em>
 			</li>
 			<li class="gettogether">
+				<%= image_tag "home/gettogethericon-single.png", :alt => "Get Together", :data => {:rollover => true, :animate => true, :json => image_path("home/gettogethericon.json")} %>
 				<h2>Get Together</h2>
 				<em>The fastest way to create calendar events on your iPhone or iPad.</em>
 			</li>
 			<li class="uberlayer">
+				<%= image_tag "home/uberlayericon.png", :alt => "Uberlayer", :data => {:rollover => true, :animate => true, :json => image_path("home/uberlayericon.json")} %>
 				<h2>Uberlayer</h2>
 				<em>Admit it, semitransparent, always-on-top pixel proofing just became sexy...</em>
 			</li>

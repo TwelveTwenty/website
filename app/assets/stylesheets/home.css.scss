@@ -15,18 +15,28 @@ body.home {
 			padding: 20px $padding-right 0 $padding-left;
 			cursor: pointer;
 			background-position-x: 45px;
+			position: relative;
 		}
 
-		li.uberlayer {
-			background-image: url('/assets/iconuberlayer.png');
+		li img,
+		li canvas {
+			position: absolute;
+			top: 55px;
+			left: 91px;
 		}
 
-		li.willitfit {
-			background-image: url('/assets/iconwillitfit.png');
+		li.willitfit img, li.willitfit canvas {
+			top: 50px;
+			left: 86px;
 		}
 
-		li.gettogether {
-			background-image: url('/assets/icongettogether.png');
+		li.uberlayer img, li.uberlayer canvas {
+			top: 55px;
+			left: 86px;
+		}
+
+		li.uberlayer, li.willitfit, li.gettogether {
+			background-image: url('/assets/home/appicon-up.png');
 		}
 
 		@media (max-width: $site-width) {
@@ -42,6 +52,5 @@ body.home {
 	@include dark-light;
 
 }
-
 
 //.home

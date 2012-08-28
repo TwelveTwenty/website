@@ -1,0 +1,9 @@
+{"images":["/assets/home/gettogethericon.png"], "frames":{
+	"regY":0,
+	"width":40,
+	"count":30,
+	"regX":0,
+	"height":44
+}, "animations":{
+	"all":[0, 29]
+}}
