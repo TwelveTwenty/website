@@ -94,21 +94,22 @@ body .wrapper:after {
 	width: 236px;
 	height: 45px;
 
+	text-align: left;
+	padding-left: 20px;
 	line-height: 45px;
 	font-family: $oswald;
 	font-size: 15px;
 	color: white;
 
-	background-image: url('/assets/contact/btn.png');
+	background-image: url('/assets/block-button/button-bg.png');
+}
+
+.call-to-action .button {
+
 }
 
 .call-to-action a:hover {
 	text-decoration: none;
-}
-
-.call-to-action a img {
-	margin: 4px;
-	float: right;
 }
 
 .call-to-action .appstore {
