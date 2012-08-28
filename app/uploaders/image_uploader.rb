@@ -40,8 +40,8 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_limit => [714, 999]
   end
 
-  version :goody_thumb do
-    process :resize_to_fill => [218, 200]
+  version :block_thumb do
+    process :resize_to_fill => [341, 200]
   end
 
   version :images_thumb do
