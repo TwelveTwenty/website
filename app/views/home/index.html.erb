@@ -8,7 +8,7 @@
 			<h2>Make apps, not war.</h2>
 			<em>Here at Twelve Twenty, we make apps for the Mac, iPhone and iPad. The kind of apps we need ourselves, refined and polished for people like you to use and enjoy.</em>
 		</section>
-		<section class="one-third centered"><%= image_tag "logo.png", :alt => "Twelve Twenty logo",:data => {:animate => 'logo', :color => 'black'} %></section>
+		<section class="one-third centered"><%= image_tag "logo.png", :alt => "Twelve Twenty logo", :data => {:animate => 'logo', :color => 'black'} %></section>
 		<section class="one-third hidden-mobile centered">
 			<h2>Latest tweets</h2>
 			<em>Get Together from
@@ -47,19 +47,11 @@
 
 	<div class="row blog-teaser">
 		<% @blogs.each do |blog| %>
+			<%= render "third-block", :data => blog %>
+		<% end %>
 
-			<article class="one-third">
-				<header style="background-image: url('/assets/dummy/test-blog-teaser-image.png')"></header>
-				<div class="content">
-					<div class="padded">
-						<h3><%= blog.title %></h3>
-						<p><%= strip_tags blog.body.truncate(100) %></p>
-						<em><%= link_to "read more", blog, :class => "arrow" %></em>
-					</div>
-				</div>
-				<footer></footer>
-			</article>
-
+		<% @goodies.each do |goody| %>
+			<%= render "third-block", :data => goody %>
 		<% end %>
 	</div>
 </div>

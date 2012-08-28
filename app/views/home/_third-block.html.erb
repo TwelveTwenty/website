@@ -1,0 +1,11 @@
+<article class="one-third">
+	<header style="background-image: url('<%= image_path data.artwork_url(:goody_thumb).to_s %>')"></header>
+	<div class="content">
+		<div class="padded">
+			<h3><%= data.title %></h3>
+			<p><%= markdown strip_tags data.body.truncate(100) %></p>
+			<em><%= link_to "read more", data, :class => "arrow" %></em>
+		</div>
+	</div>
+	<footer></footer>
+</article>
