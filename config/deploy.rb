@@ -33,6 +33,7 @@ namespace :deploy do
 
     run "rm #{release_path}/config/config.yml"
     run "ln -fs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
+    run "ln -fs #{shared_path}/uploads #{release_path}/public/uploads"
   end
 end
 
