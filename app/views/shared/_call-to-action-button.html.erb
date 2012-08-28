@@ -1,0 +1,14 @@
+<div class="half centered <%= color %>">
+	<% if defined? price %>
+		<div class="appstore"><%= price %></div>
+	<% else %>
+		<%= image_tag icon %>
+	<% end %>
+
+	<a href="<%= link %>">
+		<div class="button-holder">
+			<div class="button background-image-left"></div>
+			<%= text %>
+		</div>
+	</a>
+</div>

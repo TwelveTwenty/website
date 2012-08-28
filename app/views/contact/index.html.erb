@@ -16,13 +16,7 @@
 	</div>
 
 	<div class="column call-to-action">
-		<section class="half centered">
-			<%= image_tag "contact/iconmail.png" %>
-			<a href="">SEND US AN EMAIL <div class="button"></div></a>
-		</section>
-		<section class="half centered">
-			<%= image_tag "contact/icontwitter.png" %>
-			<a href="">FOLLOW US ON TWITTER</a>
-		</section>
+		<%= render "shared/call-to-action-button", :link => "http://google.com", :color => "orange", :text => "Send us an email", :icon => "contact/iconmail.png" %>
+		<%= render "shared/call-to-action-button", :link => "http://google.com", :color => "orange", :text => "Follow us on Twitter", :icon => "contact/icontwitter.png" %>
 	</div>
 </div>

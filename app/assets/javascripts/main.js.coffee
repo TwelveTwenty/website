@@ -8,6 +8,16 @@ class Main
 		@addScrollListeners()
 		@enableResposiveMenu()
 
+		($ '.button-holder').mouseenter (e) =>
+			($ e.currentTarget).find('.background-image-left').stop().animate
+				backgroundPosition:"100% 0px"
+			,200
+
+		($ '.button-holder').mouseleave (e) =>
+			($ e.currentTarget).find('.background-image-left').stop().animate
+				backgroundPosition:"0% 0"
+			,100
+
 	addScrollListeners: ->
 		@spacer = ($ 'body > header .spacer')
 		($ document).bind "touchmove", => @handleScroll()
