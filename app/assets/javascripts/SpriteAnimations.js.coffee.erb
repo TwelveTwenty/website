@@ -5,7 +5,6 @@ class SpriteAnimations
 		@autostart = @asset.data('autostart')
 		@trigger = @asset.data('trigger')
 		@canvas = ($ "<canvas></canvas>").insertBefore(@asset)
-		@asset.load => @imageLoaded() if @asset.length > 0
 		@asset.hide()
 
 		@canvas.attr('width', @asset.attr('width'))
