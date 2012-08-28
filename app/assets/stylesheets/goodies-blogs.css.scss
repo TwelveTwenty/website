@@ -1,6 +1,6 @@
 @import "_variables-mixins.css.scss";
 
-body.blogs {
+body.blogs, body.goodies {
 	@include dark-light;
 
 	.wrapper h1 {
@@ -37,7 +37,7 @@ body.blogs {
 
 @media (max-width: $site-width) {
 
-	body.blogs {
+	body.blogs, body.goodies {
 		article footer {
 			background-image: url('/assets/blog345-bottom.png');
 		}

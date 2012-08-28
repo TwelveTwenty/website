@@ -1,16 +1,4 @@
-<% content_for :header do %>
-	<h1 class="hidden">Goodies</h1>
-	<div class="column hidden-mobile">
-		<section class="full centered">
-			<%= image_tag "logo.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-zwart-helft.json")} %>
-		</section>
-		<% if current_user %>
-			<section class="full centered">
-				<%= link_to "Add goody", new_goody_path %>
-			</section>
-		<% end %>
-	</div>
-<% end %>
+<%= render "shared/simple-header", :color => :black, :admin_links => [link_to("Add goody", new_goody_path)] %>
 
 <div class="container">
 	<div class="row blog-teaser">
@@ -22,7 +10,7 @@
 						<h3><%= goody.title %></h3>
 						<p><%= markdown goody.teaser %></p>
 
-						<%if current_user %>
+						<% if current_user %>
 							<h4>Admin links</h4>
 							<ul>
 								<li><%= link_to "Edit this goody", edit_goody_path(goody) %></li>
@@ -41,15 +29,3 @@
 		<% end %>
 	</div>
 </div>
-
-<!--
-
-<% @goodies.each do |goody| %>
-    <td><%= link_to 'Show', goody %></td>
-    <td><%= link_to 'Edit', edit_goody_path(goody) %></td>
-    <td><%= link_to 'Destroy', goody, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-<% end %>
-
-<%= link_to 'New Goody', new_goody_path %>
-
--->

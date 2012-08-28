@@ -1,17 +1,4 @@
-<% content_for :header do %>
-	<h1 class="hidden">Goodies</h1>
-	<div class="column hidden-mobile">
-		<section class="full centered">
-			<%= image_tag "logo.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-zwart-helft.json")} %>
-		</section>
-		<% if current_user %>
-			<section class="full centered">
-				<%= link_to "Add blog post", new_blog_path %>
-			</section>
-		<% end %>
-	</div>
-<% end %>
-
+<%= render "shared/simple-header", :color => :black, :admin_links => [link_to("Add blog post", new_blog_path)] %>
 
 <div class="container">
 	<div class="row">
