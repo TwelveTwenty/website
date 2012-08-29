@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+load 'deploy/assets'
 
 server "hosting.base42.nl", :web, :app, :db, primary: true
 set :user, "jankeesvw"
@@ -24,7 +25,6 @@ namespace :passenger do
   desc "Restart Application"
   task :restart do
     run "touch #{current_path}/tmp/restart.txt"
-    run "rake assets:precompile"
   end
 end
 
@@ -39,6 +39,5 @@ namespace :deploy do
   end
 end
 
-before "deploy:restart", "deploy:symlink_shared"
-
 after :deploy, "passenger:restart"
+after :deploy, "deploy:symlink_shared"
