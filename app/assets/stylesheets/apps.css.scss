@@ -1,5 +1,23 @@
 @import "_variables-mixins.css.scss";
 
+.apps.apps-show-uberlayer {
+	.app.uberlayer {
+		background-image: url('/assets/home/appicon-up.png');
+	}
+}
+
+.apps.apps-show-willitfit {
+	.app.willitfit {
+		background-image: url('/assets/home/appicon-up.png');
+	}
+}
+
+.apps.apps-show-gettogether {
+	.app.gettogether {
+		background-image: url('/assets/home/appicon-up.png');
+	}
+}
+
 body.apps {
 
 	@include light-dark;
@@ -10,7 +28,7 @@ body.apps {
 		background-repeat: no-repeat;
 		height: 200px;
 		text-align: center;
-		padding-top: 150px;
+		padding-top: 170px;
 
 		display: inline-block;
 		width: 133px;
@@ -20,18 +38,32 @@ body.apps {
 		-ms-transition: opacity 0.3s ease;
 		-o-transition: opacity 0.3s ease;
 		transition: opacity 0.3s ease;
-	}
 
-	.willitfit {
-		background-image: url('/assets/apps/icon-willitfit.png');
-	}
+		min-height: 200px;
+		background-image: url('/assets/home/appicon-down.png');
 
-	.uberlayer {
-		background-image: url('/assets/apps/icon-uberlayer.png');
-	}
+		position: relative;
 
-	.gettogether {
-		background-image: url('/assets/apps/icon-gettogether.png');
+		canvas, img {
+			position: absolute;
+			top: 49px;
+			left: 45px;
+		}
+
+		&.willitfit img, &.willitfit canvas {
+			top: 45px;
+			left: 40px;
+		}
+
+		&.uberlayer img, &.uberlayer canvas {
+			top: 49px;
+			left: 43px;
+		}
+
+		h2 {
+			width: 133px;
+			bottom: 0;
+		}
 	}
 
 	.requirements {
