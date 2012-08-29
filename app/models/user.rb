@@ -4,11 +4,9 @@ class User < ActiveRecord::Base
   def self.from_omniauth(auth)
     user = auth.slice(:provider, :uid)
 
-    # return nil if user isn't authorized (array with users is found in environments)
-    # TODO: fix facebook login
-    #unless APP_CONFIG["facebook_authorized_users"].include? user[:uid]
-    #  return nil
-    #end
+    unless APP_CONFIG["facebook_authorized_users"].include? user[:uid].to_i
+      return nil
+    end
 
     where(user).first_or_initialize.tap do |user|
       user.provider = auth.provider
