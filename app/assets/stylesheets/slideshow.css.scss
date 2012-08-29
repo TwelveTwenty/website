@@ -6,10 +6,7 @@
 		background-image: url('/assets/apps/gettogether/iphone.png');
 		width: 346px;
 		height: 675px;
-		padding: 113px 18px 110px 20px;
-
-		img {
-		}
+		padding: 120px 0px 0px 6px;
 	}
 
 	.photo-container {
@@ -17,7 +14,7 @@
 		height: 479px;
 
 		margin: 0;
-		padding: 9px 12px 48px 11px;
+		padding: 10px 15px 0px 0px;
 
 		background-image: url('/assets/apps/imageframe.png');
 		background-repeat: no-repeat;
@@ -30,6 +27,7 @@
 		}
 
 		li {
+			text-align: center;
 			height: 100%;
 			display: none;
 			list-style: none;
