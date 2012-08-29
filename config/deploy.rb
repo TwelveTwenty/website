@@ -26,6 +26,9 @@ namespace :passenger do
   task :restart do
     run "touch #{current_path}/tmp/restart.txt"
   end
+  task :logs do
+    run "cd #{current_path}/log && tail -f -n 50 *.log"
+  end
 end
 
 namespace :deploy do
@@ -38,6 +41,8 @@ namespace :deploy do
     run "ln -fs #{shared_path}/uploads #{release_path}/public/uploads"
   end
 end
+
+
 
 after :deploy, "passenger:restart"
 after :deploy, "deploy:symlink_shared"
