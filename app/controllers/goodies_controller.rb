@@ -9,7 +9,7 @@ class GoodiesController < ApplicationController
     if current_user
       @goodies = Goody.order('id desc').all
     else
-      @goodies = Goody.where("draft = ?", false).order('id desc')
+      @goodies = Goody.where("draft != ?", true).order('id desc')
     end
 
     respond_to do |format|
