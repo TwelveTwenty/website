@@ -1,34 +1,37 @@
 @import "_variables-mixins.css.scss";
 
-.apps.apps-show-uberlayer {
-	.app.uberlayer {
-		background-image: url('/assets/home/appicon-up.png');
-	}
+@mixin current-selected-icon {
+	top: 20px;
+	height: 220px;
+	background-image: url('/assets/home/appicon-up.png');
 }
 
-.apps.apps-show-willitfit {
-	.app.willitfit {
-		background-image: url('/assets/home/appicon-up.png');
-	}
+.apps.apps-show-uberlayer .app.uberlayer {
+	@include current-selected-icon;
 }
 
-.apps.apps-show-gettogether {
-	.app.gettogether {
-		background-image: url('/assets/home/appicon-up.png');
-	}
+.apps.apps-show-willitfit .app.willitfit {
+	@include current-selected-icon;
+}
+
+.apps.apps-show-gettogether .app.gettogether {
+	@include current-selected-icon;
 }
 
 body.apps {
 
+	.app-icons {
+		margin-top: 50px;
+	}
+
 	@include light-dark;
 
 	.app {
-		margin-top: $column-margin;
+		top: 20px;
 		background-position: center top;
 		background-repeat: no-repeat;
 		height: 200px;
 		text-align: center;
-		padding-top: 170px;
 
 		display: inline-block;
 		width: 133px;
@@ -61,6 +64,7 @@ body.apps {
 		}
 
 		h2 {
+			position: absolute;
 			width: 133px;
 			bottom: 0;
 		}
