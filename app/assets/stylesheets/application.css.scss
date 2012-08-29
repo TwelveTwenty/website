@@ -27,6 +27,10 @@ body .wrapper:before, body .wrapper:after {
 	display: table;
 }
 
+.draft {
+	opacity: 0.3;
+}
+
 body .wrapper:after {
 	clear: both;
 }

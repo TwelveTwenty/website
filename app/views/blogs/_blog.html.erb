@@ -1,4 +1,4 @@
-<article class="full">
+<article class="full <%= "draft" if blog.draft %>">
 	<%= image_tag blog.artwork_url(:full).to_s, :class => "artwork" %>
 
 	<div class="content">

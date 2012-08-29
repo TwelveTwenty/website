@@ -8,7 +8,7 @@ class BlogsController < ApplicationController
     if current_user
       @blogs = Blog.order('id desc').all
     else
-      @blogs = Blog.where("draft = ?", true).order('id desc')
+      @blogs = Blog.where("draft = ?", false).order('id desc')
     end
 
     respond_to do |format|
