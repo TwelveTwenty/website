@@ -13,6 +13,8 @@ set :scm, "git"
 set :repository, "git://github.com/TwelveTwenty/website.git"
 set :branch, "develop"
 
+set :bundle_without, [:development, :test]
+
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
