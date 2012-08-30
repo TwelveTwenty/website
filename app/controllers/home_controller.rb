@@ -4,8 +4,8 @@ class HomeController < ApplicationController
   require 'uri'
 
   def index
-    @blogs = Blog.all :limit => 2
-    @goody = Goody.first
+    @blogs = Blog.where("draft != ?", true).order('id desc').all :limit => 2
+    @goody = Goody.where("draft != ?", true).last
 
     unless Rails.cache.read('tweets')
 

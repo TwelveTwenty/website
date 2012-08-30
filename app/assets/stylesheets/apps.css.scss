@@ -50,17 +50,6 @@ body.apps {
 
 	@include light-dark;
 
-	a {
-		color: white !important;
-		opacity: 0.5;
-		text-decoration: underline;
-	}
-
-	a:hover {
-		opacity: 1;
-		text-decoration: underline;
-	}
-
 	.app {
 
 		background-position: center top;
@@ -81,7 +70,6 @@ body.apps {
 
 		top: 20px;
 		height: 220px;
-
 
 		position: relative;
 
@@ -115,15 +103,33 @@ body.apps {
 		background-image: none;
 	}
 
-	.content .text {
-		h2 {
-			padding-left: 40px;
+	.content {
+		.text {
+			h2 {
+				padding-left: 40px;
 
-			background-repeat: no-repeat;
-			background-position: center left;
+				background-repeat: no-repeat;
+				background-position: center left;
+			}
+			p {
+				padding-left: 40px;
+			}
 		}
-		p {
-			padding-left: 40px;
+
+		.text, .requirements {
+
+			a {
+				color: white !important;
+				opacity: 0.5;
+				text-decoration: underline;
+			}
+
+			a:hover {
+				opacity: 1;
+				text-decoration: underline;
+			}
+
 		}
 	}
+
 }
