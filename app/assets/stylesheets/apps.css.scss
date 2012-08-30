@@ -24,6 +24,18 @@
 	font-style: italic;
 }
 
+.apps-show-gettogether .content .text h2 {
+	background-image: url('/assets/apps/dotsyellow.png') !important;
+}
+
+.apps-show-uberlayer .content .text h2 {
+	background-image: url('/assets/apps/dotsorange.png') !important;
+}
+
+.apps-show-willitfit .content .text h2 {
+	background-image: url('/assets/apps/dotsgreen.png') !important;
+}
+
 body.apps {
 
 	@media (min-width: $site-width) {
@@ -92,7 +104,7 @@ body.apps {
 	.content .text {
 		h2 {
 			padding-left: 40px;
-			background-image: url('/assets/apps/dotsgreen.png');
+
 			background-repeat: no-repeat;
 			background-position: center left;
 		}
