@@ -11,8 +11,6 @@
 <head>
 	<meta charset="utf-8">
 
-	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
-More info: h5bp.com/i/378 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Twelve Twenty</title>
@@ -24,26 +22,16 @@ More info: h5bp.com/i/378 -->
 	<meta property="og:image" content="<%= image_path "share.jpg" %>"/>
 	<meta property="og:url" content="http://twelvetwenty.nl"/>
 
-	<!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width">
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
 	<%= stylesheet_link_tag "application" %>
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
+
 	<%= csrf_meta_tags %>
 
-	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-	<!-- All JavaScript at the bottom, except this Modernizr build.
-Modernizr enables HTML5 elements & feature detects for optimal performance.
-Create your own custom Modernizr build: www.modernizr.com/download/ -->
 	<%= javascript_include_tag 'modernizr' %>
 
-	<!-- Initializes the modernizr and actually perform the checks. Enable this
-if you need the modernizr, but remember to only do the actual checks
-that you need. -->
 	<%= javascript_tag "Modernizr.load();" %>
 </head>
 <body class="<%= "#{params[:controller]} #{params[:controller]}-#{params[:action]} #{params[:controller]}-#{params[:action]}-#{params[:app]}" %>">
@@ -113,12 +101,9 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 
 </footer>
 
-<!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 <%= javascript_include_tag 'application' %>
 
 <% if Rails.env.production? %>
-	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-mathiasbynens.be/notes/async-analytics-snippet -->
 	<script>
 		var _gaq = [
 			['_setAccount', 'UA-XXXXX-X'],
