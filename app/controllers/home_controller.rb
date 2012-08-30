@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     @goody = Goody.first
 
     unless Rails.cache.read('tweets')
+
       # load json from twitter
       uri = URI('http://api.twitter.com/1/favorites.json?screen_name=twelve_20')
       response = Net::HTTP.get(uri)
@@ -16,7 +17,7 @@ class HomeController < ApplicationController
       tweets = JSON.parse(response)
 
       #save to cache
-      Rails.cache.write('tweets', tweets, :time_to_idle => 60.seconds, :expires_in => 1.hour)
+      Rails.cache.write('tweets', tweets, :time_to_idle => 5.seconds, :expires_in => 1.hour)
 
       logger.debug "Fetch new tweets."
     end
