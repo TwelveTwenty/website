@@ -16,11 +16,10 @@ body.home {
 			cursor: pointer;
 			background-position-x: 45px;
 			position: relative;
-
 		}
 
 		a {
-			color: $black;
+			color: $black !important;
 		}
 
 		li img,

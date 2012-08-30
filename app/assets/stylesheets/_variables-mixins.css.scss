@@ -22,6 +22,8 @@ $poly: 'Poly', Georgia, serif;
 	color: white;
 
 	a {
+		color: $red;
+
 		h1, h2, h3 {
 			color: white;
 		}
@@ -33,6 +35,8 @@ $poly: 'Poly', Georgia, serif;
 	background-image: url('/assets/bg-white-pattern.png');
 	color: $black;
 	a {
+		color: $red;
+
 		h1, h2, h3 {
 			color: $black;
 		}

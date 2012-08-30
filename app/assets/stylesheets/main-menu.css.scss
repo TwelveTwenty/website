@@ -100,113 +100,117 @@ body > header {
 
 @media (max-width: $site-width) {
 
-$spacing: 10px;
+	$spacing: 10px;
 
-.wrapper.header {
-	margin-top: 0px;
-}
-
-body > header {
-
-	background-image: url('/assets/nav-pattern.png');
-
-	width: auto;
-	position: relative;
-	background-repeat: repeat;
-
-	.toggle-menu {
-		padding-top: $spacing;
-	}
-
-	.spacer {
-		display: none;
-	}
-
-	ul {
-		background-image: none;
-		height: auto;
-		line-height: 35px;
-	}
-
-	.divider {
+	.wrapper.header {
 		margin-top: 0px;
-		background-image: url('/assets/divider-menu.png');
-		height: 2px;
-		opacity: 0;
-
-		-webkit-transition: all 0.3s ease;
-		-moz-transition: all 0.3s ease;
-		-ms-transition: all 0.3s ease;
-		-o-transition: all 0.3s ease;
-		transition: all 0.3s ease;
 	}
 
-	&.open .divider {
-		margin-top: $spacing;
-		opacity: 1;
-	}
+	body > header {
 
-	.item.current {
-		opacity: 1;
-	}
-	.item.current a {
-		border-width: 0;
-	}
+		li.current a {
+			background-image: none;
+		}
 
-	.item {
-		opacity: 0.5;
-	}
+		background-image: url('/assets/nav-pattern.png');
 
-	.main-menu {
-		margin-top: $spacing;
-		height: 0px;
-		overflow: hidden;
-
-		-webkit-transition: height 0.3s ease;
-		-moz-transition: height 0.3s ease;
-		-ms-transition: height 0.3s ease;
-		-o-transition: height 0.3s ease;
-		transition: height 0.3s ease;
-	}
-
-	li {
-		width: $site-width-mobile;
-	}
-
-	.main-menu-toggle {
-		display: block;
-		margin-bottom: 0;
-		padding: 0;
-	}
-
-	li#toggle-button {
-		display: block;
-	}
-
-	ul.toggle-menu {
-		padding-bottom: 0;
-	}
-
-	li.toggle-button {
-		cursor: pointer;
+		width: auto;
 		position: relative;
-	}
+		background-repeat: repeat;
 
-	li.toggle-button .arrow {
-		position: absolute;
-		right: $spacing;
-	}
+		.toggle-menu {
+			padding-top: $spacing;
+		}
 
-	&.open .arrow {
-		-webkit-transform: rotate(180deg);
-		-moz-transform: rotate(180deg);
-		-ms-transform: rotate(180deg);
-		-o-transform: rotate(180deg);
-		transform: rotate(180deg);
-		filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */ M11 =-1, M12 =-1.2246063538223773e-16, M21 = 1.2246063538223773 e-16, M22 =-1, sizingMethod = 'auto expand');
-		zoom: 1;
+		.spacer {
+			display: none;
+		}
+
+		ul {
+			background-image: none;
+			height: auto;
+			line-height: 35px;
+		}
+
+		.divider {
+			margin-top: 0px;
+			background-image: url('/assets/divider-menu.png');
+			height: 2px;
+			opacity: 0;
+
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+
+		&.open .divider {
+			margin-top: $spacing;
+			opacity: 1;
+		}
+
+		.item.current {
+			opacity: 1;
+		}
+		.item.current a {
+			border-width: 0;
+		}
+
+		.item {
+			opacity: 0.5;
+		}
+
+		.main-menu {
+			margin-top: $spacing;
+			height: 0px;
+			overflow: hidden;
+
+			-webkit-transition: height 0.3s ease;
+			-moz-transition: height 0.3s ease;
+			-ms-transition: height 0.3s ease;
+			-o-transition: height 0.3s ease;
+			transition: height 0.3s ease;
+		}
+
+		li {
+			width: $site-width-mobile;
+		}
+
+		.main-menu-toggle {
+			display: block;
+			margin-bottom: 0;
+			padding: 0;
+		}
+
+		li#toggle-button {
+			display: block;
+		}
+
+		ul.toggle-menu {
+			padding-bottom: 0;
+		}
+
+		li.toggle-button {
+			cursor: pointer;
+			position: relative;
+		}
+
+		li.toggle-button .arrow {
+			position: absolute;
+			right: $spacing;
+		}
+
+		&.open .arrow {
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+			filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */ M11 =-1, M12 =-1.2246063538223773e-16, M21 = 1.2246063538223773 e-16, M22 =-1, sizingMethod = 'auto expand');
+			zoom: 1;
+		}
+
 	}
 
 }
-
-	}
