@@ -1,5 +1,9 @@
 @import "_variables-mixins.css.scss";
 
+* {
+	line-height: 1.5em;
+}
+
 ::-moz-selection {
 	color: white;
 	background: $black;

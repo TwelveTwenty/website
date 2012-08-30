@@ -28,21 +28,27 @@
 		</section>
 
 		<ul class="two-thirds apps trigger">
-			<li class="willitfit">
-				<%= image_tag "home/willitfit-single.png", :width => 55, :height => 55, :alt => "Will It Fit", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/willitfiticon.json")} %>
-				<h2>Will it fit</h2>
-				<em>Review your designs at their true physical size without ever leaving your Mac.</em>
-			</li>
-			<li class="gettogether trigger">
-				<%= image_tag "home/gettogethericon-single.png", :width => 40, :height => 44, :alt => "Get Together", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/gettogethericon.json")} %>
-				<h2>Get Together</h2>
-				<em>The fastest way to create calendar events on your iPhone or iPad.</em>
-			</li>
-			<li class="uberlayer trigger">
-				<%= image_tag "home/uberlayericon.png", :width => 49, :height => 49, :alt => "Uberlayer", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/uberlayericon.json")} %>
-				<h2>Uberlayer</h2>
-				<em>Admit it, semitransparent, always-on-top pixel proofing just became sexy...</em>
-			</li>
+			<%= link_to :controller => :apps, :action => :show, :app => :willitfit do %>
+				<li class="willitfit">
+					<%= image_tag "home/willitfit-single.png", :width => 55, :height => 55, :alt => "Will It Fit", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/willitfiticon.json")} %>
+					<h2>Will it fit</h2>
+					<em>Review your designs at their true physical size without ever leaving your Mac.</em>
+				</li>
+			<% end %>
+			<%= link_to :controller => :apps, :action => :show, :app => :gettogether do %>
+				<li class="gettogether trigger">
+					<%= image_tag "home/gettogethericon-single.png", :width => 40, :height => 44, :alt => "Get Together", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/gettogethericon.json")} %>
+					<h2>Get Together</h2>
+					<em>The fastest way to create calendar events on your iPhone or iPad.</em>
+				</li>
+			<% end %>
+			<%= link_to :controller => :apps, :action => :show, :app => :uberlayer do %>
+				<li class="uberlayer trigger">
+					<%= image_tag "home/uberlayericon.png", :width => 49, :height => 49, :alt => "Uberlayer", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/uberlayericon.json")} %>
+					<h2>Uberlayer</h2>
+					<em>Admit it, semitransparent, always-on-top pixel proofing just became sexy...</em>
+				</li>
+			<% end %>
 		</ul>
 	</div>
 
