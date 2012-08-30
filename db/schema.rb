@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828202606) do
+ActiveRecord::Schema.define(:version => 20120830144851) do
 
   create_table "artworks", :force => true do |t|
     t.string   "alt"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120828202606) do
     t.string   "artwork"
     t.datetime "publish_date"
     t.boolean  "draft"
+    t.string   "teaser"
   end
 
   create_table "goodies", :force => true do |t|
