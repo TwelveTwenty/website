@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     @blogs = Blog.where("draft != ?", true).order('id desc').all :limit => 2
     @goody = Goody.where("draft != ?", true).last
 
-    unless Rails.cache.read('tweets')
+    unless Rails.cache.read(:tweets)
 
       # load json from twitter
       uri = URI('http://api.twitter.com/1/favorites.json?screen_name=twelve_20')
@@ -17,12 +17,16 @@ class HomeController < ApplicationController
       tweets = JSON.parse(response)
 
       #save to cache
-      Rails.cache.write('tweets', tweets, :time_to_idle => 5.seconds, :expires_in => 1.hour)
+      Rails.cache.write(:tweets, tweets, :time_to_idle => 5.seconds, :expires_in => 1.hour)
 
       logger.debug "Fetch new tweets."
     end
 
-    @tweets = Rails.cache.read('tweets')
+    @tweets = Rails.cache.read(:tweets)
+
+    unless @tweets.is_a? Array
+      logger.error "Problem loading tweets: #{@tweets}"
+    end
 
   end
 end
