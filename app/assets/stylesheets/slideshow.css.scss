@@ -1,5 +1,18 @@
 @import "_variables-mixins.css.scss";
 
+.apps-show-uberlayer .slideshow .controls li.current {
+	background-image: url('/assets/apps/slideshow/controls-item-current-orange.png');
+}
+
+.apps-show-willitfit .slideshow .controls li.current {
+	background-image: url('/assets/apps/slideshow/controls-item-current-green.png');
+}
+
+.apps-show-gettogether.slideshow .controls li.current {
+	background-image: url('/assets/apps/slideshow/controls-item-current-yellow.png');
+}
+
+
 .slideshow {
 
 	&.iphone .photo-container {
