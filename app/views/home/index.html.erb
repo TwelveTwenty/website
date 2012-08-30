@@ -52,10 +52,16 @@
 	<h2 class="hidden">From the blog</h2>
 
 	<div class="row blog-teaser">
+		<%
+			more_titles = Array.new
+			more_titles.push "Tell me more..."
+			more_titles.push "Read all about it!"
+			more_titles.push "Gimme that goodie!"
+		%>
 		<% @blogs.each do |blog| %>
-			<%= render "third-block", :data => blog %>
+		<%= render "third-block", :data => blog, :more_title => more_titles.shift %>
 		<% end %>
 
-		<%= render "third-block", :data => @goody %>
+		<%= render "third-block", :data => @goody, :more_title => more_titles.shift %>
 	</div>
 </div>
