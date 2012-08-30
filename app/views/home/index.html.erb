@@ -10,11 +10,8 @@
 		</section>
 		<section class="one-third centered"><%= image_tag "logo.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-zwart-helft.json")} %></section>
 		<section class="one-third hidden-mobile centered">
-			<h2>Latest tweets</h2>
-			<em>Get Together from
-				<a href="https://twitter.com/twelve_20">@twelve_20</a> is quite possibly one of the most beautiful and pleasant ways to plan social events
-				<a href="http://twelvetwenty.nl/gettogether">http://twelvetwenty.nl/gettogether</a> </em>
-			<em>Follow us <a href="https://twitter.com/twelve_20">@twelve_20</a></em>
+			<h2>What people are saying</h2>
+			<p class="tweet"><%= render 'random-tweet', :tweets => @tweets %></p>
 		</section>
 	</div>
 
