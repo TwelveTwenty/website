@@ -1,9 +1,9 @@
 @import "_variables-mixins.css.scss";
 
 @mixin current-selected-icon {
+	background-image: url('/assets/home/appicon-down.png');
+	height: 200px;
 	top: 20px;
-	height: 220px;
-	background-image: url('/assets/home/appicon-up.png');
 }
 
 .apps.apps-show-uberlayer .app.uberlayer {
@@ -51,10 +51,9 @@ body.apps {
 	@include light-dark;
 
 	.app {
-		top: 20px;
+
 		background-position: center top;
 		background-repeat: no-repeat;
-		height: 200px;
 		text-align: center;
 
 		display: inline-block;
@@ -67,7 +66,11 @@ body.apps {
 		transition: opacity 0.3s ease;
 
 		min-height: 200px;
-		background-image: url('/assets/home/appicon-down.png');
+		background-image: url('/assets/home/appicon-up.png');
+
+		top: 20px;
+		height: 220px;
+
 
 		position: relative;
 
