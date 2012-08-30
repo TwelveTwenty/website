@@ -50,6 +50,17 @@ body.apps {
 
 	@include light-dark;
 
+	a {
+		color: white !important;
+		opacity: 0.5;
+		text-decoration: underline;
+	}
+
+	a:hover {
+		opacity: 1;
+		text-decoration: underline;
+	}
+
 	.app {
 
 		background-position: center top;

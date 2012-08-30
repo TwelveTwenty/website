@@ -18,6 +18,10 @@ body.home {
 			position: relative;
 		}
 
+		li:hover {
+			color: #939393;
+		}
+
 		a {
 			color: $black !important;
 		}
