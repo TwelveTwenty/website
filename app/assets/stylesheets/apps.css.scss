@@ -26,6 +26,12 @@
 
 body.apps {
 
+	@media (min-width: $site-width) {
+		.requirements {
+			margin-top: 108px;
+		}
+	}
+
 	.app-icons {
 		margin-top: 50px;
 	}
