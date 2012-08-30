@@ -18,6 +18,12 @@
 	@include current-selected-icon;
 }
 
+.apps.apps-show-uberlayer .keycodes .text {
+	vertical-align: middle;
+	padding-left: 14px;
+	font-style: italic;
+}
+
 body.apps {
 
 	.app-icons {
