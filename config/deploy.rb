@@ -42,12 +42,5 @@ namespace :deploy do
   end
 end
 
-namespace :deploy do
-  task :migrate do
-    run "cd #{deploy_to}/current && rake db:migrate RAILS_ENV=production"
-  end
-end
-
-after :deploy, "deploy:migrate"
 after :deploy, "deploy:symlink_shared"
 after :deploy, "passenger:restart"
