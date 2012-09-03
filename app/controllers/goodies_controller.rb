@@ -7,9 +7,9 @@ class GoodiesController < ApplicationController
   def index
 
     if current_user
-      @goodies = Goody.order('id desc').all
+      @goodies = Goody.order('created_at desc').all
     else
-      @goodies = Goody.where("draft != ?", true).order('id desc')
+      @goodies = Goody.where("draft != ?", true).order('created_at desc').all
     end
 
     respond_to do |format|

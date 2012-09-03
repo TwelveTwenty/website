@@ -6,9 +6,9 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     if current_user
-      @blogs = Blog.order('id desc').all
+      @blogs = Blog.order('created_at desc').all
     else
-      @blogs = Blog.where("draft != ?", true).order('id desc')
+      @blogs = Blog.where("draft != ?", true).order('created_at desc').all
     end
 
     respond_to do |format|
