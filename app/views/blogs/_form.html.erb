@@ -18,6 +18,12 @@
 	</div>
 
 	<div class="field">
+		<%= f.label :created_at, "created_at" %>
+		<br/>
+		<%= f.datetime_select :created_at %>
+	</div>
+
+	<div class="field">
 		<%= f.label :title, "title" %>
 		<br/>
 		<%= f.text_field :title %>
