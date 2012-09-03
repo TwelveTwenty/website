@@ -1,6 +1,5 @@
 @import "_variables-mixins.css.scss";
 
-
 @mixin current-selected-icon {
 	background-image: url('/assets/home/appicon-down.png');
 	height: 200px;
@@ -10,14 +9,29 @@
 // special content treatment for apps begin
 .apps.apps-show-uberlayer .app.uberlayer {
 	@include current-selected-icon;
+
+	img, canvas {
+		top: 45px;
+	}
+
 }
 
 .apps.apps-show-willitfit .app.willitfit {
 	@include current-selected-icon;
+
+	img, canvas {
+		top: 42px;
+	}
+
 }
 
 .apps.apps-show-gettogether .app.gettogether {
 	@include current-selected-icon;
+
+	img, canvas {
+		top: 48px;
+	}
+
 }
 
 .apps.apps-show-uberlayer .keycodes .text {
@@ -83,11 +97,13 @@ body.apps {
 
 		canvas, img {
 			position: absolute;
-			top: 49px;
-			left: 45px;
 		}
 
-		// Not all icons are centered in the same way in the image.
+		&.gettogether img, &.gettogether canvas {
+			top: 52px;
+			left: 48px;
+		}
+
 		&.willitfit img, &.willitfit canvas {
 			top: 45px;
 			left: 40px;
