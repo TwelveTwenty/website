@@ -77,7 +77,7 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 </header>
 
 <div class="sharing">
-	<a href="https://www.facebook.com/dialog/feed?app_id=<%=APP_CONFIG["facebook_key"]%>&link=<%= request.url %>&picture=<%= root_url[0...-1] + image_path("share.jpeg") %>&name=<%= Rack::Utils.escape @page_title %>&caption=Twelve+Twenty&redirect_uri=<%= request.url %>" target="_blank"><div class="facebook"></div></a>
+	<a href="https://www.facebook.com/dialog/feed?app_id=<%=APP_CONFIG["facebook_key"]%>&link=<%= request.url %>&picture=<%= root_url[0...-1] + image_path("share.jpeg") %>&name=<%= Rack::Utils.escape @page_title %>&caption=Twelve+Twenty&redirect_uri=<%= request.url %>"><div class="facebook"></div></a>
 	<a href="http://twitter.com/home?status=<%= Rack::Utils.escape @page_title + " - " +  request.url %>" target="_blank"><div class="twitter"></div></a>
 </div>
 
