@@ -100,7 +100,11 @@ body > header {
 
 @media (min-width: $site-width) {
 	body > header {
-		height: $main-menu-height + 130px !important;
+		height: $main-menu-height + 30px !important;
+	}
+
+	body > header .main-menu {
+		height: $main-menu-height + 30px !important;
 	}
 }
 
