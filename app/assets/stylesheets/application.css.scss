@@ -169,7 +169,7 @@ body .wrapper:after {
 	display: inline-block;
 
 	font-family: $oswald;
-	font-size: 14px;
+	font-size: 12px;
 	letter-spacing: 0.1em;
 
 	width: 130px;
@@ -181,8 +181,5 @@ body .wrapper:after {
 }
 
 // light - dark is default
-@include
-light-dark
-
-;
+@include light-dark;
 
