@@ -33,9 +33,10 @@
 	<meta property="og:type" content=website>
 	<meta property="og:title" content="<%= page_title %>"/>
 	<meta property="og:description" content="<%= page_description %>"/>
-	<meta property="og:image" content="<%= request.url[0..-1] + image_path("share.jpeg") %>"/>
 	<meta property="og:url" content="<%= request.url %>"/>
+	<meta property="og:image" content="<%= root_url[0...-1] + image_path("share.jpeg") %>"/>
 	<meta property="og:caption" content="Twelve Twenty"/>
+
 
 	<meta name="viewport" content="width=device-width">
 
