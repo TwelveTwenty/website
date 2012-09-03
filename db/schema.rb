@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120830144851) do
+ActiveRecord::Schema.define(:version => 20120903092402) do
 
   create_table "artworks", :force => true do |t|
     t.string   "alt"
@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(:version => 20120830144851) do
     t.datetime "publish_date"
     t.boolean  "draft"
     t.string   "teaser"
+    t.string   "slug"
   end
+
+  add_index "blogs", ["slug"], :name => "index_blogs_on_slug"
 
   create_table "goodies", :force => true do |t|
     t.string   "title"

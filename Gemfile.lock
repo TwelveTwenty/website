@@ -61,11 +61,12 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
+    friendly_id (4.0.8)
     hashie (1.2.0)
     highline (1.6.14)
     hike (1.2.1)
     httpauth (0.1)
-    i18n (0.6.0)
+    i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.1.1)
       railties (>= 3.1.0, < 5.0)
@@ -94,7 +95,7 @@ GEM
       jwt (~> 0.1.4)
       multi_json (~> 1.0)
       rack (~> 1.2)
-    omniauth (1.1.0)
+    omniauth (1.1.1)
       hashie (~> 1.2)
       rack
     omniauth-facebook (1.4.1)
@@ -153,9 +154,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.33)
-    uglifier (1.2.7)
+    uglifier (1.3.0)
       execjs (>= 0.3.0)
-      multi_json (~> 1.3)
+      multi_json (~> 1.0, >= 1.0.2)
 
 PLATFORMS
   ruby
@@ -165,6 +166,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.2.1)
   debugger
+  friendly_id
   jquery-rails
   mysql2
   omniauth-facebook
