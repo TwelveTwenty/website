@@ -21,6 +21,22 @@
 	height: 61px;
 }
 
+@media (min-width: $site-width) {
+	article {
+		position: relative;
+	}
+
+	.goody-label {
+		position: absolute;
+		right: -5px;
+		top: -7px;
+		width: 92px;
+		height: 92px;
+		background-image: url('/assets/label-goodies.png');
+		background-repeat: no-repeat;
+	}
+}
+
 @media (max-width: $site-width) {
 
 	.blog-teaser .content {

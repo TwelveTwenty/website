@@ -61,9 +61,9 @@
 			more_titles.push "Gimme that goodie!"
 		%>
 		<% @blogs.each do |blog| %>
-		<%= render "third-block", :data => blog, :more_title => more_titles.shift %>
+			<%= render "third-block", :data => blog, :more_title => more_titles.shift %>
 		<% end %>
 
-		<%= render "third-block", :data => @goody, :more_title => more_titles.shift %>
+		<%= render "third-block", :data => @goody, :more_title => more_titles.shift, :goody => true %>
 	</div>
 </div>

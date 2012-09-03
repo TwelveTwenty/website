@@ -3,7 +3,13 @@ input, textarea {
 	padding: 5px;
 }
 
+
+.field {
+	clear: both;
+}
+
 label {
+	font-weight: bold;
 	padding: 5px;
 	margin-top: 20px;
 	float: left;
