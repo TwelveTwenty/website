@@ -194,3 +194,22 @@ Add a link with a block, so you can add HTML content
 * Added a before_filter in GoodiesController and BlogController
 * Added an array with valid Admin Facebook id's (maybe I'll make an UI later)
 * Scaffolded a controller and views for Images, those images can be used in Blog posts and Goodies
+
+
+# Monday, september 3th
+
+* installed the [friendly_id])(https://github.com/norman/friendly_id) gem for nicer urls with blogs and goodies
+* On the server i could run the rails console, found out that the `libreadline-dev` wasn't installed, did this on the server to get it working
+
+	apt-get install libreadline-dev
+
+	#recompile ruby
+	rbenv install 1.9.3-p194
+
+	#restart app
+	touch tmp/restart.txt
+
+	# start console in production environment
+	rails console production
+
+
