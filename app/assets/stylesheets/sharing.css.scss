@@ -1,0 +1,76 @@
+.sharing {
+	position: fixed;
+	top: 150px;
+	width: 58px;
+	height: 136px;
+	background-image: url('/assets/sharing/bgsocial-orange.png');
+	text-align: center;
+	padding-top: 13px;
+	padding-right: 5px;
+
+	.facebook, .twitter {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin-bottom: 6px;
+	}
+
+	.facebook {
+		background-image: url('/assets/sharing/facebook-orange-up.png');
+	}
+
+	.twitter {
+		background-image: url('/assets/sharing/twitter-orange-up.png');
+	}
+
+	.facebook:hover {
+		background-image: url('/assets/sharing/facebook-orange-down.png');
+	}
+
+	.twitter:hover {
+		background-image: url('/assets/sharing/twitter-orange-down.png');
+	}
+
+}
+
+.apps.apps-show-willitfit .sharing {
+	background-image: url('/assets/sharing/bgsocial-green.png');
+
+	.facebook {
+		background-image: url('/assets/sharing/facebook-green-up.png');
+	}
+
+	.twitter {
+		background-image: url('/assets/sharing/twitter-green-up.png');
+	}
+
+	.facebook:hover {
+		background-image: url('/assets/sharing/facebook-green-down.png');
+	}
+
+	.twitter:hover {
+		background-image: url('/assets/sharing/twitter-green-down.png');
+	}
+
+}
+
+.apps.apps-show-gettogether .sharing {
+	background-image: url('/assets/sharing/bgsocial-yellow.png');
+
+	.facebook {
+		background-image: url('/assets/sharing/facebook-yellow-up.png');
+	}
+
+	.twitter {
+		background-image: url('/assets/sharing/twitter-yellow-up.png');
+	}
+
+	.facebook:hover {
+		background-image: url('/assets/sharing/facebook-yellow-down.png');
+	}
+
+	.twitter:hover {
+		background-image: url('/assets/sharing/twitter-yellow-down.png');
+	}
+
+}
