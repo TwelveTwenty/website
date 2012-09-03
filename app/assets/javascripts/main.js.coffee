@@ -20,15 +20,13 @@ class Main
 
 	addScrollListeners: ->
 		@spacer = ($ 'body > header .spacer')
-		($ document).bind "touchmove", => @handleScroll()
-		($ window).scroll => @handleScroll()
+		($ document).bind "touchmove", debounce( @handleScroll, 200, false )
+		($ window).scroll debounce( @handleScroll, 100, false )
 		@handleScroll()
 
 	enableResposiveMenu: ->
 		@list = ($ '.main-menu')
 		@header = @list.closest('header')
-
-		@header.addClass('closed')
 
 		($ '#toggle-button').click =>
 			if @header.hasClass "open"
@@ -43,7 +41,7 @@ class Main
 				@header.removeClass('closed')
 				@header.addClass('open')
 
-	handleScroll: ->
+	handleScroll: =>
 		pos = ($ window).scrollTop()
 		c = ($ "#logo")
 		delta = Math.max(160 - pos, 0)
