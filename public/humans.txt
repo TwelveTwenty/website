@@ -3,41 +3,16 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Co-founder: Timo Kuilder
+  Site: http://www.zwartekoffie.nl
+  Twitter: @timokuilder
+  Location: Amsterdam
 
-/* THANKS */
-  Names (& URL):
+  Co-founder: Eric-Paul Lecluse
+  Site: http://epologee.com
+  Twitter: @epologee
+  Location: Amsterdam
 
-/* SITE */
-  Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
-
-
-
-                               -o/-
-                               +oo//-
-                              :ooo+//:
-                             -ooooo///-
-                             /oooooo//:
-                            :ooooooo+//-
-                           -+oooooooo///-
-           -://////////////+oooooooooo++////////////::
-            :+ooooooooooooooooooooooooooooooooooooo+:::-
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-
-                     -:+ooooooooooooooooo+:://////:--
-                       /ooooooooooooooooo+//////:-
-                      -ooooooooooooooooooo////-
-                      /ooooooooo+oooooooooo//:
-                     :ooooooo+/::/+oooooooo+//-
-                    -oooooo/::///////+oooooo///-
-                    /ooo+::://////:---:/+oooo//:
-                   -o+/::///////:-      -:/+o+//-
-                   :-:///////:-            -:/://
-                     -////:-                 --//:
-                       --                       -:
+  Co-founder: Jankees van Woezik
+  Site: http://www.base42.nl
+  Twitter: @jankeesvw
