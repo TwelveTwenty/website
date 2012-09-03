@@ -64,6 +64,6 @@
 			<%= render "third-block", :data => blog, :more_title => more_titles.shift %>
 		<% end %>
 
-		<%= render "third-block", :data => @goody, :more_title => more_titles.shift, :goody => true %>
+		<%= render "third-block", :data => @goody, :more_title => more_titles.shift, :goody => true if @goody %>
 	</div>
 </div>
