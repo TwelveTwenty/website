@@ -21,6 +21,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'redcarpet'
 gem 'capistrano'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'sqlite3'
