@@ -119,6 +119,8 @@ GEM
       bundler (~> 1.0)
       railties (= 3.2.8)
     rails-boilerplate (0.1.9)
+    rails-footnotes (3.7.8)
+      rails (>= 3.0.0)
     railties (3.2.8)
       actionpack (= 3.2.8)
       activesupport (= 3.2.8)
@@ -168,6 +170,7 @@ DEPENDENCIES
   omniauth-facebook
   rails (= 3.2.8)
   rails-boilerplate
+  rails-footnotes (>= 3.7.5.rc4)
   redcarpet
   rmagick
   sass-rails (~> 3.2.3)

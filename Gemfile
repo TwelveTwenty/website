@@ -26,6 +26,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'thin'
   gem 'debugger'
+  gem 'rails-footnotes', '>= 3.7.5.rc4'
 end
 
 group :production do

@@ -156,5 +156,10 @@ body .wrapper:after {
 	height: 131px;
 }
 
+#footnotes_debug {
+	background-color: white;
+}
+
 // light - dark is default
 @include light-dark;
+
