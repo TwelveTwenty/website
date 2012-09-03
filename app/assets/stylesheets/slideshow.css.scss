@@ -12,7 +12,6 @@
 	background-image: url('/assets/apps/slideshow/controls-item-current-yellow.png');
 }
 
-
 .slideshow {
 
 	&.iphone .photo-container {
@@ -22,26 +21,36 @@
 		padding: 120px 0px 0px 6px;
 	}
 
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
 	.photo-container {
 		cursor: pointer;
 		height: 479px;
+		width: 696px;
 
 		margin: 0;
-		padding: 10px 15px 0px 0px;
+		padding: 8px 8px 8px 6px;
 
 		background-image: url('/assets/apps/imageframe.png');
 		background-repeat: no-repeat;
+
 
 		ol {
 			overflow: hidden;
 			height: 100%;
 			margin: 0;
-			padding: 0px;
+			padding: 0;
 		}
 
 		li {
+			margin: 0;
+			padding: 0;
 			text-align: center;
 			height: 100%;
+			width: 100%;
 			display: none;
 			list-style: none;
 		}
@@ -92,6 +101,7 @@
 	@media (max-width: $site-width) {
 
 		.photo-container {
+			width: inherit;
 			height: inherit;
 			background-image: none;
 			padding: 0;
@@ -106,7 +116,6 @@
 		}
 	}
 }
-
 
 @media (min-width: $site-width) {
 	.full.slideshow {
