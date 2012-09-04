@@ -1,0 +1,11 @@
+<div class="photo-container">
+	<ol>
+		<% images.each do |image| %>
+			<li><%= image_tag image %></li>
+		<% end %>
+	</ol>
+</div>
+<div class="clearfix"></div>
+<div class="controls">
+	<div class="start"></div><ol><% images.each do |image| %><li></li><% end %></ol><div class="end"></div>
+</div>

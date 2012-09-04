@@ -11,6 +11,53 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20120903094324) do
+
+  create_table "artworks", :force => true do |t|
+    t.string   "alt"
+    t.string   "artwork"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "blogs", :force => true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.text     "body"
+    t.string   "artwork"
+    t.datetime "publish_date"
+    t.boolean  "draft"
+    t.string   "teaser"
+    t.string   "slug"
+  end
+
+  add_index "blogs", ["slug"], :name => "index_blogs_on_slug"
+
+  create_table "goodies", :force => true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "artwork"
+    t.string   "download_url"
+    t.text     "teaser"
+    t.text     "body"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.boolean  "draft"
+    t.string   "slug"
+  end
+
+  add_index "goodies", ["slug"], :name => "index_goodies_on_slug"
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
 end

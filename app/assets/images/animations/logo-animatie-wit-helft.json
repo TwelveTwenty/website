@@ -1,0 +1,9 @@
+{"frames":{
+	"regX":0,
+	"height":161,
+	"regY":0,
+	"width":141,
+	"count":52
+}, "images":["/assets/animations/logo-animatie-wit-helft.png"], "animations":{
+	"all":[0, 51]
+}}

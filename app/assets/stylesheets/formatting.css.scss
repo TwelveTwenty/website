@@ -1,0 +1,88 @@
+@import "_variables-mixins.css.scss";
+
+::-moz-selection {
+	color: white;
+	background: $black;
+	text-shadow: none;
+}
+
+::selection {
+	color: white;
+	background: $black;
+	text-shadow: none;
+}
+
+ins {
+	background-color: transparent;
+	color: inherit;
+}
+
+th {
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+td {
+	padding: 5px;
+}
+
+body {
+	font-size: 14px;
+
+	p, ol, ul, td {
+		font-size: 14px;
+		font-family: 'Poly', serif;
+		font-weight: normal;
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+
+}
+
+h1, h2, h3, h4, h5 {
+	text-transform: uppercase;
+	font-family: $oswald;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 25px;
+	line-height: 30px;
+}
+
+h2 {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+em {
+	font-family: $poly;
+}
+
+body a, body a:visited, body a:hover {
+	background-color: transparent;
+	color: $red;
+	text-decoration: none;
+}
+
+a.arrow, a.arrow:visited {
+	background-image: url('/assets/pijl.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 15px;
+	color: $black;
+}
+a.arrow:hover {
+	color: $red;
+}
+
+ul {
+	margin: 0;
+}
+
+.centered {
+	text-align: center;
+}
+
+.padded {
+	padding: $column-margin;
+}

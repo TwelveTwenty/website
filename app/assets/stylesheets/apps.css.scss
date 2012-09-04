@@ -1,0 +1,172 @@
+@import "_variables-mixins.css.scss";
+
+@mixin current-selected-icon {
+	background-image: url('/assets/home/appicon-down.png');
+	height: 200px;
+	top: 20px;
+}
+
+// special content treatment for apps begin
+.apps.apps-show-uberlayer .app.uberlayer {
+	@include current-selected-icon;
+
+	img, canvas {
+		top: 45px;
+	}
+
+}
+
+.apps.apps-show-willitfit .app.willitfit {
+	@include current-selected-icon;
+
+	img, canvas {
+		top: 42px;
+	}
+
+}
+
+.apps.apps-show-gettogether .app.gettogether {
+	@include current-selected-icon;
+
+	img, canvas {
+		top: 48px;
+	}
+
+}
+
+.apps.apps-show-uberlayer .keycodes .text {
+	vertical-align: middle;
+	padding-left: 14px;
+	font-style: italic;
+}
+
+// special content treatment for apps end
+
+// App content coloring start
+
+.apps-show-gettogether .content .text h2 {
+	background-image: url('/assets/apps/dotsyellow.png') !important;
+}
+
+.apps-show-uberlayer .content .text h2 {
+	background-image: url('/assets/apps/dotsorange.png') !important;
+}
+
+.apps-show-willitfit .content .text h2 {
+	background-image: url('/assets/apps/dotsgreen.png') !important;
+}
+
+// App content coloring end
+
+body.apps {
+
+	@media (min-width: $site-width) {
+		.requirements {
+			margin-top: 108px;
+		}
+	}
+
+	.app-icons {
+		margin-top: 50px;
+	}
+
+	@include light-dark;
+
+	.app {
+
+		background-position: center top;
+		background-repeat: no-repeat;
+		text-align: center;
+
+		display: inline-block;
+		width: 133px;
+
+		-webkit-transition: opacity 0.3s ease;
+		-moz-transition: opacity 0.3s ease;
+		-ms-transition: opacity 0.3s ease;
+		-o-transition: opacity 0.3s ease;
+		transition: opacity 0.3s ease;
+
+		min-height: 200px;
+		background-image: url('/assets/home/appicon-up.png');
+
+		top: 20px;
+		height: 220px;
+
+		position: relative;
+
+		canvas, img {
+			position: absolute;
+		}
+
+		&.gettogether img, &.gettogether canvas {
+			top: 52px;
+			left: 48px;
+		}
+
+		&.willitfit img, &.willitfit canvas {
+			top: 45px;
+			left: 40px;
+		}
+
+		&.uberlayer img, &.uberlayer canvas {
+			top: 49px;
+			left: 43px;
+		}
+
+		h2 {
+			position: absolute;
+			width: 133px;
+			bottom: 0;
+
+			-webkit-transition: opacity 0.3s ease;
+			-moz-transition: opacity 0.3s ease;
+			-ms-transition: opacity 0.3s ease;
+			-o-transition: opacity 0.3s ease;
+			transition: opacity 0.3s ease;
+		}
+	}
+
+	.app:hover {
+		h2 {
+			opacity: 0.5;
+		}
+	}
+
+	.requirements {
+		color: white;
+		background-color: $black;
+		padding-top: 5px;
+		background-image: none;
+	}
+
+	.content {
+		.text {
+			h2 {
+				padding-left: 40px;
+
+				background-repeat: no-repeat;
+				background-position: center left;
+			}
+			p {
+				padding-left: 40px;
+			}
+		}
+
+		.text, .requirements {
+
+			a {
+				color: white !important;
+				opacity: 0.5;
+				text-decoration: underline;
+			}
+
+			a:hover {
+				opacity: 1;
+				text-decoration: underline;
+			}
+
+		}
+	}
+
+}

@@ -1,0 +1,64 @@
+<% title "Will it fit" %>
+<% description "Review your designs at their true physical size without ever leaving your Mac." %>
+
+<% content_for :header do %>
+	<%= render "apps/header" %>
+<% end %>
+
+<div class="container">
+	<h1 class="hidden">Will it fit</h1>
+
+	<%= render 'vimeo_video', :video_id => "42493161" %>
+
+	<div class="row">
+		<article class="half text">
+			<h2>Will it fit</h2>
+			<p>Do you want to review your designs for print or devices at their true physical size? Will it fit is for you! With our massive database of physical screen dimensions, we know exactly how many pixels on your screen correspond with an inch or a centimeter in the physical world.</p>
+			<p><%= link_to "This article explains how it works", {:controller => :blogs, :action => :show, :id => 4}, :class => "arrow" %></p>
+		</article>
+		<article class="half centered hidden-mobile">
+			<%= image_tag "apps/willitfit/macwillitfit.png" %>
+		</article>
+	</div>
+
+	<div class="row full">
+		<div class="slideshow">
+			<%= render 'slideshow', :images => %w{apps/willitfit/screenshots/willitfit-screen-1.jpg apps/willitfit/screenshots/willitfit-screen-2.jpg  apps/willitfit/screenshots/willitfit-screen-3.jpg} %>
+		</div>
+	</div>
+
+	<div class="row">
+		<article class="half text">
+			<h2>Save a tree!</h2>
+			<p>Whether you design business cards, letterheads, iPhone apps or mobile websites, it is a breeze to get the right physical dimensions on your Mac's screen. It's way faster than proof-printing and better for the environment too.</p>
+		</article>
+		<article class="half centered hidden-mobile">
+			<%= image_tag "apps/willitfit/iconswillitfit.png" %>
+		</article>
+	</div>
+
+	<div class="row">
+		<article class="half text">
+			<h2>Free templates</h2>
+			<p>Use one of the built-in templates or customize them at will. And because we're nice guys, we'll let you have as many as you want at no extra charge!</p>
+		</article>
+		<article class="half centered">
+			<%= image_tag "apps/willitfit/screenshots/will-it-fit-app-dropdown.png" %>
+		</article>
+	</div>
+
+	<div class="row">
+		<article class="half padded requirements">
+			<h2>Requirements for Will it fit</h2>
+			<ul>
+				<li>The desire to print less</li>
+				<li>OS X Lion (10.7) or later</li>
+				<li>Possibly a tape measure or ruler&#8230;</li>
+			</ul>
+		</article>
+		<div class="call-to-action">
+			<%= render "shared/call-to-action-button", :link => "http://itunes.apple.com/app/id521680466", :color => "green", :text => "Download Will it fit", :price => "$4.99 / €3,99" %>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,32 @@
+<% title "Contact" %>
+
+<% content_for :header do %>
+	<div class="column" xmlns="http://www.w3.org/1999/html">
+		<section class="full centered">
+			<%= image_tag "logo-white.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-wit-helft.json")} %>
+		</section>
+	</div>
+<% end %>
+
+<div class="container">
+	<div class="column">
+		<section class="two-thirds">
+			<h1>Why or how to contact us?</h1>
+			<p>We can’t make our apps without people like you as our customers. And we wouldn’t know what our customers appreciate or despise without feedback. That’s why we value you, taking time to contact us.</p>
+			<p>If you have a suggestion, a remark or -heavens forbid- found a bug in one of our apps, please let us know. We’re friendly people!</p>
+		</section>
+	</div>
+
+	<div class="column full">
+		<div class="spacer"></div>
+	</div>
+
+	<div class="column call-to-action">
+		<%= render "shared/call-to-action-button", :link => "mailto:team@twelvetwenty.nl", :color => "orange", :text => "Send us an email", :icon => "contact/iconmail.png" %>
+		<%= render "shared/call-to-action-button", :link => "http://twitter.com/twelve_20", :color => "orange", :text => "Follow us on Twitter", :icon => "contact/icontwitter.png" %>
+	</div>
+
+	<div class="column full">
+		<div class="spacer"></div>
+	</div>
+</div>

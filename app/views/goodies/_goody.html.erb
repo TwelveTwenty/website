@@ -1,0 +1,29 @@
+<article class="full">
+	<%= image_tag goody.artwork_url(:full).to_s, :class => "artwork" %>
+
+	<div class="content">
+		<div class="padded">
+			<header>
+				<% if defined? detail %>
+					<h1><%= goody.title %></h1>
+				<% else %>
+					<%= link_to goody do %>
+						<h1><%= goody.title %></h1>
+					<% end %>
+				<% end %>
+				<h2>Written by <%= goody.author %></h2>
+			</header>
+			<%= markdown goody.body %>
+			<%  if current_user %>
+				<h4>Admin links</h4>
+				<ul>
+					<li><%= link_to "Edit this goody post", edit_goody_path(goody) %></li>
+					<li><%= link_to "Destroy this goody post", goody, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+					<li><%= link_to "Open this goody post", goody %></li>
+				</ul>
+			<% end %>
+		</div>
+	</div>
+	<footer></footer>
+
+</article>

@@ -1,0 +1,9 @@
+{"frames":{
+	"regY":0,
+	"width":280,
+	"count":52,
+	"regX":0,
+	"height":320
+}, "animations":{
+	"all":[0, 51]
+}, "images":["/assets/animations/logo-animatie-wit_0.png", "/assets/animations/logo-animatie-wit_1.png"]}

@@ -1,0 +1,29 @@
+<h1 class="hidden">Apps</h1>
+<div class="column hidden-mobile">
+	<section class="full centered">
+		<%= image_tag "logo-white.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-wit-helft.json")} %>
+	</section>
+</div>
+
+<div class="column">
+	<div class="full centered app-icons">
+		<%= link_to :controller => :apps, :action => :show, :app => :uberlayer do %>
+			<article class="app uberlayer trigger">
+				<%= image_tag "home/uberlayericon.png", :width => 49, :height => 49, :alt => "Uberlayer", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/uberlayericon.json")} %>
+				<h2>Uberlayer</h2>
+			</article>
+		<% end %>
+		<%= link_to :controller => :apps, :action => :show, :app => :willitfit do %>
+			<article class="app willitfit trigger">
+				<%= image_tag "home/willitfit-single.png", :width => 55, :height => 55, :alt => "Will It Fit", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/willitfiticon.json")} %>
+				<h2>Will it fit</h2>
+			</article>
+		<% end %>
+		<%= link_to :controller => :apps, :action => :show, :app => :gettogether do %>
+			<article class="app gettogether trigger">
+				<%= image_tag "home/gettogethericon-single.png", :width => 40, :height => 44, :alt => "Get Together", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/gettogethericon.json")} %>
+				<h2>Get Together</h2>
+			</article>
+		<% end %>
+	</div>
+</div>

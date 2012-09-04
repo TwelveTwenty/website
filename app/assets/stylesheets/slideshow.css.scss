@@ -1,0 +1,126 @@
+@import "_variables-mixins.css.scss";
+
+.apps-show-uberlayer .slideshow .controls li.current {
+	background-image: url('/assets/apps/slideshow/controls-item-current-orange.png');
+}
+
+.apps-show-willitfit .slideshow .controls li.current {
+	background-image: url('/assets/apps/slideshow/controls-item-current-green.png');
+}
+
+.apps-show-gettogether.slideshow .controls li.current {
+	background-image: url('/assets/apps/slideshow/controls-item-current-yellow.png');
+}
+
+.slideshow {
+
+	&.iphone .photo-container {
+		background-image: url('/assets/apps/gettogether/iphone.png');
+		width: 346px;
+		height: 675px;
+		padding: 120px 0px 0px 6px;
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.photo-container {
+		cursor: pointer;
+		height: 479px;
+		width: 696px;
+
+		margin: 0;
+		padding: 8px 8px 8px 6px;
+
+		background-image: url('/assets/apps/imageframe.png');
+		background-repeat: no-repeat;
+
+
+		ol {
+			overflow: hidden;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			height: 100%;
+			width: 100%;
+			display: none;
+			list-style: none;
+		}
+	}
+
+	.controls {
+		text-align: center;
+		margin-top: 10px;
+
+		.start, .end {
+			display: inline-block;
+			width: 14px;
+			height: 29px;
+
+			background-image: url('/assets/apps/slideshow/controls-slideshow-left.png');
+		}
+
+		.end {
+			background-image: url('/assets/apps/slideshow/controls-slideshow-right.png');
+		}
+
+		ol {
+			padding: 0;
+			margin: 0;
+
+			display: inline-block;
+			list-style: none;
+		}
+
+		li {
+			width: 13px;
+			height: 29px;
+
+			padding: 0;
+			margin: 0;
+
+			cursor: pointer;
+			display: inline-block;
+			background-image: url('/assets/apps/slideshow/controls-item.png');
+		}
+
+		li.current {
+			background-image: url('/assets/apps/slideshow/controls-item-current.png');
+		}
+
+	}
+
+	@media (max-width: $site-width) {
+
+		.photo-container {
+			width: inherit;
+			height: inherit;
+			background-image: none;
+			padding: 0;
+
+			ol {
+				padding: 0;
+			}
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: $site-width) {
+	.full.slideshow {
+		width: 696px;
+	}
+}
+
+

@@ -1,0 +1,5 @@
+@import "_variables-mixins.css.scss";
+
+body.images {
+	@include dark-light;
+}

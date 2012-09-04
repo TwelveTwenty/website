@@ -1,0 +1,190 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require layout
+ *= require_self
+ *= require_tree .
+ */
+
+@import "_variables-mixins.css.scss";
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body .wrapper:before, body .wrapper:after {
+	content: "";
+	display: table;
+}
+
+.draft {
+	opacity: 0.3;
+}
+
+body .wrapper:after {
+	clear: both;
+}
+
+.wrapper.content {
+	padding: 39px 0;
+}
+
+.wrapper.footer {
+	position: relative;
+	padding: 5px 0;
+	text-align: center;
+	ul {
+		padding: 10px 0;
+		margin-left: -10px;
+	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+		padding-left: 10px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		width: 50px;
+		height: 50px;
+	}
+
+	li.facebook {
+		background-image: url('/assets/facebook-up.png');
+	}
+
+	li.twitter {
+		background-image: url('/assets/twitter-up.png');
+	}
+
+	li:hover.facebook {
+		background-image: url('/assets/facebook-down.png');
+	}
+
+	li:hover.twitter {
+		background-image: url('/assets/twitter-down.png');
+	}
+}
+
+.footer-border {
+	height: 8px;
+	background-image: url('/assets/footerpattern.png');
+	background-repeat: repeat-x;
+}
+
+.login {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+}
+
+.login, .login a, .login a:active, .login a:visited {
+	color: white;
+	font-size: 10px;
+}
+
+.copy-to-clipboard {
+	cursor: pointer;
+}
+
+.copy-to-clipboard:hover {
+	background-color: #707070;
+	color: white;
+}
+
+.call-to-action > div {
+	height: 210px;
+	margin-top: 40px;
+	background-image: url('/assets/contact/pattern-striped-block.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	position: relative;
+}
+
+.call-to-action .button-holder {
+	text-transform: uppercase;
+
+	position: absolute;
+	bottom: 15px;
+	left: 50px;
+
+	width: 248px;
+	height: 45px;
+
+	text-align: left;
+	padding-left: 20px;
+	line-height: 45px;
+	font-family: $oswald;
+	font-size: 15px;
+	color: white;
+
+	background-image: url('/assets/block-button/button-bg.png');
+
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+}
+
+.call-to-action .yellow .button {
+	background-image: url('/assets/block-button/arrow-yellow.png');
+}
+
+.call-to-action .green .button {
+	background-image: url('/assets/block-button/arrow-green.png');
+}
+
+.call-to-action .button {
+	position: absolute;
+
+	top: 4px;
+	right: 5px;
+
+	width: 42px;
+	height: 37.5px;
+
+	background-image: url('/assets/block-button/arrow-orange.png');
+
+	// border radius
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.call-to-action a:hover {
+	text-decoration: none;
+}
+
+.call-to-action .appstore {
+	background-image: url('/assets/apps/price.png');
+	background-position: no-repeat;
+
+	line-height: 190px;
+	display: inline-block;
+
+	font-family: $poly;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+
+	width: 130px;
+	height: 131px;
+}
+
+#footnotes_debug {
+	background-color: white;
+}
+
+// light - dark is default
+@include light-dark;
+

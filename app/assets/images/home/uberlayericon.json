@@ -1,0 +1,9 @@
+{"images":["/assets/home/uberlayericon.png"], "frames":{
+	"regY":0,
+	"width":49,
+	"count":20,
+	"regX":0,
+	"height":49
+}, "animations":{
+	"all":[0, 19]
+}}

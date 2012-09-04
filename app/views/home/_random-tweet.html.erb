@@ -1,0 +1,13 @@
+<%=
+	random_tweet = tweets.sample
+	tweet_text = random_tweet["text"]
+
+	#make links clickable
+	tweet_text.gsub!(/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/) { |x| "<a href='#{x}'>#{x}</a>" }
+
+	#make mentions clickable
+	tweet_text.gsub!(/@\w+/) { |x| "<a href='http://twitter.com/#{x[1..-1]}'>#{x}</a>" }
+
+	#pass it to the view
+	raw "<em>#{random_tweet["user"]["name"]} <a href='http://twitter.com/#{random_tweet["user"]["screen_name"]}/statuses/#{random_tweet["id"]}'>@#{random_tweet["user"]["screen_name"]}</a> :<br>&ldquo;#{tweet_text}&rdquo;</em>"
+%>

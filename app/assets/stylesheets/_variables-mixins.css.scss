@@ -1,0 +1,71 @@
+$site-width: 762px;
+
+$column-margin: 24px;
+$column-at-one-third: ($site-width - 4 * $column-margin) / 3;
+$column-at-two-thirds: ($site-width - 4 * $column-margin) / 3 * 2 + $column-margin;
+$column-at-half: ($site-width - 3 * $column-margin) / 2;
+$column-at-full: ($site-width - 2 * $column-margin);
+
+$site-width-mobile: $column-at-half + 2 * $column-margin;
+
+$black: #282828;
+$red: #e97058;
+
+$oswald: 'Oswald', Tahoma, sans-serif;
+$poly: 'Poly', Georgia, serif;
+
+/* wrapper coloring */
+
+@mixin wrapper-dark {
+	background-color: black;
+	background-image: url('/assets/bg-black-pattern.png');
+	color: white;
+
+	a {
+		color: $red;
+
+		h1, h2, h3 {
+			color: white;
+		}
+	}
+}
+
+@mixin wrapper-light {
+	background-color: white;
+	background-image: url('/assets/bg-white-pattern.png');
+	color: $black;
+	a {
+		color: $red;
+
+		h1, h2, h3 {
+			color: $black;
+		}
+	}
+}
+
+/* end wrapper coloring */
+
+/* mixins for default background coloring */
+
+@mixin light-dark {
+	.wrapper.header {
+		padding: 39px 0;
+		@include wrapper-light;
+	}
+
+	.wrapper.content, .wrapper.footer, body {
+		@include wrapper-dark;
+	}
+}
+
+@mixin dark-light {
+	.wrapper.header, .wrapper.footer {
+		@include wrapper-dark;
+	}
+
+	.wrapper.content {
+		@include wrapper-light;
+	}
+}
+
+/* end mixins for default background coloring */

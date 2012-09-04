@@ -1,0 +1,19 @@
+<% content_for :header do %>
+	<h1 class="hidden">Goodies</h1>
+	<div class="column hidden-mobile">
+		<section class="full centered">
+			<% if :color == :white %>
+				<%= image_tag "logo-white.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-wit-helft.json")} %>
+			<% else %>
+				<%= image_tag "logo.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-zwart-helft.json")} %>
+			<% end %>
+		</section>
+		<% if current_user and defined? admin_links %>
+			<section class="full centered">
+				<% admin_links.each do |link| %>
+					<%= link %>
+				<% end %>
+			</section>
+		<% end %>
+	</div>
+<% end %>

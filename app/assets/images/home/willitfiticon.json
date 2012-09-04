@@ -1,0 +1,9 @@
+{"frames":{
+	"regY":0,
+	"width":55,
+	"count":30,
+	"regX":0,
+	"height":55
+}, "animations":{
+	"all":[0, 29]
+}, "images":["/assets/home/willitfiticon.png"]}

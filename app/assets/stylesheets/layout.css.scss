@@ -1,0 +1,110 @@
+@import "_variables-mixins.css.scss";
+
+/** DEBUGGING LAYOUT */
+
+body.debug-layout {
+	background-color: blue !important;
+
+	@media (max-width: $site-width) {
+		background-color: orange !important;
+	}
+
+	.one-third {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwARpjGhiaUD+LGRBsABIEUwQLgATRBEACQIAw+IEbPD2jzoAAAAASUVORK5CYII=);
+	}
+
+	.half {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAL7rh5MY4TxQRwnbftZYAEYB8RmROaABADOIg6/PJ3T6QAAAABJRU5ErkJggg==);
+	}
+
+	.full {
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJElEQVQIW2NkYGAwBuKzQAwHjFAWigRMECQHl0AWhEugC4IlAPMHBDmyOst9AAAAAElFTkSuQmCC);
+	}
+
+	.two-thirds {
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHUlEQVQIW2NkgAK11hNpjCA2iHGr2mIWI4wBEgQAm2QJ3Z7sbdcAAAAASUVORK5CYII=);
+	}
+
+}
+
+/** DEBUGGING LAYOUT END */
+
+.container {
+	width: 762px;
+	margin: 0 auto;
+}
+
+.row {
+	margin-bottom: 24px;
+}
+
+.row::after {
+	clear: both;
+}
+
+.row::before, .row::after {
+	display: table;
+	content: "";
+}
+
+.one-third, .half, .full, .two-thirds {
+	float: left;
+	margin-left: 24px;
+}
+
+.one-third {
+	width: $column-at-one-third;
+}
+
+.two-thirds {
+	width: $column-at-two-thirds;
+}
+
+.half {
+	width: $column-at-half;
+}
+
+.full {
+	width: $column-at-full;
+}
+
+.half.centered-column, .two-thirds.centered-column, .one-third.centered-column {
+	margin: 0 auto;
+	float: none;
+}
+
+/** This is inspired by Twitter Bootstrap */
+
+// Phones only
+@media (max-width: $site-width) {
+
+	body, html {
+		min-width: $site-width-mobile;
+	}
+
+	.container {
+		width: $site-width-mobile;
+	}
+
+	.one-third, .half, .full, .two-thirds {
+		width: $column-at-half;
+		margin-bottom: 24px;
+	}
+
+	.row {
+		margin-bottom: 0px;
+	}
+
+	.visible-mobile     { display: inherit !important; }
+	.hidden-mobile      { display: none !important; }
+	.hidden-desktop    { display: inherit !important; }
+	.visible-desktop   { display: inherit !important; }
+}
+
+// Bigger than phone
+@media (min-width: $site-width) {
+	.visible-mobile    { display: inherit !important; }
+	.hidden-mobile     { display: inherit !important; }
+	.hidden-desktop    { display: none !important; }
+	.visible-desktop   { display: none !important ; }
+}

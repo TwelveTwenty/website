@@ -1,0 +1,85 @@
+<% title "Get Together" %>
+<% description "The fastest way to create calendar events on your iPhone or iPad." %>
+
+<% content_for :header do %>
+	<%= render "apps/header" %>
+<% end %>
+<div class="container">
+	<h1 class="hidden">Will it fit</h1>
+
+	<div class="row">
+		<article class="half text">
+			<h2>Get Together</h2>
+			<p>
+				<strong>
+					So you're <ins class="casuals">walking down the street</ins> when <ins class="friends">an old friend</ins> bumps into you.
+					You get talking and before long <ins class="heshes">she</ins> proposes:<br>
+					"Hey, let's get together some day soon <ins class="actions">for drinks</ins>!"
+					<br><br>
+					That's when you whip out your iPhone and tap the Get Together icon.
+				</strong>
+			</p>
+
+
+			<p>That's when you whip out your iPhone and tap the Get Together icon.</p>
+			<p>Swipe through your weekly schedule and plan a social event all within seconds of opening the app. Get Together let's you focus on the most important aspects of an event: what, when and with whom. And because it uses your iPhone's built-in calendars, it's a perfect companion to Apple's Calendar app.</p>
+		</article>
+		<article class="half">
+			<div class="slideshow iphone">
+				<%= render 'slideshow', :images => %w{apps/gettogether/screenshots/01.jpg apps/gettogether/screenshots/02.jpg apps/gettogether/screenshots/03.jpg apps/gettogether/screenshots/04.jpg apps/gettogether/screenshots/05.jpg} %>
+			</div>
+		</article>
+	</div>
+
+	<div class="row">
+		<article class="half text">
+			<%= image_tag "apps/gettogether/gtfivehourgrid.png" %>
+			<h2>The five hour grid</h2>
+			<p>The center piece of the app is a week view of all your iPhone's calendars. Early mornings and late nights are hidden, while the rest of your schedule is shown in a five hour grid. Although this might sounds awkward at first, it speeds up planning by a great deal, which leaves time for you to enjoy your day.</p>
+			<p><a href="/blog/2" class="arrow">We wrote the full story on our blog...</a></p>
+		</article>
+		<article class="half text">
+			<%= image_tag "apps/gettogether/gtcolorcode.png" %>
+			<h2>Color code everything</h2>
+			<p>We not only use your many calendars' colors to draw your weekly schedule, but we color code the hell out of your iPhone's contacts. As it turns out, this color coding grants a sense of direction when scrolling lists of many hundreds of contacts. As an added bonus, it looks totally awesome!</p>
+			<p><a href="/blog/3" class="arrow">Read the rest on our blog...</a></p>
+		</article>
+	</div>
+
+	<div class="row">
+		<article class="half text">
+			<h2>Advanced features</h2>
+			<p>If you like to have total control over your calendars, you'll enjoy the many features of Get Together:
+			<ul>
+				<li>Default alerts</li>
+				<li>Prevent nightly alerts</li>
+				<li>Edit event details</li>
+				<li>Share events via email</li>
+				<li>Fast calendar switching</li>
+				<li>Week number display</li>
+				<li>Context aware help system</li>
+			</ul>
+			</p>
+		</article>
+		<article class="half text">
+			<h2>It's all about speed</h2>
+			<p>Get Together was never meant to be a substitution of your regular calendar app, although it uses your iPhone's calendar data. For example, many planning details are either left out, like location details, or set to default values, like event reminders. Probably not suited if you want to schedule a 45 minute meeting, but awesome if you want to plan a night out with friends!</p>
+		</article>
+	</div>
+
+	<div class="row">
+		<article class="half padded requirements">
+			<h2>Requirements for Get Together</h2>
+			<ul>
+				<li>An iPhone, iPod or iPad</li>
+				<li>iOS 5 or higher</li>
+				<li>A social life</li>
+			</ul>
+		</article>
+		<article class="half centered">
+			<div class="call-to-action">
+				<%= render "shared/call-to-action-button", :link => "http://itunes.apple.com/app/get-together-by-twelve-twenty/id536900789", :color => "yellow", :text => "Download Get Together", :price => "$1.99 / €1,59" %>
+			</div>
+		</article>
+	</div>
+</div>

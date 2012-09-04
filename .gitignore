@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+.rakeTasks
+
+# ignore assets from asset pipeline
+public/assets/
+public/uploads/

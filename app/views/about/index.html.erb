@@ -1,0 +1,68 @@
+<% title "About" %>
+
+<% content_for :header do %>
+
+	<div class="column">
+		<section class="full centered">
+			<%= image_tag "logo-white.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-wit-helft.json")} %>
+		</section>
+	</div>
+
+	<div class="column">
+		<section class="full">
+			<h1>About Twelve Twenty</h1>
+		</section>
+	</div>
+
+	<div class="column">
+		<section class="half">
+
+			<p>One might describe Twelve Twenty as an "independent software company”, but we rather think of ourselves as people who make things, most of which are apps for devices like the Mac or the iPhone, but also for the web in general.</p>
+			<p>The ever growing intertwinement of computing devices is accompanied by a fair amount of growing pains. No piece of technology can ever hope to be perfect, or at the very least not in it’s first few iterations, and companies that take big steps often overlook the little details that matter.</p>
+		</section>
+		<section class="half">
+			<p>Isn’t there any one to address these issues? But of course, this is where Twelve Twenty steps in. With our apps we hope to solve problems we care about, increase productivity at work, reduce time spent on the mundane and add a bit of joy to this modern society we live in.</p>
+		</section>
+	</div>
+<% end %>
+
+<div class="container">
+	<div class="row people">
+		<section class="one-third">
+			<div class="centered">
+				<%= image_tag "about/profiletimo.png", :alt => "Timo's profile image" %>
+				<h2>Timo Kuilder</h2>
+			</div>
+			<p>Swarms of hovering art directors drove Timo to a place of solitude, a place where nobody second guesses his artistry and a place where no pixel is ever 100% black. That place is here, where everything you see is designed by Timo.</p>
+			<ul>
+				<li><a href="mailto:timo@twelvetwenty.nl">timo@twelvetwenty.nl</a></li>
+				<li><a href="http://twitter.com/timokuilder">@timokuilder</a></li>
+			</ul>
+		</section>
+		<section class="one-third">
+
+			<div class="centered">
+				<%= image_tag "about/profilejankees.png", :alt => "Jankees' profile image" %>
+				<h2>Jankees van Woezik</h2>
+			</div>
+
+			<p>From an app’s architecture to the surrounding tools & workflow, he applies his appetite for anything new and cutting edge to all aspects of software development. Jankees codes before breakfast and leads OSX development.</p>
+			<ul>
+				<li><a href="mailto:jankees@twelvetwenty.nl">jankees@twelvetwenty.nl</a></li>
+				<li><a href="http://twitter.com/jankeesvw">@jankeesvw</a></li>
+			</ul>
+		</section>
+		<section class="one-third">
+			<div class="centered">
+				<%= image_tag "about/profileep.png", :alt => "Eric-Paul's profile image" %>
+				<h2>Eric-Paul Lecluse</h2>
+			</div>
+
+			<p>If the release schedule of our apps were his sole responsibility, no app would ever see the light of day. Refining details and iterating features are his favorite pastimes, which is why Eric-Paul leads the development of iOS projects.</p>
+			<ul>
+				<li><a href="mailto:ep@twelvetwenty.nl">ep@twelvetwenty.nl</a></li>
+				<li><a href="http://twitter.com/epologee">@epologee</a></li>
+			</ul>
+		</section>
+	</div>
+</div>

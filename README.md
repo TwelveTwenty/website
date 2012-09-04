@@ -19,6 +19,18 @@ Ensure you have the latest version of Ruby I'm using 1.9.3p194
 
 If you don't have the latest consider installing [rbenv](https://github.com/sstephenson/rbenv/#section_2) and [Ruby build](https://github.com/sstephenson/ruby-build#installation)
 
+First install [Homebrew](http://mxcl.github.com/homebrew/) to install [ImageMagic](https://github.com/mxcl/homebrew/blob/master/Library/Formula/imagemagick.rb) (if you haven't got it already)
+
+	$ ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+
+Then install ImageMagic
+
+	$ brew install imagemagick
+	# ==> Installing imagemagick dependency: pkg-config
+    # ==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/pkg-config-0.27.mountainlion.bottle.tar.gz
+    # [...]
+
+
 Open the terminal and install `bundler`
 
     $ gem install bundler
@@ -52,10 +64,15 @@ Change into the new directory, then run `bundle install` to install al dependenc
     #  = 1.8.7 : gem install rdoc-data; rdoc-data --install
     #  = 1.9.1 : gem install rdoc-data; rdoc-data --install
     # >= 1.9.2 : nothing to do! Yay!
- 
+
+
+## Running in development mode
+
 Run the rake migrations to update your local database
 
+	$ rake db:create
 	$ rake db:migrate
+	$ rake db:seed	
 	
 Then start the rails server with this command:
 
@@ -68,4 +85,26 @@ Then start the rails server with this command:
     # [2012-08-13 10:23:11] INFO  ruby 1.9.3 (2012-04-20) [x86_64-darwin12.0.0]
     # [2012-08-13 10:23:11] INFO  WEBrick::HTTPServer#start: pid=6818 port=3000
     
-Open your web browser at 127.0.0.1:3000 to view the project 
+Open your web browser at 127.0.0.1:3000 to view the project
+
+## Running in production mode
+
+Run these rake tasks (I'm using the [asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html))
+
+	$ rake db:create RAILS_ENV=production
+	$ rake db:migrate RAILS_ENV=production
+	$ rake assets:precompile RAILS_ENV=production
+	$ rake db:seed RAILS_ENV=production
+
+Then start the rails server with this command:
+
+    $ rails server --e=production                                                                                                         develop [fee530a] modified untracked
+    # => Booting WEBrick
+    # => Rails 3.2.8 application starting in production on http://0.0.0.0:3000
+    # => Call with -d to detach
+    # => Ctrl-C to shutdown server
+    # [2012-08-13 12:27:46] INFO  WEBrick 1.3.1
+    # [2012-08-13 12:27:46] INFO  ruby 1.9.3 (2012-04-20) [x86_64-darwin12.0.0]
+    # [2012-08-13 12:27:46] INFO  WEBrick::HTTPServer#start: pid=12697 port=3000
+
+Open your web browser at 127.0.0.1:3000 to view the project

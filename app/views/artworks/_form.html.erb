@@ -1,0 +1,25 @@
+<%= form_for(@artwork) do |f| %>
+  <% if @artwork.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artwork.errors.count, "error") %> prohibited this artwork from being saved:</h2>
+
+      <ul>
+      <% @artwork.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :alt, "alt" %><br />
+    <%= f.text_field :alt %>
+  </div>
+  <div class="field">
+    <%= f.label :artwork, "artwork" %><br />
+	  <%= f.file_field :artwork %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

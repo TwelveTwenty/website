@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-  </style>
+	<title>The page you were looking for doesn't exist (404)</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body {
+			background-color: #fff;
+			color: #fff;
+			text-align: center;
+			background-image: url('/assets/bg-black-pattern.png');
+			font-family: 'Oswald', sans-serif;
+		}
+		h1 {
+			text-transform: uppercase;
+		}
+
+		a, a:visited, a:active {
+			color: white;
+			text-decoration: none;
+			padding: 0 10px;
+		}
+
+		.dialog {
+			margin-top: 180px;
+		}
+
+	</style>
 </head>
 
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
-  </div>
+<div class="dialog">
+	<img src="/assets/logo.png">
+	<h1>Sorry, something whent wrong.</h1>
+	<p><img src="/assets/apps/dotsred.png"> <a href="/">Please try to go back to our homepage, or try again later</a> <img src="/assets/apps/dotsred.png"></p>
+</div>
 </body>
 </html>

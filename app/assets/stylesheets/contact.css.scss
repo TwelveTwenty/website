@@ -1,0 +1,21 @@
+@import "_variables-mixins.css.scss";
+
+body.contact {
+
+	h1 {
+		font-size: 18px;
+		padding-left: 40px;
+		background-image: url('/assets/contact/red-dots.png');
+		background-repeat: no-repeat;
+		background-position: center left;
+	}
+
+	p {
+		padding-left: 40px;
+	}
+
+	.column .spacer {
+		height: 50px;
+	}
+
+}

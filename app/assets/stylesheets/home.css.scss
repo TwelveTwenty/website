@@ -1,0 +1,76 @@
+@import "_variables-mixins.css.scss";
+
+body.home {
+
+	.apps {
+		list-style: none;
+		padding: 0px;
+
+		$padding-left: 216px;
+		$padding-right: 10px;
+
+		li {
+			min-height: 172px;
+			background-repeat: no-repeat;
+			padding: 20px $padding-right 0 $padding-left;
+			cursor: pointer;
+			background-position-x: 45px;
+			position: relative;
+		}
+
+		li:hover {
+			color: #939393;
+		}
+
+		a {
+			color: $black !important;
+		}
+
+		li img,
+		li canvas {
+			position: absolute;
+			top: 55px;
+			left: 91px;
+		}
+
+		li.willitfit img, li.willitfit canvas {
+			top: 50px;
+			left: 86px;
+		}
+
+		li.uberlayer img, li.uberlayer canvas {
+			top: 55px;
+			left: 86px;
+		}
+
+		li.uberlayer, li.willitfit, li.gettogether {
+			background-image: url('/assets/home/appicon-up.png');
+		}
+
+		@media (max-width: $site-width) {
+			li {
+				background-position: center top;
+				padding: 160px 50px 25px;
+				text-align: center;
+			}
+
+			li.gettogether img, li.gettogether canvas {
+				left: 153px;
+			}
+
+			li.willitfit img, li.willitfit canvas {
+				left: 146px;
+			}
+
+			li.uberlayer img, li.uberlayer canvas {
+				left: 148px;
+			}
+		}
+	}
+	//.apps
+
+	@include dark-light;
+
+}
+
+//.home

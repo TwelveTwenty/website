@@ -1,0 +1,35 @@
+body.about {
+	.people h2 {
+		background: url("/assets/about/dots.png");
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		padding-bottom: 18px;
+	}
+
+	.people ul {
+		background: url("/assets/about/iconemailtwitter.png");
+		background-repeat: no-repeat;
+		background-position: left top;
+		list-style: none;
+		padding-left: 70px;
+		padding-top: 12px;
+		min-height: 65px;
+	}
+
+	.people li {
+		padding-bottom: 5px;
+	}
+
+	.people li a {
+		color: white;
+		font-style: italic;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.people p {
+		min-height: 160px;
+	}
+}

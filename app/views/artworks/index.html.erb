@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="row full">
+		<h1>Listing artworks</h1>
+
+		<table>
+			<tr>
+				<th>Alt</th>
+				<th>Artwork</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+
+
+			<% @artworks.each do |artwork| %>
+				<tr>
+					<td><%= image_tag artwork.artwork_url(:images_thumb).to_s %></td>
+					<td class="copy-to-clipboard">
+						<textarea style="width: 400px; height: 100px;">![<%= artwork.alt %>](<%= artwork.artwork_url.to_s %>)</textarea>
+					</td>
+					<td><%= link_to 'Show', artwork %></td>
+					<td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
+					<td><%= link_to 'Destroy', artwork, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+				</tr>
+			<% end %>
+
+		</table>
+
+		<br/>
+
+		<%= link_to 'New Artwork', new_artwork_path %>
+	</div>
+</div>

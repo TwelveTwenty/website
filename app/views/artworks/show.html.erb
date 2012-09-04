@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row full">
+		<p id="notice"><%= notice %></p>
+
+		<p>
+			<b>Alt:</b>
+			<%= @artwork.alt %>
+		</p>
+
+		<p>
+			<b>Artwork:</b>
+			<%= @artwork.artwork %>
+		</p>
+
+
+		<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
+		<%= link_to 'Back', artworks_path %>
+	</div>
+</div>

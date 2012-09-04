@@ -1,0 +1,58 @@
+@import "_variables-mixins.css.scss";
+
+.blog-teaser a {
+	color: $black;
+}
+
+.blog-teaser .content {
+	background-image: url('/assets/blog222-side.png');
+	background-repeat: repeat-y;
+}
+
+.blog-teaser header {
+	background-position: center top;
+	height: 200px;
+	margin-left: 4px;
+}
+
+.blog-teaser footer {
+	background-image: url('/assets/blog222-bottom.png');
+	background-position: left;
+	height: 61px;
+}
+
+@media (min-width: $site-width) {
+	article {
+		position: relative;
+	}
+
+	.goody-label {
+		position: absolute;
+		right: -5px;
+		top: -7px;
+		width: 92px;
+		height: 92px;
+		background-image: url('/assets/label-goodies.png');
+		background-repeat: no-repeat;
+	}
+}
+
+@media (max-width: $site-width) {
+
+	.blog-teaser .content {
+		background-image: url('/assets/blog345-side.png');
+		background-repeat: repeat-y;
+	}
+
+	.blog-teaser header {
+		height: 200px;
+		margin-left: 4px;
+	}
+
+	.blog-teaser footer {
+		background-image: url('/assets/blog345-bottom.png');
+		background-position: left;
+		height: 57px;
+	}
+
+}

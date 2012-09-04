@@ -1,0 +1,29 @@
+<article class="full <%= "draft" if blog.draft %>">
+	<%= image_tag blog.artwork_url(:full).to_s, :class => "artwork" %>
+
+	<div class="content">
+		<div class="padded">
+			<header>
+				<% if defined? detail %>
+					<h1><%= blog.title %></h1>
+				<% else %>
+					<%= link_to blog do %>
+						<h1><%= blog.title %></h1>
+					<% end %>
+				<% end %>
+				<h2>Written by <%= blog.author %></h2>
+			</header>
+			<%= markdown blog.body %>
+			<%  if current_user %>
+				<h4>Admin links</h4>
+				<ul>
+					<li><%= link_to "Edit this blog post", edit_blog_path(blog) %></li>
+					<li><%= link_to "Destroy this blog post", blog, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+					<li><%= link_to "Open this blog post", blog %></li>
+				</ul>
+			<% end %>
+		</div>
+	</div>
+	<footer></footer>
+
+</article>

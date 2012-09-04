@@ -1,0 +1,18 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Co-founder: Timo Kuilder
+  Site: http://www.zwartekoffie.nl
+  Twitter: @timokuilder
+  Location: Amsterdam
+
+  Co-founder: Eric-Paul Lecluse
+  Site: http://epologee.com
+  Twitter: @epologee
+  Location: Amsterdam
+
+  Co-founder: Jankees van Woezik
+  Site: http://www.base42.nl
+  Twitter: @jankeesvw

@@ -1,0 +1,48 @@
+class SpriteAnimations
+	constructor: (@asset) ->
+		@json = @asset.data('json')
+		@rollover = @asset.data('rollover')
+		@autostart = @asset.data('autostart')
+		@trigger = @asset.data('trigger')
+		@canvas = ($ "<canvas></canvas>").insertBefore(@asset)
+		@asset.hide()
+
+		@canvas.attr('width', @asset.attr('width'))
+		@canvas.attr('height', @asset.attr('height'))
+
+		@stage = new Stage @canvas.get(0)
+
+		$.ajax
+			url: @json,
+			dataType: 'json',
+			success: @jsonLoaded
+
+	jsonLoaded: (data) =>
+		Ticker.addListener @stage
+
+		@spriteSheet = new SpriteSheet data
+
+		@assetAnimation = new BitmapAnimation @spriteSheet
+		@assetAnimation.x = @width
+		@stage.addChild @assetAnimation
+
+
+
+		if @autostart
+			@assetAnimation.play()
+		else
+			@assetAnimation.gotoAndStop(@assetAnimation.spriteSheet._numFrames - 1)
+
+		@assetAnimation.onAnimationEnd = =>
+			@assetAnimation.gotoAndStop(@assetAnimation.spriteSheet._numFrames - 1)
+
+		if @rollover
+			el = @canvas
+			el = @asset.closest($ @trigger) if @trigger
+
+			el.mouseenter (e) =>
+				@assetAnimation.gotoAndPlay(0)
+
+($ document).ready ->
+	Ticker.setFPS 30
+	new SpriteAnimations ($ asset) for asset in ($ "[data-animate='true']")

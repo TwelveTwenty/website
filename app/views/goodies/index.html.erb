@@ -1,0 +1,33 @@
+<% title "Goodies" %>
+
+<%= render "shared/simple-header", :color => :black, :admin_links => [link_to("Add goody", new_goody_path)] %>
+
+<div class="container">
+	<div class="row blog-teaser">
+		<% @goodies.each do |goody| %>
+			<article class="one-third <%= "draft" if goody.draft %>">
+				<header style="background-image: url('<%= image_path goody.artwork_url(:block_thumb).to_s %>')"></header>
+				<div class="content">
+					<div class="padded">
+						<h3><%= goody.title %></h3>
+						<p><%= markdown goody.teaser %></p>
+
+						<% if current_user %>
+							<h4>Admin links</h4>
+							<ul>
+								<li><%= link_to "Edit this goody", edit_goody_path(goody) %></li>
+								<li><%= link_to "Destroy this goody", goody, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+								<li><%= link_to "Show goody", goody %></li>
+							</ul>
+
+						<% else %>
+							<em><%= link_to "read more", goody, :class => "arrow" %></em>
+						<% end %>
+					</div>
+				</div>
+				<footer></footer>
+			</article>
+
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<% title "Blog" %>
+
+<%= render "shared/simple-header", :color => :black, :admin_links => [link_to("Add blog post", new_blog_path)] %>
+
+<div class="container">
+	<div class="row">
+		<% @blogs.each do |blog| %>
+			<%= render "blog", :blog => blog %>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+<% title @blog.title %>
+<% description @blog.teaser %>
+
+<%= render "shared/simple-header", :color => :black %>
+
+<div class="container">
+	<%= render "blog", :blog => @blog, :detail => true %>
+</div>
