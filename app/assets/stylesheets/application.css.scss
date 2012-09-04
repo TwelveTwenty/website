@@ -115,9 +115,9 @@ body .wrapper:after {
 
 	position: absolute;
 	bottom: 15px;
-	left: 55px;
+	left: 50px;
 
-	width: 236px;
+	width: 248px;
 	height: 45px;
 
 	text-align: left;
@@ -128,6 +128,11 @@ body .wrapper:after {
 	color: white;
 
 	background-image: url('/assets/block-button/button-bg.png');
+
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
 }
 
 .call-to-action .yellow .button {
