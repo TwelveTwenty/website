@@ -44,5 +44,6 @@ class SpriteAnimations
 				@assetAnimation.gotoAndPlay(0)
 
 ($ document).ready ->
-	Ticker.setFPS 30
-	new SpriteAnimations ($ asset) for asset in ($ "[data-animate='true']")
+	if Modernizr.canvas
+		Ticker.setFPS 30
+		new SpriteAnimations ($ asset) for asset in ($ "[data-animate='true']")
