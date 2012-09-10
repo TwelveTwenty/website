@@ -37,7 +37,6 @@
 	<meta property="og:image" content="<%= root_url[0...-1] + image_path("share.jpeg") %>"/>
 	<meta property="og:caption" content="Twelve Twenty"/>
 
-
 	<meta name="viewport" content="width=device-width,maximum-scale=1.0">
 
 	<%= stylesheet_link_tag "application" %>
@@ -50,7 +49,7 @@
 
 	<%= javascript_tag "Modernizr.load();" %>
 </head>
-<body class="debug-layout <%= "#{params[:controller]} #{params[:controller]}-#{params[:action]} #{params[:controller]}-#{params[:action]}-#{params[:app]}" %>">
+<body class="<%= "#{params[:controller]} #{params[:controller]}-#{params[:action]} #{params[:controller]}-#{params[:action]}-#{params[:app]}" %>">
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
 chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]>
 <p class=chromeframe>Your browser is <em>ancient!</em>
@@ -85,8 +84,12 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 </header>
 
 <div class="sharing">
-	<a href="https://www.facebook.com/dialog/feed?app_id=<%=APP_CONFIG["facebook_key"]%>&link=<%= request.url %>&redirect_uri=<%= request.url %>"><div class="facebook"></div></a>
-	<a href="http://twitter.com/home?status=<%= Rack::Utils.escape page_title + " - " +  request.url %>" target="_blank"><div class="twitter"></div></a>
+	<a href="https://www.facebook.com/dialog/feed?app_id=<%= APP_CONFIG["facebook_key"] %>&link=<%= request.url %>&redirect_uri=<%= request.url %>">
+		<div class="facebook"></div>
+	</a>
+	<a href="http://twitter.com/home?status=<%= Rack::Utils.escape page_title + " - " + request.url %>" target="_blank">
+		<div class="twitter"></div>
+	</a>
 </div>
 
 <div class="wrapper header" id="heading">
@@ -114,8 +117,11 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 		</div>
 
 		<ul>
-			<a href="http://twitter.com/twelve_20"><li class="twitter"></li></a>
-			<a href="http://www.facebook.com/twelvetwenty.nl"><li class="facebook"></li></a>
+			<a href="http://twitter.com/twelve_20">
+				<li class="twitter"></li>
+			</a> <a href="http://www.facebook.com/twelvetwenty.nl">
+			<li class="facebook"></li>
+		</a>
 		</ul>
 
 	</div>
@@ -123,6 +129,37 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 </footer>
 
 <%= javascript_include_tag 'application' %>
+
+
+<% if params[:controller] == 'goodies' && params[:action] == 'show' %>
+
+	<script type="text/javascript" charset="utf-8">
+		window.twttr = (function (d, s, id) {
+			var t, js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			return window.twttr || (t = { _e:[], ready:function (f) {
+				t._e.push(f)
+			} });
+		}(document, "script", "twitter-wjs"));
+	</script>
+
+	<script type="text/javascript">
+		twttr.ready(function (twttr) {
+			twttr.events.bind('tweet', function (event) {
+				if (DOWNLOAD_URL) {
+					window.location = DOWNLOAD_URL;
+				}else{
+					log("Sorry, no DOWNLOAD_URL found in document.");
+				}
+			});
+		});
+	</script>
+
+<% end %>
 
 <% if Rails.env.production? %>
 	<script>

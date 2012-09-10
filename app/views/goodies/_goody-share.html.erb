@@ -4,7 +4,14 @@
 		<div class="image" style="background-image: url('<%= image_path goody.call_to_action_artwork_url(:block_thumb).to_s %>')"></div>
 		<h2><%= goody.call_to_action_header %></h2>
 		<p><%= goody.call_to_action_teaser %></p>
-		<a href="">Share!</a>
+		<p>
+			<% share_text = Rack::Utils.escape goody.share_text %>
+			<a href="https://twitter.com/intent/tweet?text=<%=share_text%>&via=twelve_20" class="arrow"><%=goody.share_link_text%></a>
+		</p>
 	</article>
+
+	<script type="text/javascript">
+		var DOWNLOAD_URL = "<%= goody.download_url %>";
+	</script>
 
 <% end %>
