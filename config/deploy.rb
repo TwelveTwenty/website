@@ -17,7 +17,7 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "git://github.com/TwelveTwenty/website.git"
 
-set :bundle_without, [:development, :test]
+set :bundle_without, [:test]
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
@@ -59,7 +59,7 @@ namespace :application do
 
 end
 
-after :deploy, "application:remove_config"
-after :deploy, "application:create_symlinks"
-after :deploy, "application:write_deploy_details"
+after "deploy:update_code", "application:remove_config"
+after "deploy:update_code", "application:create_symlinks"
+after "deploy:update_code", "application:write_deploy_details"
 after :deploy, "passenger:restart"
