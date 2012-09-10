@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120903094324) do
+ActiveRecord::Schema.define(:version => 20120910140025) do
 
   create_table "artworks", :force => true do |t|
     t.string   "alt"
@@ -42,10 +42,16 @@ ActiveRecord::Schema.define(:version => 20120903094324) do
     t.string   "download_url"
     t.text     "teaser"
     t.text     "body"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.boolean  "draft"
     t.string   "slug"
+    t.string   "call_to_action_artwork"
+    t.string   "call_to_action_header"
+    t.string   "call_to_action_teaser"
+    t.boolean  "has_call_to_action"
+    t.string   "share_text"
+    t.string   "share_link_text"
   end
 
   add_index "goodies", ["slug"], :name => "index_goodies_on_slug"

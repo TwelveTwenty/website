@@ -73,6 +73,10 @@ body.debug-layout {
 	float: none;
 }
 
+.half.right-column, .two-thirds.right-column, .one-third.right-column {
+	float: right;
+}
+
 /** This is inspired by Twitter Bootstrap */
 
 // Phones only

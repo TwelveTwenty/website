@@ -11,6 +11,10 @@ body.blogs, body.goodies {
 		font-size: 1.1em;
 	}
 
+	.wrapper p {
+		color: $black;
+	}
+
 	.wrapper.content img.artwork {
 		width: 100%;
 	}
@@ -29,6 +33,29 @@ body.blogs, body.goodies {
 		background-image: url('/assets/blog714-side.png');
 		background-repeat: repeat-y;
 	}
+
+	article.goody-share-block {
+		background-image: url('/assets/goodies/goody-get-block.png');
+		background-repeat: no-repeat;
+		height: 292px;
+		width: 439px;
+		position:relative;
+		padding: 20px;
+
+		.image {
+			position: absolute;
+			left: 1px;
+			top: 1px;
+			width: 192px;
+			height: 194px;
+		}
+
+		h2,p {
+			margin-left: 200px;
+		}
+
+	}
+
 }
 
 @media (max-width: $site-width) {

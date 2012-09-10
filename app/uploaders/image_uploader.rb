@@ -44,6 +44,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [341, 200]
   end
 
+  version :call_to_action_artwork do
+    process :resize_to_fill => [192, 194]
+  end
+
   version :images_thumb do
     process :resize_to_fill => [100, 100]
   end
