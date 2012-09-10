@@ -11,6 +11,10 @@ body.blogs, body.goodies {
 		font-size: 1.1em;
 	}
 
+	.wrapper p {
+		color: $black;
+	}
+
 	.wrapper.content img.artwork {
 		width: 100%;
 	}
