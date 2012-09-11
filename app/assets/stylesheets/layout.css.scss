@@ -95,6 +95,12 @@ body.debug-layout {
 		margin-bottom: 24px;
 	}
 
+	.half.right-column, .two-thirds.right-column, .one-third.right-column {
+		float: left;
+		margin-left: -20px;
+	}
+
+
 	.row {
 		margin-bottom: 0px;
 	}
