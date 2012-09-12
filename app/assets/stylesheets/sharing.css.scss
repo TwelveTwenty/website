@@ -12,7 +12,7 @@
 	top: 150px;
 	width: 58px;
 	height: 136px;
-	background-image: url('/assets/sharing/bgsocial-orange.png');
+	background: url(/assets/sharing/sharing.png) -68px 0px no-repeat;
 	text-align: center;
 	padding-top: 13px;
 	padding-right: 5px;
@@ -25,61 +25,61 @@
 	}
 
 	.facebook {
-		background-image: url('/assets/sharing/facebook-orange-up.png');
+		background: url(/assets/sharing/sharing.png) -120px -145px no-repeat;
 	}
 
 	.twitter {
-		background-image: url('/assets/sharing/twitter-orange-up.png');
+		background: url(/assets/sharing/sharing.png) 0px -184px no-repeat;
 	}
 
 	.facebook:hover {
-		background-image: url('/assets/sharing/facebook-orange-down.png');
+		background: url(/assets/sharing/sharing.png) -80px -145px no-repeat;
 	}
 
 	.twitter:hover {
-		background-image: url('/assets/sharing/twitter-orange-down.png');
+		background: url(/assets/sharing/sharing.png) -204px -117px no-repeat;
 	}
 
 }
 
 .apps.apps-show-willitfit .sharing {
-	background-image: url('/assets/sharing/bgsocial-green.png');
+	background: url(/assets/sharing/sharing.png) 0px 0px no-repeat;
 
 	.facebook {
-		background-image: url('/assets/sharing/facebook-green-up.png');
+		background: url(/assets/sharing/sharing.png) -40px -145px no-repeat;
 	}
 
 	.twitter {
-		background-image: url('/assets/sharing/twitter-green-up.png');
+		background: url(/assets/sharing/sharing.png) -204px -78px no-repeat;
 	}
 
 	.facebook:hover {
-		background-image: url('/assets/sharing/facebook-green-down.png');
+		background: url(/assets/sharing/sharing.png) 0px -145px no-repeat;
 	}
 
 	.twitter:hover {
-		background-image: url('/assets/sharing/twitter-green-down.png');
+		background: url(/assets/sharing/sharing.png) -204px -39px no-repeat;
 	}
 
 }
 
 .apps.apps-show-gettogether .sharing {
-	background-image: url('/assets/sharing/bgsocial-yellow.png');
+	background: url(/assets/sharing/sharing.png) -136px 0px no-repeat;
 
 	.facebook {
-		background-image: url('/assets/sharing/facebook-yellow-up.png');
+		background: url(/assets/sharing/sharing.png) -204px 0px no-repeat;
 	}
 
 	.twitter {
-		background-image: url('/assets/sharing/twitter-yellow-up.png');
+		background: url(/assets/sharing/sharing.png) -80px -184px no-repeat;
 	}
 
 	.facebook:hover {
-		background-image: url('/assets/sharing/facebook-yellow-down.png');
+		background: url(/assets/sharing/sharing.png) -160px -145px no-repeat;
 	}
 
 	.twitter:hover {
-		background-image: url('/assets/sharing/twitter-yellow-down.png');
+		background: url(/assets/sharing/sharing.png) -40px -184px no-repeat;
 	}
 
 }

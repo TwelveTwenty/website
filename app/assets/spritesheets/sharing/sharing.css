@@ -1,0 +1,104 @@
+.bgsocial-green {
+  background: url(/assets/sharing/sharing.png) 0px 0px no-repeat;
+  display: inline-block;
+  width: 58px;
+  height: 135px;
+}
+
+.bgsocial-orange {
+  background: url(/assets/sharing/sharing.png) -68px 0px no-repeat;
+  display: inline-block;
+  width: 58px;
+  height: 135px;
+}
+
+.bgsocial-yellow {
+  background: url(/assets/sharing/sharing.png) -136px 0px no-repeat;
+  display: inline-block;
+  width: 58px;
+  height: 135px;
+}
+
+.facebook-green-down {
+  background: url(/assets/sharing/sharing.png) 0px -145px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.facebook-green-up {
+  background: url(/assets/sharing/sharing.png) -40px -145px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.facebook-orange-down {
+  background: url(/assets/sharing/sharing.png) -80px -145px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.facebook-orange-up {
+  background: url(/assets/sharing/sharing.png) -120px -145px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.facebook-yellow-down {
+  background: url(/assets/sharing/sharing.png) -160px -145px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.facebook-yellow-up {
+  background: url(/assets/sharing/sharing.png) -204px 0px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.twitter-green-down {
+  background: url(/assets/sharing/sharing.png) -204px -39px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.twitter-green-up {
+  background: url(/assets/sharing/sharing.png) -204px -78px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.twitter-orange-down {
+  background: url(/assets/sharing/sharing.png) -204px -117px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.twitter-orange-up {
+  background: url(/assets/sharing/sharing.png) 0px -184px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.twitter-yellow-down {
+  background: url(/assets/sharing/sharing.png) -40px -184px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
+
+.twitter-yellow-up {
+  background: url(/assets/sharing/sharing.png) -80px -184px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+}
