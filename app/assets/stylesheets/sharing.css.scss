@@ -10,14 +10,15 @@
 .sharing {
 	position: fixed;
 	top: 150px;
+	right: 0px;
 	width: 58px;
 	height: 136px;
 	background: url(/assets/sharing/sharing.png) -68px 0px no-repeat;
 	text-align: center;
-	padding-top: 13px;
-	padding-right: 5px;
+	padding-top: 48px;
 
 	.facebook, .twitter {
+		margin-left: -2px;
 		display: inline-block;
 		width: 30px;
 		height: 30px;
