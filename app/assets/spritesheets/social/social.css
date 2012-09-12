@@ -1,0 +1,27 @@
+.facebook-down {
+  background: url(../../images/social.png) 0px 0px no-repeat;
+  display: inline-block;
+  width: 37px;
+  height: 41px;
+}
+
+.facebook-up {
+  background: url(../../images/social.png) -39px -45px no-repeat;
+  display: inline-block;
+  width: 37px;
+  height: 41px;
+}
+
+.twitter-down {
+  background: url(../../images/social.png) -39px 0px no-repeat;
+  display: inline-block;
+  width: 37px;
+  height: 41px;
+}
+
+.twitter-up {
+  background: url(../../images/social.png) 0px -43px no-repeat;
+  display: inline-block;
+  width: 37px;
+  height: 41px;
+}

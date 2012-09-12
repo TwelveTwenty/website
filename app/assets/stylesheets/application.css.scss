@@ -52,26 +52,25 @@ body .wrapper:after {
 		list-style: none;
 		display: inline-block;
 		padding-left: 10px;
-		background-position: center center;
-		background-repeat: no-repeat;
-		width: 50px;
-		height: 50px;
+		width: 37px;
+  		height: 41px;
+
 	}
 
 	li.facebook {
-		background-image: url('/assets/facebook-up.png');
+		background: url(/assets/social.png) -39px -45px no-repeat;
 	}
 
 	li.twitter {
-		background-image: url('/assets/twitter-up.png');
+		background: url(/assets/social.png) 0px -43px no-repeat;
 	}
 
 	li:hover.facebook {
-		background-image: url('/assets/facebook-down.png');
+		background: url(/assets/social.png) 0px 0px no-repeat;
 	}
 
 	li:hover.twitter {
-		background-image: url('/assets/twitter-down.png');
+		background: url(/assets/social.png) -39px 0px no-repeat;
 	}
 }
 
