@@ -161,18 +161,29 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 
 <% end %>
 
-<% if Rails.env.production? %>
-	<script>
-		var _gaq = [
-			['_setAccount', 'UA-29165093-1'],
-			['_trackPageview']
-		];
-		(function (d, t) {
-			var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-			g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g, s)
-		}(document, 'script'));
-	</script>
-<% end %>
+<script>
+	var _gaq = [
+		['_setAccount', 'UA-29165093-1'],
+		['_trackPageview']
+	];
+
+	(function (d, t) {
+		var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+		g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g, s)
+	}(document, 'script'));
+
+	// track all outgoing links with Google Analytics
+	var a = document.getElementsByTagName('a');
+	for (i = 0; i < a.length; i++) {
+		if (a[i].href.indexOf(location.host) == -1 && a[i].href.match(/^http:\/\//i)) {
+			a[i].onclick = function () {
+				var link = this.href.replace(/^http:\/\//i, '');
+				var category = 'outgoing_link';
+				_gaq.push(['_trackEvent', category, link]);
+			}
+		}
+	}
+</script>
 </body>
 </html>
