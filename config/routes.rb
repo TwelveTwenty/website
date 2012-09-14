@@ -2,6 +2,7 @@ Website::Application.routes.draw do
 
   # apps
   match 'apps/:app' => 'apps#show', :constraints => {:name => /(gettogether|willitfit|uberlayer)/i}
+  match 'apps' => 'apps#index'
 
   # - old urls
   match 'uberlayer', to: redirect('/apps/uberlayer')
