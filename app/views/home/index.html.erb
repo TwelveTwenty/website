@@ -26,14 +26,14 @@
 			<p>With our apps we try to address these productivity issues in both our working and private lives, for us all to win a little time back for the good things in life.</p>
 		</section>
 
-		<% @version = :a unless defined? @version
+		<% @version = :gt unless defined? @version
 
 		   def build_app_order (order)
 			 output = ""
 			 for app in order
-			   output << render("trigger-get-together") if app == :a
-			   output << render("trigger-will-it-fit") if app == :b
-			   output << render("trigger-uberlayer") if app == :c
+			   output << render("trigger-get-together") if app == :gt
+			   output << render("trigger-will-it-fit") if app == :wf
+			   output << render("trigger-uberlayer") if app == :ul
 			 end
 			 output
 		   end
@@ -42,17 +42,17 @@
 		<ul class="two-thirds apps trigger">
 			<%= raw case @version
 				when :a
-				  build_app_order [:a, :b, :c]
+				  build_app_order [:gt, :wf, :ul]
 				when :b
-				  build_app_order [:a, :c, :b]
+				  build_app_order [:gt, :ul, :wf]
 				when :c
-				  build_app_order [:b, :a, :c]
+				  build_app_order [:wf, :gt, :ul]
 				when :d
-				  build_app_order [:b, :c, :a]
+				  build_app_order [:wf, :ul, :gt]
 				when :e
-				  build_app_order [:c, :a, :b]
+				  build_app_order [:ul, :gt, :wf]
 				else
-				  build_app_order [:c, :b, :a]
+				  build_app_order [:ul, :wf, :gt]
 			end %>
 		</ul>
 	</div>
