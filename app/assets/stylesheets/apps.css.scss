@@ -5,6 +5,12 @@
 	height: 200px;
 	top: 20px;
 }
+.apps-index {
+	.wrapper.content {
+		display: none;
+	}
+}
+
 
 // special content treatment for apps begin
 .apps.apps-show-uberlayer .app.uberlayer {
