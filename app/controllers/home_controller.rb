@@ -28,5 +28,7 @@ class HomeController < ApplicationController
       logger.error "Problem loading tweets: #{@tweets}"
     end
 
+    # a/b testing parameter
+    @version = params[:v].to_sym if params[:v]
   end
 end

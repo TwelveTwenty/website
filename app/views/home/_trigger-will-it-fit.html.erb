@@ -1,0 +1,7 @@
+<%= link_to :controller => :apps, :action => :show, :app => :willitfit do %>
+	<li class="willitfit">
+		<%= image_tag "home/willitfit-single.png", :width => 55, :height => 55, :alt => "Will It Fit", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/willitfiticon.json")} %>
+		<h2>Will it fit</h2>
+		<em>Review your designs at their true physical size without ever leaving your Mac.</em>
+	</li>
+<% end %>

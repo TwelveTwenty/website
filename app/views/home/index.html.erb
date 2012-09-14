@@ -26,28 +26,34 @@
 			<p>With our apps we try to address these productivity issues in both our working and private lives, for us all to win a little time back for the good things in life.</p>
 		</section>
 
+		<% @version = :gt unless defined? @version
+
+		   def build_app_order (order)
+			 output = ""
+			 for app in order
+			   output << render("trigger-get-together") if app == :gt
+			   output << render("trigger-will-it-fit") if app == :wf
+			   output << render("trigger-uberlayer") if app == :ul
+			 end
+			 output
+		   end
+		%>
+
 		<ul class="two-thirds apps trigger">
-			<%= link_to :controller => :apps, :action => :show, :app => :willitfit do %>
-				<li class="willitfit">
-					<%= image_tag "home/willitfit-single.png", :width => 55, :height => 55, :alt => "Will It Fit", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/willitfiticon.json")} %>
-					<h2>Will it fit</h2>
-					<em>Review your designs at their true physical size without ever leaving your Mac.</em>
-				</li>
-			<% end %>
-			<%= link_to :controller => :apps, :action => :show, :app => :gettogether do %>
-				<li class="gettogether trigger">
-					<%= image_tag "home/gettogethericon-single.png", :width => 40, :height => 44, :alt => "Get Together", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/gettogethericon.json")} %>
-					<h2>Get Together</h2>
-					<em>The fastest way to create calendar events on your iPhone or iPad.</em>
-				</li>
-			<% end %>
-			<%= link_to :controller => :apps, :action => :show, :app => :uberlayer do %>
-				<li class="uberlayer trigger">
-					<%= image_tag "home/uberlayericon-single.png", :width => 49, :height => 49, :alt => "Uberlayer", :data => {:trigger => ".trigger", :rollover => true, :animate => true, :json => image_path("home/uberlayericon.json")} %>
-					<h2>Uberlayer</h2>
-					<em>Admit it, semitransparent, always-on-top pixel proofing just became sexy...</em>
-				</li>
-			<% end %>
+			<%= raw case @version
+				when :a
+				  build_app_order [:gt, :wf, :ul]
+				when :b
+				  build_app_order [:gt, :ul, :wf]
+				when :c
+				  build_app_order [:wf, :gt, :ul]
+				when :d
+				  build_app_order [:wf, :ul, :gt]
+				when :e
+				  build_app_order [:ul, :gt, :wf]
+				else
+				  build_app_order [:ul, :wf, :gt]
+			end %>
 		</ul>
 	</div>
 
