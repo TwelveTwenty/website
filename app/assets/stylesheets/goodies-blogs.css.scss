@@ -39,7 +39,7 @@ body.blogs, body.goodies {
 		background-repeat: no-repeat;
 		height: 292px;
 		width: 439px;
-		position:relative;
+		position: relative;
 		padding: 11px;
 
 		.image {
@@ -50,12 +50,21 @@ body.blogs, body.goodies {
 			height: 194px;
 		}
 
-		h2,p {
+		h2, p {
 			margin-left: 200px;
 		}
 
 	}
 
+}
+
+body.goodies-index {
+	article .content {
+		background-image: url('/assets/blog222-side.png');
+	}
+	article footer {
+		background-image: url('/assets/blog222-bottom.png');
+	}
 }
 
 @media (max-width: $site-width) {
