@@ -1,11 +1,16 @@
 <article class="one-third">
 	<% if defined? goody %>
 		<div class="goody-label"></div>
+		<% if defined? data.homepage_artwork %>
+			<header style="background-image: url('<%= image_path data.homepage_artwork_url(:block_thumb).to_s %>')"></header>
+		<% end %>
+	<% else %>
+		<% if defined? data.artwork_url %>
+			<header style="background-image: url('<%= image_path data.artwork_url(:block_thumb).to_s %>')"></header>
+		<% end %>
 	<% end %>
 
-	<% if defined? data.artwork_url %>
-		<header style="background-image: url('<%= image_path data.artwork_url(:block_thumb).to_s %>')"></header>
-	<% end %>
+
 	<div class="content">
 		<div class="padded">
 			<h3><%= data.title %></h3>

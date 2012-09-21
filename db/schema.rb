@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910140025) do
+ActiveRecord::Schema.define(:version => 20120921073132) do
 
   create_table "artworks", :force => true do |t|
     t.string   "alt"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20120910140025) do
     t.boolean  "has_call_to_action"
     t.string   "share_text"
     t.string   "share_link_text"
+    t.string   "homepage_artwork"
   end
 
   add_index "goodies", ["slug"], :name => "index_goodies_on_slug"
