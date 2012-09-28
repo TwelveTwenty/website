@@ -52,3 +52,8 @@ class Main
 
 
 ($ document).ready -> new Main()
+
+$(window).bind 'page:change', ->
+	_gaq.push ['_trackPageview']
+	window.scrollTo(0, 0)
+	""
