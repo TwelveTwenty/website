@@ -131,9 +131,9 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 
 		<div class="login">
 			<% if current_user %>
-				<%= link_to image_tag("keyhole.png"), signout_path, id: "sign_out" %>
+				<%= link_to image_tag("keyhole.png"), signout_path, id: "sign_out", "data-no-turbolink" => "data-no-turbolink" %>
 			<% else %>
-				<%= link_to image_tag("signin.png"), "/auth/facebook", id: "sign_in" %>
+				<%= link_to image_tag("signin.png"), "/auth/facebook", id: "sign_in", "data-no-turbolink" => "data-no-turbolink" %>
 			<% end %>
 		</div>
 
@@ -174,7 +174,7 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 				if (DOWNLOAD_URL) {
 					window.location = DOWNLOAD_URL;
 				}else{
-					log("Sorry, no DOWNLOAD_URL found in document.");
+					console.log("Sorry, no DOWNLOAD_URL found in document.");
 				}
 			});
 		});

@@ -66,6 +66,8 @@ class Slideshow
 
 		@image_container_list.css('height', @max_height + 'px')
 
-
-($ document).ready ->
+window.searchForSlideShows = =>
 	($ '.slideshow').each (iterator, element) => new Slideshow(($ element))
+
+($ document).ready -> window.searchForSlideShows()
+$(window).bind 'page:change', -> window.searchForSlideShows()
