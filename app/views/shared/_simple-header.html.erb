@@ -3,9 +3,9 @@
 		<%= link_to root_url do %>
 			<section class="full centered">
 				<% if :color == :white %>
-					<%= image_tag "logo-white.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-wit-helft.json")} %>
+					<%= image_tag "logo-white.png", :id => "twelvetwenty-logo", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-wit-helft.json")} %>
 				<% else %>
-					<%= image_tag "logo.png", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-zwart-helft.json")} %>
+					<%= image_tag "logo.png", :id => "twelvetwenty-logo", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-zwart-helft.json")} %>
 				<% end %>
 			</section>
 		<% end %>
