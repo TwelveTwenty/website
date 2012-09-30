@@ -2,7 +2,14 @@
 
 body.home {
 
+	@media (min-width: $site-width) {
+		.payoff {
+			padding-top: 55px;
+		}
+	}
+
 	.apps {
+
 		list-style: none;
 		padding: 0px;
 
