@@ -43,7 +43,11 @@ class SpriteAnimations
 			el.mouseenter (e) =>
 				@assetAnimation.gotoAndPlay(0)
 
-($ document).ready ->
+window.initializeSpriteAnimations = =>
 	if Modernizr.canvas
 		Ticker.setFPS 30
 		new SpriteAnimations ($ asset) for asset in ($ "[data-animate='true']")
+
+($ document).ready -> window.initializeSpriteAnimations()
+$(window).bind 'page:change', -> window.initializeSpriteAnimations()
+
