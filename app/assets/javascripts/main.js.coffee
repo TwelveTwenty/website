@@ -10,18 +10,18 @@ class Main
 
 		($ '.button-holder').mouseenter (e) =>
 			($ e.currentTarget).find('.background-image-left').stop().animate
-				backgroundPosition:"100% 0px"
-			,200
+				backgroundPosition: "100% 0px"
+				, 200
 
 		($ '.button-holder').mouseleave (e) =>
 			($ e.currentTarget).find('.background-image-left').stop().animate
-				backgroundPosition:"0% 0"
-			,100
+				backgroundPosition: "0% 0"
+				, 100
 
 	addScrollListeners: ->
 		@spacer = ($ 'body > header .spacer')
-		($ document).bind "touchmove", debounce( @handleScroll, 200, false )
-		($ window).scroll debounce( @handleScroll, 100, false )
+		($ document).bind "touchmove", debounce(@handleScroll, 200, false)
+		($ window).scroll debounce(@handleScroll, 100, false)
 		@handleScroll()
 
 	enableResposiveMenu: ->
@@ -52,3 +52,8 @@ class Main
 
 
 ($ document).ready -> new Main()
+
+$(window).bind 'page:change', ->
+	_gaq.push ['_trackPageview']
+	window.scrollTo(0, 0)
+	""

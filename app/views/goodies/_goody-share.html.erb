@@ -6,7 +6,7 @@
 		<p><%= goody.call_to_action_teaser %></p>
 		<p>
 			<% share_text = Rack::Utils.escape goody.share_text %>
-			<a href="https://twitter.com/intent/tweet?text=<%=share_text%>&via=twelve_20" class="arrow"><%=goody.share_link_text%></a>
+			<a href="https://twitter.com/intent/tweet?text=<%=share_text%>&via=twelve_20" class="arrow" data-no-turbolink><%=goody.share_link_text%></a>
 		</p>
 	</article>
 
