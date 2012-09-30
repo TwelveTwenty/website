@@ -3,10 +3,8 @@
 	<h1 class="hidden">Home</h1>
 	<div class="row">
 
-		<section class="one-third centered">
-			<!-- <h2>Apps you didn't know you needed</h2> -->
+		<section class="one-third centered payoff">
 			<h2>Make apps, not war.</h2>
-			<em>Here at Twelve Twenty we make apps for the Mac, iPhone and iPad. The kind of apps we need ourselves, refined and polished for people like you to use and enjoy.</em>
 		</section>
 		<section class="one-third centered"><%= image_tag "logo.png", :id => "twelvetwenty-logo", :width => 141, :height => 163, :alt => "Twelve Twenty logo", :data => {:autostart => true, :animate => true, :json => image_path("animations/logo-animatie-zwart-helft.json")} %></section>
 		<% if @tweets.is_a? Array %>
