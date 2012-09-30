@@ -151,37 +151,6 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 
 <%= javascript_include_tag 'application' %>
 
-
-<% if params[:controller] == 'goodies' && params[:action] == 'show' %>
-
-	<script type="text/javascript" charset="utf-8">
-		window.twttr = (function (d, s, id) {
-			var t, js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//platform.twitter.com/widgets.js";
-			fjs.parentNode.insertBefore(js, fjs);
-			return window.twttr || (t = { _e:[], ready:function (f) {
-				t._e.push(f)
-			} });
-		}(document, "script", "twitter-wjs"));
-	</script>
-
-	<script type="text/javascript">
-		twttr.ready(function (twttr) {
-			twttr.events.bind('tweet', function (event) {
-				if (DOWNLOAD_URL) {
-					window.location = DOWNLOAD_URL;
-				}else{
-					console.log("Sorry, no DOWNLOAD_URL found in document.");
-				}
-			});
-		});
-	</script>
-
-<% end %>
-
 <script>
 	var _gaq = [
 		['_setAccount', 'UA-29165093-1'],
