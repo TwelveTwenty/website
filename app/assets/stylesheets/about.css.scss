@@ -1,4 +1,9 @@
 body.about {
+
+	.person {
+		margin-top: 35px;
+	}
+
 	.people h2 {
 		background: url("/assets/about/dots.png");
 		background-repeat: no-repeat;
@@ -21,7 +26,6 @@ body.about {
 	}
 
 	.people li a {
-		color: white;
 		font-style: italic;
 
 		&:hover {

@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5 {
 	text-transform: uppercase;
 	font-family: $oswald;
 	font-weight: normal;
+	word-spacing: 7px;
 }
 
 h1 {
@@ -72,6 +73,7 @@ a.arrow, a.arrow:visited {
 	padding-right: 15px;
 	color: $black;
 }
+
 a.arrow:hover {
 	color: $red;
 }

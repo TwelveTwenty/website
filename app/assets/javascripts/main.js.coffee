@@ -3,23 +3,19 @@ main.js.coffee
 ###
 
 class Main
-
 	constructor: ->
 		@addScrollListeners()
 		@enableResposiveMenu()
 
 		($ '.button-holder').mouseenter (e) =>
 			($ e.currentTarget).find('.background-image-left').stop().animate
-				backgroundPosition: "100% 0px"
-				, 200
+				backgroundPosition: "100% 0px", 200
 
 		($ '.button-holder').mouseleave (e) =>
 			($ e.currentTarget).find('.background-image-left').stop().animate
-				backgroundPosition: "0% 0"
-				, 100
+				backgroundPosition: "0% 0", 100
 
 	addScrollListeners: ->
-		@spacer = ($ 'body > header .spacer')
 		($ document).bind "touchmove", debounce(@handleScroll, 200, false)
 		($ window).scroll debounce(@handleScroll, 100, false)
 		@handleScroll()
@@ -42,18 +38,21 @@ class Main
 				@header.addClass('open')
 
 	handleScroll: =>
+		spacer = ($ 'body > header .spacer')
+
 		pos = ($ window).scrollTop()
-		c = ($ "#logo")
+
 		delta = Math.max(160 - pos, 0)
-		if delta is 0
-			@spacer.addClass('show')
+		if delta is 0 or ($ "#twelvetwenty-logo").length is 0
+			spacer.addClass('show')
 		else
-			@spacer.removeClass('show')
+			spacer.removeClass('show')
 
 
-($ document).ready -> new Main()
+($ document).ready -> window.main = new Main()
 
 $(window).bind 'page:change', ->
-	_gaq.push ['_trackPageview']
+	window.main.handleScroll()
 	window.scrollTo(0, 0)
+	_gaq.push ['_trackPageview']
 	""

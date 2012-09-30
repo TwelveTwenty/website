@@ -53,8 +53,8 @@ namespace :application do
   desc "Add deploy details to app folder"
   task :write_deploy_details do
     run "echo \"Last deployment: `date -R`\" > #{release_path}/public/deployment.txt"
-    run "echo \"Git commit hash: `cat #{current_path}/REVISION` \" >> #{release_path}/public/deployment.txt"
-    run "echo \"Github: https://github.com/TwelveTwenty/website/commit/`cat #{current_path}/REVISION` \" >> #{release_path}/public/deployment.txt"
+    run "echo \"Git commit hash: `cat #{release_path}/REVISION` \" >> #{release_path}/public/deployment.txt"
+    run "echo \"Github: https://github.com/TwelveTwenty/website/commit/`cat #{release_path}/REVISION` \" >> #{release_path}/public/deployment.txt"
   end
 
 end
