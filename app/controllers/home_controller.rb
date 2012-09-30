@@ -27,6 +27,6 @@ class HomeController < ApplicationController
     unless @tweets.is_a? Array
       logger.error "Problem loading tweets: #{@tweets}"
     end
-    
+
   end
 end

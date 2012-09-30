@@ -40,8 +40,6 @@ class Main
 	handleScroll: =>
 		spacer = ($ 'body > header .spacer')
 
-		log spacer
-
 		pos = ($ window).scrollTop()
 
 		delta = Math.max(160 - pos, 0)
