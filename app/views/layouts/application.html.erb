@@ -37,6 +37,10 @@
 	<meta property="og:image" content="<%= root_url[0...-1] + image_path("share.jpeg") %>"/>
 	<meta property="og:caption" content="Twelve Twenty"/>
 
+<% if params.has_key?(:app) && params[:app] == 'gettogether' %>
+	<meta name="apple-itunes-app" content="app-id=536900789">
+<% end %>
+
 	<meta name="viewport" content="width=device-width,maximum-scale=1.0">
 
 	<%= stylesheet_link_tag "application" %>
