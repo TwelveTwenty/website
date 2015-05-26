@@ -18,6 +18,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'redcarpet'
 gem 'friendly_id'
+gem 'pg'
 
 group :development, :test do
   gem 'sqlite3'
