@@ -19,10 +19,10 @@ gem 'rmagick'
 gem 'redcarpet'
 gem 'friendly_id'
 gem 'pg'
+gem 'thin'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'thin'
   gem 'rails-footnotes', '>= 3.7.5.rc4'
 end
 
