@@ -50,6 +50,7 @@
 	<%= csrf_meta_tags %>
 
 	<%= javascript_include_tag 'modernizr' %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
 	<%= javascript_tag "Modernizr.load();" %>
 </head>
@@ -62,46 +63,9 @@ chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7]
 	<a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.
 </p><![endif]-->
 
-<header>
-	<div class="container main-menu-toggle hidden-desktop">
-		<ul class="toggle-menu">
-			<li id="toggle-button" class="toggle-button">
-				<div class="arrow"><%= image_tag "menu-arrow.png" %></div>
-				MENU
-			</li>
-		</ul>
-	</div>
-	<div class="divider"></div>
-	<div class="container">
-		<ul class="main-menu">
-			<li class="item <%= "current" if params[:controller] == "home" %>"><%= link_to "home", {:controller => :home} %></li>
-			<li class="item <%= "current" if params[:controller] == "apps" %>"><%= link_to "Apps", :controller => :apps, :action => :show, :app => :uberlayer %></li>
-			<li class="item <%= "current" if params[:controller] == "goodies" %>"><%= link_to "Goodies", :controller => :goodies %></li>
-			<li class="item spacer">&nbsp;</li>
-			<li class="item <%= "current" if params[:controller] == "about" %>"><%= link_to "About", :controller => :about %></li>
-			<li class="item <%= "current" if params[:controller] == "blogs" %>"><%= link_to "Blog", :controller => :blogs %></li>
-			<li class="item <%= "current" if params[:controller] == "contact" %>"><%= link_to "Contact", :controller => :contact %></li>
-			<% if current_user %>
-				<li class="item <%= "current" if params[:controller] == "artworks" %>"><%= link_to "Artwork", :controller => :artworks %></li>
-			<% end %>
-		</ul>
-	</div>
-</header>
-
-<div class="sharing">
-	<a href="https://www.facebook.com/dialog/feed?app_id=<%= APP_CONFIG["facebook_key"] %>&link=<%= request.url %>&redirect_uri=<%= request.url %>">
-		<div class="facebook"></div>
-	</a>
-	<a href="http://twitter.com/home?status=<%= Rack::Utils.escape page_title + " - " + request.url %>" target="_blank">
-		<div class="twitter"></div>
-	</a>
-</div>
-
-<div class="wrapper header" id="heading">
 	<div class="container">
 		<%= yield :header %>
 	</div>
-</div>
 
 <% if yield.length > 0 %>
 	<div class="wrapper content">

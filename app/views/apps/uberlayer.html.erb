@@ -1,10 +1,12 @@
 <% title "Uberlayer" %>
 <% description "Admit it, semitransparent, always-on-top pixel proofing just became sexy..." %>
 
-<% content_for :header do %>
-	<%= render "apps/header" %>
-<% end %>
 <div class="container">
+
+  <p class="centered" style="margin-bottom: 90px">
+    <%= image_tag "logo.png" %>
+  </p>
+
 	<h1 class="hidden">Uberlayer</h1>
 	<%= render 'vimeo_video', :video_id => "39413714" %>
 
@@ -12,51 +14,6 @@
 		<article class="half centered-column centered">
 			<h2><%= image_tag "apps/dotsred.png", :style => 'margin-right: 10px' %>Uberlayer<%= image_tag "apps/dotsred.png", :style => 'margin-left: 10px' %></h2>
 			<p>With the Uberlayer app you can put floating images on top of your computer screen. Maybe you want to proof a design to the pixel, watermark a presentation or always have that special picture of your mother on top?</p>
-		</article>
-	</div>
-
-	<div class="row">
-		<div class="slideshow full">
-			<%= render 'slideshow', :images => %w{apps/uberlayer/screenshots/uberlayer_screen_1280_0.jpg apps/uberlayer/screenshots/uberlayer_screen_1280_1.jpg apps/uberlayer/screenshots/uberlayer_screen_1280_2.jpg apps/uberlayer/screenshots/uberlayer_screen_1280_3.jpg} %>
-		</div>
-	</div>
-
-	<div class="row">
-		<article class="half centered-column centered">
-			<h2><%= image_tag "apps/dotsred.png", :style => 'margin-right: 10px' %>Shortcuts<%= image_tag "apps/dotsred.png", :style => 'margin-left: 10px' %></h2>
-			<p>Position the image with pixel precision using the keyboard shortcuts, change the transparency so you can see through or lock the image so it will stay put, exactly where you want it. Locking will also let you click 'through' the app, so you can work with whatever app you have running below.</p>
-		</article>
-	</div>
-
-	<div class="row">
-		<article class="half">
-			<table class="keycodes">
-				<tr>
-					<td><%= image_tag "apps/uberlayer/shortkey-move-.png" %></td>
-					<td class="text">Move the image</td>
-				</tr>
-				<tr>
-					<td><%= image_tag "apps/uberlayer/shortkey-lockimage.png" %></td>
-					<td class="text">Lock the image</td>
-				</tr>
-				<tr>
-					<td><%= image_tag "apps/uberlayer/shortkey-pastimage.png" %></td>
-					<td class="text">Paste the image</td>
-				</tr>
-			</table>
-		</article>
-
-		<article class="half">
-			<table class="keycodes">
-				<tr>
-					<td><%= image_tag "apps/uberlayer/shortkey-lesstransparant.png" %></td>
-					<td class="text">Less transparent</td>
-				</tr>
-				<tr>
-					<td><%= image_tag "apps/uberlayer/shortkey-moretransparant.png" %></td>
-					<td class="text">More transparent</td>
-				</tr>
-			</table>
 		</article>
 	</div>
 
