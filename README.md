@@ -1,5 +1,7 @@
 # Twelve Twenty;
 
+**NOTICE: THIS PROJECT IS NO LONGER MAINTAINED. **
+
 [Twelve Twenty](http://twelvetwenty.nl) is a small Startup from Amsterdam. We make apps you didn't know you needed.
 
 We decided to open source the development of our new website because we hope to help other people by showing our workflow. 
